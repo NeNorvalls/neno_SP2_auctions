@@ -11,7 +11,7 @@
   <body class="container-fluid d-flex flex-column min-vh-100">
     <!-- ========================== Header =================================== -->
     <header class="sticky-top">
-      <a class="navbar-brand responsive" href="/index.html">WINER'S AUCTIONS</a>
+      <a class="navbar-brand responsive" href="/index.html">NeNo_AUCTIONS</a>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid text-center">
           <button
@@ -27,28 +27,11 @@
             id="navbarCollapse"
           >
             <div class="navbar-nav font-weight-semibold">
-              <a
-                href="/profile/"
-                class="nav-item nav-link text-white mt-4 mt-lg-0"
-                >PROFILE</a
-              >
-              <a
-                href="/pages/contact/"
-                class="nav-item nav-link text-white mt-4 mt-lg-0"
-                >CONTACT</a
-              >
-              <a
-                href="/PROFILE/login/"
-                class="nav-item nav-link text-white mt-4 mt-lg-0"
-                id="logged-in"
-                >LOGIN</a
-              >
-              <a
-                href="/index.html"
-                class="nav-item nav-link text-white mt-4 mt-lg-0"
-                id="logged-out"
-                >LOGOUT</a
-              >
+              <a href="/index.html" class="nav-item nav-link text-white mt-4 mt-lg-0">HOME</a>
+              <a href="profile.html" class="nav-item nav-link text-white mt-4 mt-lg-0" id="profile-link">PROFILE</a>
+              <a href="users.html" class="nav-item nav-link text-white mt-4 mt-lg-0" id="users-link">USERS</a>
+              <a href="/login/login.html" class="nav-item nav-link text-white mt-4 mt-lg-0" id="login-link">LOGIN</a>
+              <a href="/index.html" class="nav-item nav-link text-white mt-4 mt-lg-0" id="logout-link">LOG OUT</a>
             </div>
           </div>
         </div>
@@ -123,5 +106,6 @@
         </div>
       </div>
     </footer>
+    <script src="/src/js/logout.js"></script>
   </body>
 </html>

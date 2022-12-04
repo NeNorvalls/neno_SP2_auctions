@@ -5,27 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/dist/css/index.css" type="text/css" />
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <title>WINER'S AUCTIONS | Home</title>
   </head>
 
   <body>
     <!-- ========================== Header =================================== -->
-    <header class="sticky-top">
-      <div class="container-fluid text-center">
-        <a class="navbar-brand display-4" href="#">WINER'S AUCTIONS</a>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="/profile/login/">LOGIN</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/profile/register/"
-                >REGISTER</a
-              >
-            </li>
-          </ul>
-        </nav>
-      </div>
+    <header>
+      <a class="navbar-brand responsive" href="/index.html">WINER'S AUCTIONS</a>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid text-center">
+          <button
+            type="button"
+            class="navbar-toggler border-0 p-0"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbar-Collapse"
+          >
+            <i class="fas fa-bars" style="color: #fff; font-size: 2rem"></i>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarCollapse"
+          >
+            <div class="navbar-nav font-weight-semibold">
+              <a href="index.html" class="nav-item nav-link text-white mt-4 mt-lg-0">HOME</a>
+              <a href="./pages/profile.html" class="nav-item nav-link text-white mt-4 mt-lg-0" id="profile-link">PROFILE</a>
+              <a href="/pages/users.html" class="nav-item nav-link text-white mt-4 mt-lg-0" id="users-link">USERS</a>
+              <a href="/login/login.html" class="nav-item nav-link text-white mt-4 mt-lg-0" id="login-link">LOGIN</a>
+              <a href="index.html" class="nav-item nav-link text-white mt-4 mt-lg-0" id="logout-link">LOG OUT</a>
+            </div>
+          </div>
+        </div>
+      </nav>
     </header>
     <!-- ================================= Search ================================================== -->
     <div class="container-fluid">
@@ -34,7 +45,7 @@
           class="form-control mr-sm-2"
           id="filter-auction"
           type="search"
-          placeholder="SEARCH for Wine Brand"
+          placeholder="SEARCH for Wine Brand, users, bidders, member list here, etc."
         />
       </form>
     </div>
@@ -128,7 +139,6 @@
                         <a class="btn btn-dark" href="/index.html">Buy</a>
                         <a class="btn btn-dark" href="/index.html">Add</a>
                       </p> -->
-                      <a href="/PROFILE/register/">Register to view more</a>
                     </div>
     
                     <div class="col-md-4">
@@ -151,7 +161,6 @@
                         <a class="btn btn-dark" href="/index.html">Buy</a>
                         <a class="btn btn-dark" href="/index.html">Add</a>
                       </p> -->
-                      <a href="/PROFILE/register/">Register to view more</a>
                     </div>
                     <div class="col-md-4">
                       <img
@@ -173,7 +182,6 @@
                     <a class="btn btn-dark" href="/index.html">Buy</a>
                     <a class="btn btn-dark" href="/index.html">Add</a>
                   </p> -->
-                  <a href="/PROFILE/register/">Register to view more</a>
                 </div>
               </div>
             </div>
@@ -199,7 +207,105 @@
       </section>
 
     </main>
+    <section>
+       <!-- ==================================== CREATE LISTING ======================================= -->
+       <div class="container-fluid bg-dark" id="createListing">
+        <div class="row">
+            <div class="col-lg-6">
+                    <h2 class="text-center mt-5  text-white">CREATE A BID</h2>
+                    <div class="site-section">
+                        <div class="container w-75">
+                          <div class="row justify-content-center">
+                              <div class="col-lg-10">
+                                  <div class="row">
+                                      <div class="col-md-12">
+                                          <p id="titleMsg" class="msg-element"></p>
+                                          <label class="text-white" for="title">Title</label>
+                                          <input type="text" id="postTitle" placeholder="What are you selling?" class="form-control">
+                                      </div>
+                                  </div>
+                                  <div class="row">
+                                      <div class="col-md-12">
+                                          <p id="bodyMsg" class="msg-element"></p>
+                                          <label class="text-white" for="description">Description</label>
+                                          <textarea class="form-control" id="postContent" placeholder="Describe your product"></textarea>
+                                        </div>
+                                  </div>
+                                  <div class="row">
+                                      <div class="col-md-12">
+                                          <p id="mediaMsg" class="msg-element"></p>
+                                          <label class="text-white" for="media">Media URL</label>
+                                          <textarea class="form-control" id="postMedia" placeholder="Place a image URL"></textarea>
+                                      </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-md-12">
+                                        <p id="endbidMsg" class="msg-element"></p>
+                                        <label class="text-white" for="auction">Select time and date:</label>
+                                        <form action="/action_page.php">
+                                            <input type="datetime-local" class="form-control" id="endBid" name="time">
+                                          </form>
+                                    </div>
+                                </div>
+                                  <div class="row">
+                                      <div class="col-12 text-center mb-5">
+                                        <button class="btn btn-secondary px-5 mt-5" id="submitPost">POST</button>
+                                    </div>
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+                     </div>
+            </div>
+            <div class="col-lg-6">
+                <section class="logged-in">
+                    <h2 class="text-center mt-5 text-white">NEW LISTING</h2>
+                    <div class="container w-75">
+                        <div class="row justify-content-center">
+                            <div id="preview-container" class=""></div>       
+                        </div>
+                    </div>
+                 </section>
+            </div>
+        </div>
+    </div>
+    
 
+        <!--Search for user, product etc-->
+        <div class="col-4 mb-5 mt-5 m-auto">
+           <input type="search" id="filter-auction" class="form-control bg-white border-1" placeholder="Search for user, products and so!"/>
+       </div> 
+
+
+
+         <!--MAKING A EXAMPLE CONTAINER FOR THE LISTING-->
+         <h2 class="text-center mt-5">AUCTIONS TIME</h2>
+         <hr>
+
+    <div class="container-fluid">
+      <div id="post-container" class="row">
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card">
+                <img class="card-img-top" src="./Img/loader.gif"  alt="Loading Content" style="width:100px;" />
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <img class="card-img-top" src="./Img/loader.gif"  alt="Loading Content" style="width:100px;" />
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <img class="card-img-top" src="./Img/loader.gif"  alt="Loading Content" style="width:100px;" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
     <hr />
     <!-- =============================== Footer ====================================================== -->
     <footer class="footer-section mt-auto">
@@ -212,6 +318,9 @@
         </div>
       </div>
     </footer>
+    <script src="/src/js/logout.js"></script>
     <script src="/src/js/components/timer.js"></script>
+    <script src="/src/js/scripts.js"></script>
+
   </body>
 </html>

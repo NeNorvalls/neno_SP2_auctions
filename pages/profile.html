@@ -27,32 +27,11 @@
             id="navbarCollapse"
           >
             <div class="navbar-nav font-weight-semibold">
-              <a
-                href="/profile/"
-                class="nav-item nav-link text-white mt-4 mt-lg-0"
-                >PROFILE</a
-              >
-              <a
-              href="/pages/userList/"
-              class="nav-item nav-link text-white mt-4 mt-lg-0"
-              >USERS</a
-            >
-              <a
-                href="/pages/createListing/"
-                class="nav-item nav-link text-white mt-4 mt-lg-0"
-                >LISTING</a
-              >
-              <a
-                href="/pages/contact/"
-                class="nav-item nav-link text-white mt-4 mt-lg-0"
-                >CONTACT</a
-              >
-              <a
-                href="/index.html"
-                class="nav-item nav-link text-white mt-4 mt-lg-0"
-                id="logged-out"
-                >LOGOUT</a
-              >
+              <a href="/index.html" class="nav-item nav-link text-white mt-4 mt-lg-0">HOME</a>
+              <a href="profile.html" class="nav-item nav-link text-white mt-4 mt-lg-0" id="profile-link">PROFILE</a>
+              <a href="users.html" class="nav-item nav-link text-white mt-4 mt-lg-0" id="users-link">USERS</a>
+              <a href="/login/login.html" class="nav-item nav-link text-white mt-4 mt-lg-0" id="login-link">LOGIN</a>
+              <a href="/index.html" class="nav-item nav-link text-white mt-4 mt-lg-0" id="logout-link">LOG OUT</a>
             </div>
           </div>
         </div>
@@ -68,6 +47,9 @@
           type="search"
           placeholder="SEARCH for Wine Brand"
         />
+        <!-- <button class="btn btn-primary my-2 my-sm-0" type="submit">
+          Search
+        </button> -->
       </form>
     </div>
     <hr />
@@ -101,8 +83,7 @@
                       <div class="d-flex text-center p-4 justify-content-end">
                           <ul class="list-inline mb-0 justify-content-end"> 
                               <li class="list-inline-item"> 
-                                  <p>@username</p>
-                                  <p id="list-credits" class="font-weight-bold mb-0 d-block">$1100</p>
+                                  <p id="list-credits" class="font-weight-bold mb-0 d-block">$000</p>
                                   <p class="text-muted">Credits</p> 
                               </li> 
                           </ul> 
@@ -148,7 +129,7 @@
                   <p class="" id="updateAvatarMsg"></p>
                   <div class="text-center">
                   </div>
-              </div>        
+              </div>        </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
             <button type="button" id="updateAvatarBtn" class="btn btn-secondary" data-bs-dismiss="modal">CHANGE AVATAR</button>
@@ -170,5 +151,6 @@
         </div>
       </div>
     </footer>
+    <script src="/src/js/logout.js"></script>
   </body>
 </html>

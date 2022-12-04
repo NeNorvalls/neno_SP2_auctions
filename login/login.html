@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/dist/css/index.css" type="text/css" />
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-
-    <title>WINER'S AUCTIONS | Register</title>
+    <title>WINER'S AUCTIONS | Login</title>
   </head>
   <body class="container-fluid d-flex flex-column min-vh-100">
     <!-- =============================== Header ===================================================== -->
@@ -33,6 +32,30 @@
                 class="nav-item nav-link text-white mt-4 mt-lg-0"
                 >HOME</a
               >
+              <a
+                href="/profile/profile.html"
+                class="nav-item nav-link text-white mt-4 mt-lg-0"
+                id="profile-link"
+                >PROFILE</a
+              >
+              <a
+                href="/pages/users.html"
+                class="nav-item nav-link text-white mt-4 mt-lg-0"
+                id="users-link"
+                >USERS</a
+              >
+              <a
+                href="login.html"
+                class="nav-item nav-link text-white mt-4 mt-lg-0"
+                id="login-link"
+                >LOGIN</a
+              >
+              <a
+                href="/index.html"
+                class="nav-item nav-link text-white mt-4 mt-lg-0"
+                id="logout-link"
+                >LOG OUT</a
+              >
             </div>
           </div>
         </div>
@@ -41,55 +64,46 @@
     <!-- ==================================== main ======================================= -->
     <main>
       <div class="container-fluid">
-        <form id="registerForm">
-          <h2 class="fw-normal mb-3 pb-3 primary-text text-center">Register</h2>
-          <h5 class="fw-normal mb-3 pb-3 primary-text">Sign up here:</h5>
-
-          <div class="form-group form-outline mb-3">
-            <label for="">Name</label>
+        <form id="loginForm">
+          <h2 class="fw-normal mb-3 pb-3 primary-text text-center">Login</h2>
+          <h5 class="fw-normal mb-3 pb-3 primary-text">
+            Sign into your account:
+          </h5>
+          <div class="form-group form-floating mb-3">
+            <label for="">Email</label>
             <input
-              type="text"
-              class="form-control"
-              name="name"
-              required
-              pattern="^[\w]+$"
-              title="User name must only contain lower case and upper case letters, numbers and underscore (_). Example: My_user123"
-            />
-          </div>
-
-          <div class="form-group form-outline mb-3">
-            <label for="registerEmail">Email</label>
-            <input
-              type=" email"
+              type="email"
+              id="loginEmail"
               class="form-control"
               name="email"
               required
               pattern="^[\w\-.]+@(stud.)?noroff.no$"
               title="Only (stud.)noroff.no domains are not allowed to register"
             />
+            <p id="emailError" class="error-message"></p>
           </div>
-
-          <div class="form-group form-outline mb-3">
+          <div class="form-group form-floating mb-3">
             <label for="">Password</label>
             <input
               type="password"
+              id="loginPassword"
               class="form-control"
               name="password"
               autocomplete="username email"
               required
               minlength="8"
             />
+            <p id="passwordError" class="error-message"></p>
           </div>
-
-          <div class="form-group">
-            <label for=""> Avatar </label>
-            <input type="url" class="form-control" id="inputGroupFile02" />
-          </div>
-
-          <button type="submit" class="btn btn-primary">REGISTER</button>
+          <p>Don't have a user yet?</p>
+          <a href="/register/register.html"><p>Register here!</p></a>
+          <button id="loginSubmit" class="primary-text btn btn-success">
+            Login
+          </button>
         </form>
       </div>
     </main>
+
     <!-- =============================== Footer ====================================================== -->
     <footer class="footer-section mt-auto">
       <div class="bg-light py-2">
@@ -101,5 +115,7 @@
         </div>
       </div>
     </footer>
+    <!-- <script src="/src/js/api/auth/logout.js"></script> -->
+    <script src="/src/js/login.js"></script>
   </body>
 </html>
