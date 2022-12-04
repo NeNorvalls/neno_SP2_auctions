@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/dist/css/index.css" type="text/css" />
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <title>WINER'S AUCTIONS | Profile</title>
+  </head>
+  <body class="container-fluid d-flex flex-column min-vh-100">
+    <!-- ========================== Header =================================== -->
+    <header class="sticky-top">
+      <a class="navbar-brand responsive" href="/index.html">WINER'S AUCTIONS</a>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid text-center">
+          <button
+            type="button"
+            class="navbar-toggler border-0 p-0"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbar-Collapse"
+          >
+            <i class="fas fa-bars" style="color: #fff; font-size: 2rem"></i>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarCollapse"
+          >
+            <div class="navbar-nav font-weight-semibold">
+              <a
+                href="/profile/"
+                class="nav-item nav-link text-white mt-4 mt-lg-0"
+                >PROFILE</a
+              >
+              <a
+                href="/pages/contact/"
+                class="nav-item nav-link text-white mt-4 mt-lg-0"
+                >CONTACT</a
+              >
+              <a
+                href="/index.html"
+                class="nav-item nav-link text-white mt-4 mt-lg-0"
+                id="logged-out"
+                >LOGOUT</a
+              >
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ================================= Search ================================================== -->
+    <div class="container-fluid">
+      <form class="form-inline">
+        <input
+          class="form-control mr-sm-2"
+          id="filter-auction"
+          type="search"
+          placeholder="SEARCH for Wine Brand"
+        />
+      </form>
+    </div>
+    <hr />
+
+    <main>
+      <!-- ==================================== CREATE LISTING ======================================= -->
+      <div>
+        <div class="row">
+          <div class="col-lg-6">
+            <h2 class="text-center mt-5">EDIT LISTING</h2>
+            <div class="site-section">
+              <div>
+                <div class="row justify-content-center" id="container">
+                  <div class="col-lg-10">
+                    <div class="row">
+                      <div class="col-md-12 form-group">
+                        <p id="titleMsg" class="msg-element"></p>
+                        <label for="title">Title</label>
+                        <textarea
+                          class="form-control text-info"
+                          id="editTitle"
+                        ></textarea>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12 form-group">
+                        <p id="bodyMsg" class="msg-element"></p>
+                        <label for="description">Description</label>
+                        <textarea
+                          class="form-control text-info"
+                          id="editContent"
+                        ></textarea>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12 form-group">
+                        <p id="mediaMsg" class="msg-element"></p>
+                        <label for="media">Media URL</label>
+                        <textarea
+                          class="form-control text-info"
+                          id="editMedia"
+                        ></textarea>
+                      </div>
+                    </div>
+                    <div class="row mt-3">
+                      <div class="col-md-12 form-group">
+                        <p id="endBidTime" class="msg-element text-success"></p>
+                        <p>You cannot change/update the ending bid time.</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-12 text-center">
+                        <button
+                          class="btn btn-secondary px-5 mt-3"
+                          id="submitEdit"
+                        >
+                          EDIT
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <section class="logged-in">
+              <h2 class="text-center mt-5">PREVIEW</h2>
+              <div>
+                <div class="row justify-content-center">
+                  <div id="preview-container" class=""></div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+
+      <hr />
+      <!-- ================================= AUCTION AREA =============================================== -->
+      <h2 class="text-center mt-5">AUCTION</h2>
+
+      <div>
+        <div id="post-container" class="row">
+          <img
+            src="./Img/loader.gif"
+            alt="Loading content"
+            style="width: 100px"
+          />
+        </div>
+      </div>
+    </main>
+    <hr />
+    <!-- =================== FOOTER ================================== -->
+    <footer class="footer-section mt-auto">
+      <div class="bg-light py-2">
+        <div class="text-center">
+          <p class="mb-0 py-2 primary-text">
+            &copy; 2022 WINER'S AUCTIONS | All rights reserved.
+          </p>
+          <p>Designed by: Nenorvalls</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

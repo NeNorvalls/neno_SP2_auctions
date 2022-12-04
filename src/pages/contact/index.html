@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/dist/css/index.css" type="text/css" />
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <title>WINER'S AUCTIONS | Contact</title>
+  </head>
+  <body class="container-fluid d-flex flex-column min-vh-100">
+    <!-- ========================== Header =================================== -->
+    <header class="sticky-top">
+      <a class="navbar-brand responsive" href="/index.html">WINER'S AUCTIONS</a>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid text-center">
+          <button
+            type="button"
+            class="navbar-toggler border-0 p-0"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbar-Collapse"
+          >
+            <i class="fas fa-bars" style="color: #fff; font-size: 2rem"></i>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarCollapse"
+          >
+            <div class="navbar-nav font-weight-semibold">
+              <a
+                href="/profile/"
+                class="nav-item nav-link text-white mt-4 mt-lg-0"
+                >PROFILE</a
+              >
+              <a
+                href="/pages/contact/"
+                class="nav-item nav-link text-white mt-4 mt-lg-0"
+                >CONTACT</a
+              >
+              <a
+                href="/PROFILE/login/"
+                class="nav-item nav-link text-white mt-4 mt-lg-0"
+                id="logged-in"
+                >LOGIN</a
+              >
+              <a
+                href="/index.html"
+                class="nav-item nav-link text-white mt-4 mt-lg-0"
+                id="logged-out"
+                >LOGOUT</a
+              >
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <hr />
+    <!-- ==================================== main ======================================= -->
+    <main>
+      <div class="container-fluid">
+        <h2 class="fw-normal mb-3 pb-3 primary-text text-center">Contact Us</h2>
+        <form id="contactForm">
+          <!-- Name Input -->
+          <div class="form-group form-floating mb-3">
+            <label for="">Name</label>
+            <input
+              type="text"
+              class="form-control"
+              name="name"
+              required
+              pattern="^[\w]+$"
+              title="User name must only contain lower case and upper case letters, numbers and underscore (_). Example: My_user123"
+            />
+          </div>
+          <!-- Email Input -->
+          <div class="form-group form-floating mb-3">
+            <label for="">Email</label>
+            <input
+              type=" email"
+              class="form-control"
+              name="email"
+              required
+              pattern="^[\w\-.]+@(stud.)?noroff.no$"
+              title="Only (stud.)noroff.no domains are not allowed to register"
+            />
+          </div>
+
+          <!-- Message Input -->
+          <div class="form-floating mb-3">
+            <label for="">Message</label>
+            <textarea
+              class="form-control"
+              id="message"
+              type="text"
+              placeholder="Message"
+              style="height: 10rem"
+              data-sb-validations="required"
+            ></textarea>
+          </div>
+          <!-- Submit button -->
+          <div class="form-group">
+            <button
+              class="btn btn-primary btn-lg"
+              id="submitButton"
+              type="submit"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <hr />
+    <!-- =============================== Footer ====================================================== -->
+    <footer class="footer-section mt-auto">
+      <div class="bg-light py-2">
+        <div class="text-center">
+          <p class="mb-0 py-2 primary-text">
+            &copy; 2022 WINER'S AUCTIONS | All rights reserved.
+          </p>
+          <p>Designed by: Nenorvalls</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

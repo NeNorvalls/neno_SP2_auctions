@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/dist/css/index.css" type="text/css" />
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <title>WINER'S AUCTIONS | Profile</title>
+  </head>
+  <body class="container-fluid d-flex flex-column min-vh-100">
+    <!-- ========================== Header =================================== -->
+    <header class="sticky-top">
+      <a class="navbar-brand responsive" href="/index.html">WINER'S AUCTIONS</a>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid text-center">
+          <button
+            type="button"
+            class="navbar-toggler border-0 p-0"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbar-Collapse"
+          >
+            <i class="fas fa-bars" style="color: #fff; font-size: 2rem"></i>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarCollapse"
+          >
+            <div class="navbar-nav font-weight-semibold">
+              <a
+                href="/profile/"
+                class="nav-item nav-link text-white mt-4 mt-lg-0"
+                >PROFILE</a
+              >
+              <a
+              href="/pages/userList/"
+              class="nav-item nav-link text-white mt-4 mt-lg-0"
+              >USERS</a
+            >
+              <a
+                href="/pages/createListing/"
+                class="nav-item nav-link text-white mt-4 mt-lg-0"
+                >LISTING</a
+              >
+              <a
+                href="/pages/contact/"
+                class="nav-item nav-link text-white mt-4 mt-lg-0"
+                >CONTACT</a
+              >
+              <a
+                href="/index.html"
+                class="nav-item nav-link text-white mt-4 mt-lg-0"
+                id="logged-out"
+                >LOGOUT</a
+              >
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ================================= Search ================================================== -->
+    <div class="container-fluid">
+      <form class="form-inline">
+        <input
+          class="form-control mr-sm-2"
+          id="filter-auction"
+          type="search"
+          placeholder="SEARCH for Wine Brand"
+        />
+      </form>
+    </div>
+    <hr />
+
+    <!-- ==================================== main ======================================= -->
+    <main>
+      <h1 class="text-center mt-3">PROFILE</h1>
+  
+  
+      <div class=""> 
+          <div class="col-md-6 mx-auto shadow"> 
+              <!-- Profile box --> 
+              <div class="bg-white rounded"> 
+                  <div class=" pt-0" width="100"> 
+                      <div class="align-items-end bg-primary d-flex flex-row p-4"> 
+                              <div class="col-md-6 profile-image">
+                                  <img src="" id="avatarImg" alt="..." width="150" class="rounded mb-2 img-thumbnail">
+                              </div>
+                              <div id="post-container" class="col-md-6 col-sm-12 form-group text-start">
+                                 
+                              </div>  
+                          </div> 
+                      </div> 
+                  </div> 
+                  <div class="bg-light px-4 py-3 d-flex text-center"> 
+                      <div class="text-center">
+                          <button type="button" class="btn btn-secondary mt-4" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                              EDIT AVATAR
+                            </button>
+                      </div>
+                      <div class="d-flex text-center p-4 justify-content-end">
+                          <ul class="list-inline mb-0 justify-content-end"> 
+                              <li class="list-inline-item"> 
+                                  <p>@username</p>
+                                  <p id="list-credits" class="font-weight-bold mb-0 d-block">$1100</p>
+                                  <p class="text-muted">Credits</p> 
+                              </li> 
+                          </ul> 
+                      </div>
+                  </div> 
+  
+                  <div class="px-4 py-3"> 
+                      <h3 class="mb-0">About me</h3> 
+                      <div class="p-4 rounded shadow-sm bg-light"> 
+                          <p id="list-email" class="mb-0"></p> 
+                          <p class="mb-0">Norway</p> 
+                          <p class="mb-0">+47 911 00 990</p> 
+                      </div> 
+                  </div> 
+  
+                  <div class="py-4 px-4"> 
+                      <div class="d-flex align-items-center justify-content-between mb-3">
+                           <h3 class="mb-0">My listings</h3>
+
+                      </div> 
+                      <div class="row"> 
+                          <div id="listing-container" class="row">
+                              <img src="/images/gallery4.jpg" alt="Loading content" style="width:100px;">
+                          </div>
+                      </div> 
+                  </div> 
+              </div> 
+          </div>
+      </main>
+  
+        <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <div class="text-center mt-5">
+                  <label for="avatar">Avatar URL</label>
+                  <textarea class="form-control form-control-lg m-auto" id="updateAvatarInput"  placeholder="Place a avatar URL"></textarea>
+                  <p class="" id="updateAvatarMsg"></p>
+                  <div class="text-center">
+                  </div>
+              </div>        
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" id="updateAvatarBtn" class="btn btn-secondary" data-bs-dismiss="modal">CHANGE AVATAR</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+    
+    <hr />
+    <!-- =================== FOOTER ================================== -->
+    <footer class="footer-section mt-auto">
+      <div class="bg-light py-2">
+        <div class="text-center">
+          <p class="mb-0 py-2 primary-text">
+            &copy; 2022 WINER'S AUCTIONS | All rights reserved.
+          </p>
+          <p>Designed by: Nenorvalls</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

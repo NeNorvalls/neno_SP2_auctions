@@ -1,12 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/dist/css/index.css" type="text/css" />
+    <title>WINER'S AUCTIONS | Home</title>
+  </head>
+
+  <body>
+    <!-- ========================== Header =================================== -->
+    <header>
+      <div class="container-fluid text-center">
+        <a class="navbar-brand display-4" href="#">WINER'S AUCTIONS</a>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link link-info" href="/profile/login/">LOGIN</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link-info" href="/profile/register/"
+                >REGISTER</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <hr />
+    <!-- ================================= Search ================================================== -->
+    <div class="container-fluid">
+      <form class="form-inline">
+        <input
+          class="form-control mr-sm-2"
+          id="filter-auction"
+          type="search"
+          placeholder="SEARCH for Wine Brand"
+        />
+      </form>
+    </div>
+    <hr />
+    <!-- ==================================== main ======================================= -->
+    <main>
+      <div class="container-fluid my-4">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="page-header">
+              <h1 class="primary-text">
+                Welcome to the home of delicious wine
+              </h1>
+            </div>
+            <p>
+              Find your favorite wine collections here. We do auctions, buy and
+              sells different brands of wine that you are aiming to add to your
+              collections. Register and be our member to view all the details.
+            </p>
+          </div>
+        </div>
+        <hr>
+        <section>
+            <div class="container-fluid text-center">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="page-header">
+                    <h1>PROFILE</h1>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <img
+                        class="rounded-circle"
+                        style="width: 180px"
+                        src="/images/gallery4.jpg"
+                        alt="profile avatar"
+                      />
+                      <h2>Neno Aksent</h2>
+                      <p>Credit: 1500</p>
+                      <div class="alert alert-warning" role="alert">
+                            Bidding Time closes in <span id="time"></span> minutes!
+                       </div>
+                       
+                  
+                      <p>
+                        You can call me Neno, and I am holding the family legacy of
+                        handling winery business from centuries already. WINER's
+                        Auction house is serving globally for so long with good
+                        quality of service. Join us and be our members. Enjoy!
+                      </p>
+                      <!-- <p>
+                        <a class="btn btn-dark" href="/index.html">Edit</a>
+                        <a class="btn btn-dark" href="/index.html">View</a>
+                        <a class="btn btn-dark" href="/index.html"
+                          >Create</a
+                        >
+                      </p> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
     
-</body>
+
+        <section id="listing">
+            <div class="container-fluid text-center">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="page-header">
+                    <h1> MY LISTING</h1>
+                  </div>
+                  <hr />
+                  <div class="row">
+                    <div class="col-md-4">
+                      <img
+                        class="img-responsive rounded-3 text-center"
+                        style="width: 350px"
+                        src="/images/Imperial Cream.jpg"
+                        alt="wine brands"
+                      />
+                      <h2>Auction</h2>
+                      <p>Imperial Cream</p>
+                      <p>Bottle: 3</p>
+                      <p>Vintage:</p>
+                      <p>Duty Paid</p>
+                      <p>Current Price: $90</p>
+                     
+                      <!-- <p>
+                        <a class="btn btn-dark" href="/index.html">Bid Now</a>
+                        <a class="btn btn-dark" href="/index.html">View</a>
+                        <a class="btn btn-dark" href="/index.html">Buy</a>
+                        <a class="btn btn-dark" href="/index.html">Add</a>
+                      </p> -->
+                      <a href="/PROFILE/register/">Register to view more</a>
+                    </div>
+    
+                    <div class="col-md-4">
+                      <img
+                        class="img-responsive rounded-3 text-center"
+                        style="width: 350px"
+                        src="/images/Zonnebloem-Cabernet-Sauvignon-2-of-2.jpeg"
+                        alt="wine brand"
+                      />
+                      <h2>Auction</h2>
+                      <p>Zonnebloem-Cabernet-Sauvignon</p>
+                      <p>Bottle: 5</p>
+                      <p>Vintage:</p>
+                      <p>Duty Paid</p>
+                      <p>Current Price: $90</p>
+                      
+                      <!-- <p>
+                        <a class="btn btn-dark" href="/index.html">Bid Now</a>
+                        <a class="btn btn-dark" href="/index.html">View</a>
+                        <a class="btn btn-dark" href="/index.html">Buy</a>
+                        <a class="btn btn-dark" href="/index.html">Add</a>
+                      </p> -->
+                      <a href="/PROFILE/register/">Register to view more</a>
+                    </div>
+                    <div class="col-md-4">
+                      <img
+                        class="img-responsive rounded-3 text-center"
+                        style="width: 350px"
+                        src="/images/Cabernet Sauvignon-1901.jpg"
+                        alt="wine brand"
+                      />
+                      <h2>Auction</h2>
+                  <p>Cabernet Sauvignon -1901</p>
+                  <p>Bottle: 2</p>
+                  <p>Vintage:</p>
+                  <p>Duty Paid</p>
+                  <p>Current Price: $90</p>
+                
+                  <!-- <p>
+                    <a class="btn btn-dark" href="/index.html">Bid Now</a>
+                    <a class="btn btn-dark" href="/index.html">View</a>
+                    <a class="btn btn-dark" href="/index.html">Buy</a>
+                    <a class="btn btn-dark" href="/index.html">Add</a>
+                  </p> -->
+                  <a href="/PROFILE/register/">Register to view more</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr />
+
+      <section>
+            <div class="container-fluid text-center">
+                <div class="row">
+                    <div class="col-md-12">
+                    <img
+                        src="/images/wines (2).jpg"
+                        class="img-fluid img-responsive mx-auto"
+                        alt="collections"
+                    />
+                    </div>
+                </div>
+                </div>
+            </div>
+      </section>
+
+    </main>
+
+    <hr />
+    <!-- =============================== Footer ====================================================== -->
+    <footer class="footer-section mt-auto">
+      <div class="bg-light py-2">
+        <div class="text-center">
+          <p class="mb-0 py-2 primary-text">
+            &copy; 2022 WINER'S AUCTIONS | All rights reserved.
+          </p>
+          <p>Designed by: Nenorvalls</p>
+        </div>
+      </div>
+    </footer>
+    <script src="/src/js/components/timer.js"></script>
+  </body>
 </html>
