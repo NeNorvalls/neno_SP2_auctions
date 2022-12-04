@@ -28,16 +28,41 @@
             id="navbarCollapse"
           >
             <div class="navbar-nav font-weight-semibold">
-              <a href="index.html" class="nav-item nav-link text-white mt-4 mt-lg-0">HOME</a>
-              <a href="./pages/profile.html" class="nav-item nav-link text-white mt-4 mt-lg-0" id="profile-link">PROFILE</a>
-              <a href="/pages/users.html" class="nav-item nav-link text-white mt-4 mt-lg-0" id="users-link">USERS</a>
-              <a href="/login/login.html" class="nav-item nav-link text-white mt-4 mt-lg-0" id="login-link">LOGIN</a>
-              <a href="index.html" class="nav-item nav-link text-white mt-4 mt-lg-0" id="logout-link">LOG OUT</a>
+              <a
+                href="index.html"
+                class="nav-item nav-link text-white mt-4 mt-lg-0"
+                >HOME</a
+              >
+              <a
+                href="./pages/profile.html"
+                class="nav-item nav-link text-white mt-4 mt-lg-0"
+                id="profile-link"
+                >PROFILE</a
+              >
+              <a
+                href="/pages/users.html"
+                class="nav-item nav-link text-white mt-4 mt-lg-0"
+                id="users-link"
+                >USERS</a
+              >
+              <a
+                href="/login/login.html"
+                class="nav-item nav-link text-white mt-4 mt-lg-0"
+                id="login-link"
+                >LOGIN</a
+              >
+              <a
+                href="index.html"
+                class="nav-item nav-link text-white mt-4 mt-lg-0"
+                id="logout-link"
+                >LOG OUT</a
+              >
             </div>
           </div>
         </div>
       </nav>
     </header>
+
     <!-- ================================= Search ================================================== -->
     <div class="container-fluid">
       <form class="form-inline">
@@ -49,139 +74,179 @@
         />
       </form>
     </div>
-
     <!-- ==================================== main ======================================= -->
+
     <main>
-      <div class="container-fluid my-4">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="page-header">
-              <h1 class="primary-text">
-                Welcome to the home of delicious wine
-              </h1>
+      <section>
+        <div class="container-fluid my-4">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="page-header">
+                <h1 class="primary-text">
+                  Welcome to the home of delicious wine
+                </h1>
+              </div>
+              <p>
+                Find your favorite wine collections here. We do auctions, buy
+                and sells different brands of wine that you are aiming to add to
+                your collections. Register and be our member to view all the
+                details.
+              </p>
             </div>
-            <p>
-              Find your favorite wine collections here. We do auctions, buy and
-              sells different brands of wine that you are aiming to add to your
-              collections. Register and be our member to view all the details.
-            </p>
           </div>
         </div>
-        <hr>
-        <section>
-            <div class="container-fluid text-center">
+      </section>
+
+      <hr />
+
+      <section>
+        <div class="container-fluid text-center">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="page-header">
+                <h1>PROFILE</h1>
+              </div>
               <div class="row">
                 <div class="col-md-12">
-                  <div class="page-header">
-                    <h1>PROFILE</h1>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-12">
-                      <img
-                        class="rounded-circle"
-                        style="width: 180px"
-                        src="/images/gallery4.jpg"
-                        alt="profile avatar"
-                      />
-                      <h2>Neno Aksent</h2>
-                      <p>Credit: 1500</p>
-                      <div class="alert alert-warning" role="alert">
-                            Bidding Time closes in <span id="time"></span> minutes!
-                       </div>
-                       
-                  
-                      <p>
-                        You can call me Neno, and I am holding the family legacy of
-                        handling winery business from centuries already. WINER's
-                        Auction house is serving globally for so long with good
-                        quality of service. Join us and be our members. Enjoy!
-                      </p>
-                      <!-- <p>
-                        <a class="btn btn-dark" href="/index.html">Edit</a>
-                        <a class="btn btn-dark" href="/index.html">View</a>
-                        <a class="btn btn-dark" href="/index.html"
-                          >Create</a
-                        >
-                      </p> -->
+                  <img
+                    class="rounded-circle"
+                    style="width: 180px"
+                    src="/images/gallery4.jpg"
+                    alt="profile avatar"
+                  />
+                  <h2>Neno Aksent</h2>
+                  <p>Credit: 1500</p>
+                  <div class="alert alert-warning" role="alert">
+                    <!-- Bidding Time closes in <span id="time"></span> minutes! -->
+                    <p class="title">Current Time</p>
+                    <div class="timer">
+                      <div class="pill">
+                        <div id="year" class="date"></div>
+                        <div class="label">Year</div>
+                      </div>
+                      <div class="pill">
+                        <div id="month" class="date"></div>
+                        <div class="label">Month</div>
+                      </div>
+                      <div class="pill">
+                        <div id="day" class="date"></div>
+                        <div class="label">Day</div>
+                      </div>
+                      <div class="pill">
+                        <div id="hours" class="date"></div>
+                        <div class="label">Hours</div>
+                      </div>
+                      <div class="pill">
+                        <div id="minutes" class="date"></div>
+                        <div class="label">Minutes</div>
+                      </div>
+                      <div class="pill">
+                        <div id="seconds" class="date"></div>
+                        <div class="label">Seconds</div>
+                      </div>
+                      <div class="pill">
+                        <div id="milliseconds" class="date"></div>
+                        <div class="label">Milliseconds</div>
+                      </div>
                     </div>
                   </div>
+
+                  <div class="alert alert-warning" role="alert">
+                    Bidding Time closes in <span id="time"></span> minutes!
+                  </div>
+
+                  <p>
+                    You can call me Neno, and I am holding the family legacy of
+                    handling winery business from centuries already. WINER's
+                    Auction house is serving globally for so long with good
+                    quality of service. Join us and be our members. Enjoy!
+                  </p>
+                  <!-- <p>
+                            <a class="btn btn-dark" href="/index.html">Edit</a>
+                            <a class="btn btn-dark" href="/index.html">View</a>
+                            <a class="btn btn-dark" href="/index.html"
+                              >Create</a
+                            >
+                          </p> -->
                 </div>
               </div>
             </div>
-          </section>
-    
-        <section id="listing">
-            <div class="container-fluid text-center">
+          </div>
+        </div>
+      </section>
+
+      <section id="listing">
+        <div class="container-fluid text-center">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="page-header">
+                <h1>MY LISTING</h1>
+              </div>
+              <hr />
               <div class="row">
-                <div class="col-md-12">
-                  <div class="page-header">
-                    <h1> MY LISTING</h1>
-                  </div>
-                  <hr />
-                  <div class="row">
-                    <div class="col-md-4">
-                      <img
-                        class="img-responsive rounded-3 text-center"
-                        style="width: 350px"
-                        src="/images/Imperial Cream.jpg"
-                        alt="wine brands"
-                      />
-                      <h2>Auction</h2>
-                      <p>Imperial Cream</p>
-                      <p>Bottle: 3</p>
-                      <p>Vintage:</p>
-                      <p>Duty Paid</p>
-                      <p>Current Price: $90</p>
-                     
-                      <!-- <p>
-                        <a class="btn btn-dark" href="/index.html">Bid Now</a>
-                        <a class="btn btn-dark" href="/index.html">View</a>
-                        <a class="btn btn-dark" href="/index.html">Buy</a>
-                        <a class="btn btn-dark" href="/index.html">Add</a>
-                      </p> -->
-                    </div>
-    
-                    <div class="col-md-4">
-                      <img
-                        class="img-responsive rounded-3 text-center"
-                        style="width: 350px"
-                        src="/images/Zonnebloem-Cabernet-Sauvignon-2-of-2.jpeg"
-                        alt="wine brand"
-                      />
-                      <h2>Auction</h2>
-                      <p>Zonnebloem-Cabernet-Sauvignon</p>
-                      <p>Bottle: 5</p>
-                      <p>Vintage:</p>
-                      <p>Duty Paid</p>
-                      <p>Current Price: $90</p>
-                      
-                      <!-- <p>
-                        <a class="btn btn-dark" href="/index.html">Bid Now</a>
-                        <a class="btn btn-dark" href="/index.html">View</a>
-                        <a class="btn btn-dark" href="/index.html">Buy</a>
-                        <a class="btn btn-dark" href="/index.html">Add</a>
-                      </p> -->
-                    </div>
-                    <div class="col-md-4">
-                      <img
-                        class="img-responsive rounded-3 text-center"
-                        style="width: 350px"
-                        src="/images/Cabernet Sauvignon-1901.jpg"
-                        alt="wine brand"
-                      />
-                      <h2>Auction</h2>
+                <div class="col-md-4">
+                  <img
+                    class="img-responsive rounded-3 text-center"
+                    style="width: 350px"
+                    src="/images/Imperial Cream.jpg"
+                    alt="wine brands"
+                  />
+                  <h2>Auction</h2>
+                  <p>Imperial Cream</p>
+                  <p>Bottle: 3</p>
+                  <p>Vintage:</p>
+                  <p>Duty Paid</p>
+                  <p>Current Price: $90</p>
+
+                  <!-- <p>
+                            <a class="btn btn-dark" href="/index.html">Bid Now</a>
+                            <a class="btn btn-dark" href="/index.html">View</a>
+                            <a class="btn btn-dark" href="/index.html">Buy</a>
+                            <a class="btn btn-dark" href="/index.html">Add</a>
+                          </p> -->
+                </div>
+
+                <div class="col-md-4">
+                  <img
+                    class="img-responsive rounded-3 text-center"
+                    style="width: 350px"
+                    src="/images/Zonnebloem-Cabernet-Sauvignon-2-of-2.jpeg"
+                    alt="wine brand"
+                  />
+                  <h2>Auction</h2>
+                  <p>Zonnebloem-Cabernet-Sauvignon</p>
+                  <p>Bottle: 5</p>
+                  <p>Vintage:</p>
+                  <p>Duty Paid</p>
+                  <p>Current Price: $90</p>
+
+                  <!-- <p>
+                            <a class="btn btn-dark" href="/index.html">Bid Now</a>
+                            <a class="btn btn-dark" href="/index.html">View</a>
+                            <a class="btn btn-dark" href="/index.html">Buy</a>
+                            <a class="btn btn-dark" href="/index.html">Add</a>
+                          </p> -->
+                </div>
+                <div class="col-md-4">
+                  <img
+                    class="img-responsive rounded-3 text-center"
+                    style="width: 350px"
+                    src="/images/Cabernet Sauvignon-1901.jpg"
+                    alt="wine brand"
+                  />
+                  <h2>Auction</h2>
                   <p>Cabernet Sauvignon -1901</p>
                   <p>Bottle: 2</p>
                   <p>Vintage:</p>
                   <p>Duty Paid</p>
                   <p>Current Price: $90</p>
-                
+
                   <!-- <p>
-                    <a class="btn btn-dark" href="/index.html">Bid Now</a>
-                    <a class="btn btn-dark" href="/index.html">View</a>
-                    <a class="btn btn-dark" href="/index.html">Buy</a>
-                    <a class="btn btn-dark" href="/index.html">Add</a>
-                  </p> -->
+                        <a class="btn btn-dark" href="/index.html">Bid Now</a>
+                        <a class="btn btn-dark" href="/index.html">View</a>
+                        <a class="btn btn-dark" href="/index.html">Buy</a>
+                        <a class="btn btn-dark" href="/index.html">Add</a>
+                      </p> -->
                 </div>
               </div>
             </div>
@@ -192,122 +257,168 @@
       <hr />
 
       <section>
-            <div class="container-fluid text-center">
-                <div class="row">
-                    <div class="col-md-12">
-                    <img
-                        src="/images/wines (2).jpg"
-                        class="img-fluid img-responsive mx-auto"
-                        alt="collections"
-                    />
-                    </div>
-                </div>
-                </div>
+        <div class="container-fluid text-center">
+          <div class="row">
+            <h2>Our Collections</h2>
+            <hr />
+            <div class="col-md-12">
+              <img
+                src="/images/wines (2).jpg"
+                class="img-fluid img-responsive mx-auto"
+                alt="collections"
+              />
             </div>
+          </div>
+        </div>
       </section>
 
-    </main>
-    <section>
-       <!-- ==================================== CREATE LISTING ======================================= -->
-       <div class="container-fluid bg-dark" id="createListing">
-        <div class="row">
-            <div class="col-lg-6">
-                    <h2 class="text-center mt-5  text-white">CREATE A BID</h2>
-                    <div class="site-section">
-                        <div class="container w-75">
-                          <div class="row justify-content-center">
-                              <div class="col-lg-10">
-                                  <div class="row">
-                                      <div class="col-md-12">
-                                          <p id="titleMsg" class="msg-element"></p>
-                                          <label class="text-white" for="title">Title</label>
-                                          <input type="text" id="postTitle" placeholder="What are you selling?" class="form-control">
-                                      </div>
-                                  </div>
-                                  <div class="row">
-                                      <div class="col-md-12">
-                                          <p id="bodyMsg" class="msg-element"></p>
-                                          <label class="text-white" for="description">Description</label>
-                                          <textarea class="form-control" id="postContent" placeholder="Describe your product"></textarea>
-                                        </div>
-                                  </div>
-                                  <div class="row">
-                                      <div class="col-md-12">
-                                          <p id="mediaMsg" class="msg-element"></p>
-                                          <label class="text-white" for="media">Media URL</label>
-                                          <textarea class="form-control" id="postMedia" placeholder="Place a image URL"></textarea>
-                                      </div>
-                                  </div>
-                                  <div class="row">
-                                    <div class="col-md-12">
-                                        <p id="endbidMsg" class="msg-element"></p>
-                                        <label class="text-white" for="auction">Select time and date:</label>
-                                        <form action="/action_page.php">
-                                            <input type="datetime-local" class="form-control" id="endBid" name="time">
-                                          </form>
-                                    </div>
-                                </div>
-                                  <div class="row">
-                                      <div class="col-12 text-center mb-5">
-                                        <button class="btn btn-secondary px-5 mt-5" id="submitPost">POST</button>
-                                    </div>
-                                  </div>
-                              </div>
-                          </div>
-                        </div>
-                     </div>
-            </div>
-            <div class="col-lg-6">
-                <section class="logged-in">
-                    <h2 class="text-center mt-5 text-white">NEW LISTING</h2>
-                    <div class="container w-75">
-                        <div class="row justify-content-center">
-                            <div id="preview-container" class=""></div>       
-                        </div>
-                    </div>
-                 </section>
-            </div>
-        </div>
-    </div>
-    
-
-        <!--Search for user, product etc-->
-        <div class="col-4 mb-5 mt-5 m-auto">
-           <input type="search" id="filter-auction" class="form-control bg-white border-1" placeholder="Search for user, products and so!"/>
-       </div> 
-
-
-
-         <!--MAKING A EXAMPLE CONTAINER FOR THE LISTING-->
-         <h2 class="text-center mt-5">AUCTIONS TIME</h2>
-         <hr>
-
-    <div class="container-fluid">
-      <div id="post-container" class="row">
-        <div class="col-md-12">
+      <!-- ==================================== CREATE LISTING ======================================= -->
+      <section>
+        <div class="container-fluid bg-dark" id="createListing">
           <div class="row">
-            <div class="col-md-4">
-              <div class="card">
-                <img class="card-img-top" src="./Img/loader.gif"  alt="Loading Content" style="width:100px;" />
+            <div class="col-lg-6">
+              <h2 class="text-center mt-5 text-white">CREATE A BID</h2>
+              <div class="site-section">
+                <div class="container-fluid w-75">
+                  <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <p id="titleMsg" class="msg-element"></p>
+                          <label class="text-white" for="title">Title</label>
+                          <input
+                            type="text"
+                            id="postTitle"
+                            placeholder="What are you selling?"
+                            class="form-control"
+                          />
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12">
+                          <p id="bodyMsg" class="msg-element"></p>
+                          <label class="text-white" for="description"
+                            >Description</label
+                          >
+                          <textarea
+                            class="form-control"
+                            id="postContent"
+                            placeholder="Describe your product"
+                          ></textarea>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12">
+                          <p id="mediaMsg" class="msg-element"></p>
+                          <label class="text-white" for="media"
+                            >Media URL</label
+                          >
+                          <textarea
+                            class="form-control"
+                            id="postMedia"
+                            placeholder="Place a image URL"
+                          ></textarea>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12">
+                          <p id="endbidMsg" class="msg-element"></p>
+                          <label class="text-white" for="auction"
+                            >Select time and date:</label
+                          >
+                          <input
+                            id="datetime"
+                            type="datetime-local"
+                            value="2014-08-19T20:00"
+                          />
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-12 text-center mb-5">
+                          <button
+                            class="btn btn-secondary px-5 mt-5"
+                            id="submitPost"
+                          >
+                            POST
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="col-md-4">
-              <div class="card">
-                <img class="card-img-top" src="./Img/loader.gif"  alt="Loading Content" style="width:100px;" />
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card">
-                <img class="card-img-top" src="./Img/loader.gif"  alt="Loading Content" style="width:100px;" />
+            <div class="col-lg-6">
+              <div class="logged-in">
+                <h2 class="text-center mt-5 text-white">NEW LISTING</h2>
+                <div class="container w-75">
+                  <div class="row justify-content-center">
+                    <div id="preview-container" class=""></div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
+      </section>
+
+      <!----------------------------Search for user, product etc-------------->
+      <div class="col-4 mb-5 mt-5 m-auto">
+        <input
+          type="search"
+          id="filterAuction"
+          class="form-control bg-white border-1"
+          placeholder="Search for user, products and so!"
+        />
       </div>
-    </div>
-  </section>
+
+      <!---------------------------LISTING CONTAINER------------------------------------>
+      <section>
+        <h2 class="text-center mt-5">AUCTIONS TIME</h2>
+        <hr />
+
+        <div class="container-fluid">
+          <div id="post-container" class="row">
+            <div class="col-md-12">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="card">
+                    <img
+                      class="card-img-top"
+                      src="./Img/loader.gif"
+                      alt="Loading Content"
+                      style="width: 100px"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card">
+                    <img
+                      class="card-img-top"
+                      src="./Img/loader.gif"
+                      alt="Loading Content"
+                      style="width: 100px"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card">
+                    <img
+                      class="card-img-top"
+                      src="./Img/loader.gif"
+                      alt="Loading Content"
+                      style="width: 100px"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
     <hr />
-    <!-- =============================== Footer ====================================================== -->
+    <!---------------------------------------------- FOOTER ------------------------------------------------------------------>
     <footer class="footer-section mt-auto">
       <div class="bg-light py-2">
         <div class="text-center">
@@ -319,8 +430,8 @@
       </div>
     </footer>
     <script src="/src/js/logout.js"></script>
-    <script src="/src/js/components/timer.js"></script>
-    <script src="/src/js/scripts.js"></script>
-
+    <script src="src/js/components/myTimer.js"></script>
+    <script src="src/js/components/bidTimer.js"></script>
+    <script src="/src/js/vanilla/specific-auction.js"></script>
   </body>
 </html>
