@@ -7,9 +7,8 @@
     <link rel="stylesheet" href="/dist/css/index.css" type="text/css" />
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="/src/js/script.js" defer></script>
-    <title>AUCTIONS | Home</title>
+    <title>AUCTIONS | myProfile</title>
   </head>
-
   <body>
     <!-- ========================== Header =================================== -->
     <header>
@@ -96,31 +95,8 @@
         </div>
       </nav>
     </header>
-    <!-- ==================================== main ======================================= -->
 <hr>
     <main>
-      <section>
-        <div class="container-fluid my-4">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="page-header">
-                <h1 class="primary-text">
-                  Welcome to the home of delicious wine
-                </h1>
-              </div>
-              <p>
-                Find your favorite wine collections here. We do auctions, buy
-                and sells different brands of wine that you are aiming to add to
-                your collections. Register and be our member to view all the
-                details.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <hr />
-
       <section>
         <div class="container-fluid text-center">
           <div class="row">
@@ -138,137 +114,21 @@
                   />
                   <h2>Neno Aksent</h2>
                   <p>Credit: 1500</p>
-                  <a href="pages/myProfile.html">View Details</a>
-
-                  <div class="container-fluid col-md-12">
-                    <p class="title">Current Time</p>
-                    <div class="timer">
-                      <!-- <div class="pill">
-                        <div id="year" class="date"></div>
-                        <div class="label">yr.</div>
-                      </div> 
-                      <div class="pill"> 
-                        <div id="month" class="date"></div>
-                        <div class="label">mos</div>
-                       </div>  -->
-                       <div class="pill"> 
-                        <div id="day" class="date"></div>
-                        <div class="label">day</div>
-                       </div> 
-                      <div class="pill"> 
-                        <div id="hours" class="date"></div>
-                        <div class="label">hrs.</div>
-                     </div> 
-                       <div class="pill"> 
-                        <div id="minutes" class="date"></div>
-                        <div class="label">min.</div>
-                      </div>
-                       <div class="pill">
-                        <div id="seconds" class="date"></div>
-                        <div class="label">sec</div>
-                      </div> 
-                       <div class="pill">
-                        <div id="milliseconds" class="date"></div>
-                        <div class="label">msec.</div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="alert alert-warning" role="alert">
-                    Bidding Time closes in <span id="time"></span> minutes!
-                  </div>
-
                   <p>
                     You can call me Neno, and I am holding the family legacy of
                     handling winery business from centuries already. WINER's
                     Auction house is serving globally for so long with good
                     quality of service. Join us and be our members. Enjoy!
                   </p>
-  
+                    <a class="btn btn-dark" href="/updateAvatar.html">Edit</a>
+                    <a class="btn btn-dark" href="/index.html">View</a>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-
-      <section id="listing">
-        <div class="container-fluid text-center">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="page-header">
-                <h1>MY LISTING</h1>
-              </div>
-              <hr />
-              <div class="row">
-                <div class="col-md-4">
-                  <img
-                    class="img-responsive img-fluid rounded-3 text-center"
-                    style="width: 350px"
-                    src="/images/Imperial Cream.jpg"
-                    alt="wine brands"
-                  />
-                  <h2>Auction</h2>
-                  <p>Imperial Cream</p>
-                  <p>Bottle: 3</p>
-                  <p>Vintage:</p>
-                  <p>Duty Paid</p>
-                  <p>Current Price: $90</p>
-                </div>
-
-                <div class="col-md-4">
-                  <img
-                    class="img-responsive img-fluid rounded-3 text-center"
-                    style="width: 350px"
-                    src="/images/Zonnebloem-Cabernet-Sauvignon-2-of-2.jpeg"
-                    alt="wine brand"
-                  />
-                  <h2>Auction</h2>
-                  <p>Zonnebloem-Cabernet-Sauvignon</p>
-                  <p>Bottle: 5</p>
-                  <p>Vintage:</p>
-                  <p>Duty Paid</p>
-                  <p>Current Price: $90</p>
-
-                </div>
-                <div class="col-md-4">
-                  <img
-                    class="img-responsive img-fluid rounded-3 text-center"
-                    style="width: 350px"
-                    src="/images/Cabernet Sauvignon-1901.jpg"
-                    alt="wine brand"
-                  />
-                  <h2>Auction</h2>
-                  <p>Cabernet Sauvignon -1901</p>
-                  <p>Bottle: 2</p>
-                  <p>Vintage:</p>
-                  <p>Duty Paid</p>
-                  <p>Current Price: $90</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <hr />
-
-      <section>
-        <div class="container-fluid text-center">
-          <div class="row">
-            <h2>Our Collections</h2>
-            <hr />
-            <div class="col-md-12">
-              <img
-                src="/images/wines (2).jpg"
-                class="img-fluid img-responsive mx-auto"
-                alt="collections"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
+      <hr>
       <!-- ==================================== CREATE LISTING ======================================= -->
       <section>
         <div class="container-fluid bg-dark" id="createListing">
@@ -369,7 +229,7 @@
               </div>
       
           <!-- listing container -->
-          <h2 class="text-center">Auction</h2>
+          <h2 class="text-center">MY LISTING</h2>
       
           <div class="container">
             <div id="post-container" class="row"></div>
