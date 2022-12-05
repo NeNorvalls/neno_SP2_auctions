@@ -6,90 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/dist/css/index.css" type="text/css" />
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    
     <title>AUCTIONS | Contact</title>
   </head>
   <body class="container-fluid d-flex flex-column min-vh-100">
     <!-- ========================== Header =================================== -->
     <header>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3 px-4">
-        <a href="/index.html" class="navbar-brand">
-            AUCTIONS
-            </a>
-            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span> </span>
-                <span> </span>
-                <span> </span>
-              </button>
-          <div
-            class="collapse navbar-collapse justify-content-end navbar-nav font-weight-semibold"
-            id="navbarCollapse"
+      <nav class="navbar navbar-expand-lg bg-dark py-3 px-4">
+        <div class="container-fluid">
+          <a class="navbar-brand text-white" href="#">AUCTIONS</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
           >
-            <ul class="navbar-nav ml-auto text-right">
-              <li
-                class="nav-item"
-                data-toggle="collapse"
-                data-target=".navbar-collapse.show"
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a
+                class="nav-link active text-white"
+                aria-current="page"
+                href="/index.html"
+                >HOME</a
               >
-                <a
-                  href="index.html"
-                  class="nav-item nav-link text-white mt-4 mt-lg-0"
-                >
-                  HOME
-                </a>
-              </li>
-              <li
-                class="nav-item"
-                data-toggle="collapse"
-                data-target=".navbar-collapse.show"
+              <a
+                class="nav-link text-white"
+                id="profile-link"
+                href="/pages/profile.html"
+                >PROFILE</a
               >
-                <a
-                  href="/pages/profile.html"
-                  class="nav-item nav-link text-white mt-4 mt-lg-0"
-                  id="profile-link"
-                >
-                  PROFILE
-                </a>
-              </li>
-              <li
-                class="nav-item"
-                data-toggle="collapse"
-                data-target=".navbar-collapse.show"
+              <a
+                class="nav-link text-white"
+                id="users-link"
+                href="/pages/users.html"
+                >USERS</a
               >
-                <a
-                  href="/pages/users.html"
-                  class="nav-item nav-link text-white mt-4 mt-lg-0"
-                  id="users-link"
-                >
-                  USERS
-                </a>
-              </li>
-              <li
-                class="nav-item"
-                data-toggle="collapse"
-                data-target=".navbar-collapse.show"
+              <a
+                class="nav-link text-white"
+                id="login-link"
+                href="/login/login.html"
+                >LOGIN</a
               >
-                <a
-                  href="/login/login.html"
-                  class="nav-item nav-link text-white mt-4 mt-lg-0"
-                  id="login-link"
-                >
-                  LOGIN
-                </a>
-              </li>
-              <li
-                class="nav-item"
-                data-toggle="collapse"
-                data-target=".navbar-collapse.show"
+              <a class="nav-link text-white" id="logout-link" href="/index.html"
+                >LOGOUT</a
               >
-                <a
-                  href="index.html"
-                  class="nav-item nav-link text-white mt-4 mt-lg-0"
-                  id="logout-link"
-                >
-                  LOGOUT
-                </a>
-              </li>
-            </ul>
+            </div>
           </div>
         </div>
       </nav>
