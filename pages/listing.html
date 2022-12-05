@@ -6,33 +6,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/dist/css/index.css" type="text/css" />
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <title>WINER'S AUCTIONS | Profile</title>
+    <title>AUCTIONS | Profile</title>
   </head>
   <body class="container-fluid d-flex flex-column min-vh-100">
     <!-- ========================== Header =================================== -->
-    <header class="sticky-top">
-      <a class="navbar-brand responsive" href="/index.html">WINER'S AUCTIONS</a>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid text-center">
-          <button
-            type="button"
-            class="navbar-toggler border-0 p-0"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbar-Collapse"
-          >
-            <i class="fas fa-bars" style="color: #fff; font-size: 2rem"></i>
-          </button>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3 px-4">
+        <a href="/index.html" class="navbar-brand">
+            AUCTIONS
+            </a>
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span> </span>
+                <span> </span>
+                <span> </span>
+              </button>
           <div
-            class="collapse navbar-collapse justify-content-end"
+            class="collapse navbar-collapse justify-content-end navbar-nav font-weight-semibold"
             id="navbarCollapse"
           >
-            <div class="navbar-nav font-weight-semibold">
-              <a href="/index.html" class="nav-item nav-link text-white mt-4 mt-lg-0">HOME</a>
-              <a href="profile.html" class="nav-item nav-link text-white mt-4 mt-lg-0" id="profile-link">PROFILE</a>
-              <a href="users.html" class="nav-item nav-link text-white mt-4 mt-lg-0" id="users-link">USERS</a>
-              <a href="/login/login.html" class="nav-item nav-link text-white mt-4 mt-lg-0" id="login-link">LOGIN</a>
-              <a href="/index.html" class="nav-item nav-link text-white mt-4 mt-lg-0" id="logout-link">LOG OUT</a>
-            </div>
+            <ul class="navbar-nav ml-auto text-right">
+              <li
+                class="nav-item"
+                data-toggle="collapse"
+                data-target=".navbar-collapse.show"
+              >
+                <a
+                  href="index.html"
+                  class="nav-item nav-link text-white mt-4 mt-lg-0"
+                >
+                  HOME
+                </a>
+              </li>
+              <li
+                class="nav-item"
+                data-toggle="collapse"
+                data-target=".navbar-collapse.show"
+              >
+                <a
+                  href="/pages/profile.html"
+                  class="nav-item nav-link text-white mt-4 mt-lg-0"
+                  id="profile-link"
+                >
+                  PROFILE
+                </a>
+              </li>
+              <li
+                class="nav-item"
+                data-toggle="collapse"
+                data-target=".navbar-collapse.show"
+              >
+                <a
+                  href="/pages/users.html"
+                  class="nav-item nav-link text-white mt-4 mt-lg-0"
+                  id="users-link"
+                >
+                  USERS
+                </a>
+              </li>
+              <li
+                class="nav-item"
+                data-toggle="collapse"
+                data-target=".navbar-collapse.show"
+              >
+                <a
+                  href="/login/login.html"
+                  class="nav-item nav-link text-white mt-4 mt-lg-0"
+                  id="login-link"
+                >
+                  LOGIN
+                </a>
+              </li>
+              <li
+                class="nav-item"
+                data-toggle="collapse"
+                data-target=".navbar-collapse.show"
+              >
+                <a
+                  href="index.html"
+                  class="nav-item nav-link text-white mt-4 mt-lg-0"
+                  id="logout-link"
+                >
+                  LOGOUT
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </nav>
@@ -129,67 +186,6 @@
             </div>
           </div>
       </div>
-      <div>
-        <div class="row">
-          <div class="col-lg-6">
-            <h2 class="text-center mt-5">EDIT LISTING</h2>
-            <div class="site-section">
-              <div>
-                <div class="row justify-content-center" id="container">
-                  <div class="col-lg-10">
-                    <div class="row">
-                      <div class="col-md-12 form-group">
-                        <p id="titleMsg" class="msg-element"></p>
-                        <label for="title">Title</label>
-                        <textarea
-                          class="form-control text-info"
-                          id="editTitle"
-                        ></textarea>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-12 form-group">
-                        <p id="bodyMsg" class="msg-element"></p>
-                        <label for="description">Description</label>
-                        <textarea
-                          class="form-control text-info"
-                          id="editContent"
-                        ></textarea>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-12 form-group">
-                        <p id="mediaMsg" class="msg-element"></p>
-                        <label for="media">Media URL</label>
-                        <textarea
-                          class="form-control text-info"
-                          id="editMedia"
-                        ></textarea>
-                      </div>
-                    </div>
-                    <div class="row mt-3">
-                      <div class="col-md-12 form-group">
-                        <p id="endBidTime" class="msg-element text-success"></p>
-                        <p>You cannot change/update the ending bid time.</p>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-12 text-center">
-                        <button
-                          class="btn btn-secondary px-5 mt-3"
-                          id="submitEdit"
-                        >
-                          EDIT
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
 <hr>
 <!-- ================================= AUCTION AREA =============================================== -->
       <h2 class="text-center mt-5">AUCTION</h2>
@@ -210,12 +206,13 @@
       <div class="bg-light py-2">
         <div class="text-center">
           <p class="mb-0 py-2 primary-text">
-            &copy; 2022 WINER'S AUCTIONS | All rights reserved.
+            &copy; 2022 AUCTIONS | All rights reserved.
           </p>
           <p>Designed by: Nenorvalls</p>
         </div>
       </div>
     </footer>
     <script src="/src/js/logout.js"></script>
+    <script src="/src/js/vanilla/specific-auction.js"></script>
   </body>
 </html>

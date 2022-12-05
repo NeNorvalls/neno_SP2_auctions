@@ -6,76 +6,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/dist/css/index.css" type="text/css" />
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <title>WINER'S AUCTIONS | Home</title>
+    <script src="/src/js/script.js" defer></script>
+    <title>AUCTIONS | Home</title>
   </head>
 
   <body>
     <!-- ========================== Header =================================== -->
     <header>
-      <a class="navbar-brand responsive" href="/index.html">WINER'S AUCTIONS</a>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid text-center">
-          <button
-            type="button"
-            class="navbar-toggler border-0 p-0"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbar-Collapse"
-          >
-            <i class="fas fa-bars" style="color: #fff; font-size: 2rem"></i>
-          </button>
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark py-3 px-4">
+          <a href="/index.html" class="navbar-brand">
+            AUCTIONS
+            </a>
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span> </span>
+                <span> </span>
+                <span> </span>
+              </button>
           <div
-            class="collapse navbar-collapse justify-content-end"
+            class="collapse navbar-collapse justify-content-end navbar-nav font-weight-semibold"
             id="navbarCollapse"
           >
-            <div class="navbar-nav font-weight-semibold">
-              <a
-                href="index.html"
-                class="nav-item nav-link text-white mt-4 mt-lg-0"
-                >HOME</a
+            <ul class="navbar-nav ml-auto text-right">
+              <li
+                class="nav-item"
+                data-toggle="collapse"
+                data-target=".navbar-collapse.show"
               >
-              <a
-                href="./pages/profile.html"
-                class="nav-item nav-link text-white mt-4 mt-lg-0"
-                id="profile-link"
-                >PROFILE</a
+                <a
+                  href="index.html"
+                  class="nav-item nav-link text-white mt-4 mt-lg-0"
+                >
+                  HOME
+                </a>
+              </li>
+              <li
+                class="nav-item"
+                data-toggle="collapse"
+                data-target=".navbar-collapse.show"
               >
-              <a
-                href="/pages/users.html"
-                class="nav-item nav-link text-white mt-4 mt-lg-0"
-                id="users-link"
-                >USERS</a
+                <a
+                  href="/pages/profile.html"
+                  class="nav-item nav-link text-white mt-4 mt-lg-0"
+                  id="profile-link"
+                >
+                  PROFILE
+                </a>
+              </li>
+              <li
+                class="nav-item"
+                data-toggle="collapse"
+                data-target=".navbar-collapse.show"
               >
-              <a
-                href="/login/login.html"
-                class="nav-item nav-link text-white mt-4 mt-lg-0"
-                id="login-link"
-                >LOGIN</a
+                <a
+                  href="/pages/users.html"
+                  class="nav-item nav-link text-white mt-4 mt-lg-0"
+                  id="users-link"
+                >
+                  USERS
+                </a>
+              </li>
+              <li
+                class="nav-item"
+                data-toggle="collapse"
+                data-target=".navbar-collapse.show"
               >
-              <a
-                href="index.html"
-                class="nav-item nav-link text-white mt-4 mt-lg-0"
-                id="logout-link"
-                >LOG OUT</a
+                <a
+                  href="/login/login.html"
+                  class="nav-item nav-link text-white mt-4 mt-lg-0"
+                  id="login-link"
+                >
+                  LOGIN
+                </a>
+              </li>
+              <li
+                class="nav-item"
+                data-toggle="collapse"
+                data-target=".navbar-collapse.show"
               >
-            </div>
+                <a
+                  href="index.html"
+                  class="nav-item nav-link text-white mt-4 mt-lg-0"
+                  id="logout-link"
+                >
+                  LOGOUT
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </nav>
     </header>
-
-    <!-- ================================= Search ================================================== -->
-    <div class="container-fluid">
-      <form class="form-inline">
-        <input
-          class="form-control mr-sm-2"
-          id="filter-auction"
-          type="search"
-          placeholder="SEARCH for Wine Brand, users, bidders, member list here, etc."
-        />
-      </form>
-    </div>
     <!-- ==================================== main ======================================= -->
-
+<hr>
     <main>
       <section>
         <div class="container-fluid my-4">
@@ -116,37 +138,37 @@
                   />
                   <h2>Neno Aksent</h2>
                   <p>Credit: 1500</p>
-                  <div class="alert alert-warning" role="alert">
-                    <!-- Bidding Time closes in <span id="time"></span> minutes! -->
+
+                  <div class="container-fluid col-md-12">
                     <p class="title">Current Time</p>
                     <div class="timer">
-                      <div class="pill">
+                      <!-- <div class="pill">
                         <div id="year" class="date"></div>
-                        <div class="label">Year</div>
-                      </div>
-                      <div class="pill">
+                        <div class="label">yr.</div>
+                      </div> 
+                      <div class="pill"> 
                         <div id="month" class="date"></div>
-                        <div class="label">Month</div>
-                      </div>
-                      <div class="pill">
+                        <div class="label">mos</div>
+                       </div>  -->
+                       <div class="pill"> 
                         <div id="day" class="date"></div>
-                        <div class="label">Day</div>
-                      </div>
-                      <div class="pill">
+                        <div class="label">day</div>
+                       </div> 
+                      <div class="pill"> 
                         <div id="hours" class="date"></div>
-                        <div class="label">Hours</div>
-                      </div>
-                      <div class="pill">
+                        <div class="label">hrs.</div>
+                     </div> 
+                       <div class="pill"> 
                         <div id="minutes" class="date"></div>
-                        <div class="label">Minutes</div>
+                        <div class="label">min.</div>
                       </div>
-                      <div class="pill">
+                       <div class="pill">
                         <div id="seconds" class="date"></div>
-                        <div class="label">Seconds</div>
-                      </div>
-                      <div class="pill">
+                        <div class="label">sec</div>
+                      </div> 
+                       <div class="pill">
                         <div id="milliseconds" class="date"></div>
-                        <div class="label">Milliseconds</div>
+                        <div class="label">msec.</div>
                       </div>
                     </div>
                   </div>
@@ -186,7 +208,7 @@
               <div class="row">
                 <div class="col-md-4">
                   <img
-                    class="img-responsive rounded-3 text-center"
+                    class="img-responsive img-fluid rounded-3 text-center"
                     style="width: 350px"
                     src="/images/Imperial Cream.jpg"
                     alt="wine brands"
@@ -208,7 +230,7 @@
 
                 <div class="col-md-4">
                   <img
-                    class="img-responsive rounded-3 text-center"
+                    class="img-responsive img-fluid rounded-3 text-center"
                     style="width: 350px"
                     src="/images/Zonnebloem-Cabernet-Sauvignon-2-of-2.jpeg"
                     alt="wine brand"
@@ -229,7 +251,7 @@
                 </div>
                 <div class="col-md-4">
                   <img
-                    class="img-responsive rounded-3 text-center"
+                    class="img-responsive img-fluid rounded-3 text-center"
                     style="width: 350px"
                     src="/images/Cabernet Sauvignon-1901.jpg"
                     alt="wine brand"
@@ -310,24 +332,26 @@
                       <div class="row">
                         <div class="col-md-12">
                           <p id="mediaMsg" class="msg-element"></p>
-                          <label class="text-white" for="media"
-                            >Media URL</label
-                          >
-                          <textarea
-                            class="form-control"
-                            id="postMedia"
-                            placeholder="Place a image URL"
-                          ></textarea>
-                        </div>
+                            <label class="text-white" 
+                            for="media">Media URL</label>
+                            <input type="url"  
+                             class="form-control" 
+                             id="registerAvatar" 
+                             placeholder="Place a image URL" />
+                            <p id="avatarError" 
+                            class="error-message"></p>
+                        </div> 
                       </div>
                       <div class="row">
                         <div class="col-md-12">
-                          <p id="endbidMsg" class="msg-element"></p>
-                          <label class="text-white" for="auction"
+                          <p id="endbidMsg" 
+                          class="msg-element"></p>
+                          <label class="text-white" 
+                          for="auction"
                             >Select time and date:</label
                           >
                           <input
-                            id="datetime"
+                            id="dateTime"
                             type="datetime-local"
                             value="2014-08-19T20:00"
                           />
@@ -368,7 +392,7 @@
           type="search"
           id="filterAuction"
           class="form-control bg-white border-1"
-          placeholder="Search for user, products and so!"
+          placeholder="SEARCH for Wine Brand, users, bidders, member list here, etc."
         />
       </div>
 
@@ -377,44 +401,25 @@
         <h2 class="text-center mt-5">AUCTIONS TIME</h2>
         <hr />
 
-        <div class="container-fluid">
-          <div id="post-container" class="row">
-            <div class="col-md-12">
-              <div class="row">
-                <div class="col-md-4">
-                  <div class="card">
-                    <img
-                      class="card-img-top"
-                      src="./Img/loader.gif"
-                      alt="Loading Content"
-                      style="width: 100px"
-                    />
+          <div class="container-fluid bg-dark">
+            <div id="post-container" class="row">
+              <div class="col-md-12">
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="card">
+                      <img
+                        class="card-img-top"
+                        src="./Img/loader.gif"
+                        alt="Loading Content"
+                        style="width: 100px"
+                      />
+                    </div>
                   </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="card">
-                    <img
-                      class="card-img-top"
-                      src="./Img/loader.gif"
-                      alt="Loading Content"
-                      style="width: 100px"
-                    />
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="card">
-                    <img
-                      class="card-img-top"
-                      src="./Img/loader.gif"
-                      alt="Loading Content"
-                      style="width: 100px"
-                    />
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
       </section>
     </main>
     <hr />
@@ -423,15 +428,14 @@
       <div class="bg-light py-2">
         <div class="text-center">
           <p class="mb-0 py-2 primary-text">
-            &copy; 2022 WINER'S AUCTIONS | All rights reserved.
+            &copy; 2022 AUCTIONS | All rights reserved.
           </p>
           <p>Designed by: Nenorvalls</p>
         </div>
       </div>
     </footer>
     <script src="/src/js/logout.js"></script>
-    <script src="src/js/components/myTimer.js"></script>
+    <script src="src/js/components/CurrentTimer.js"></script>
     <script src="src/js/components/bidTimer.js"></script>
-    <script src="/src/js/vanilla/specific-auction.js"></script>
   </body>
 </html>

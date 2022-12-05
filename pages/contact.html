@@ -6,33 +6,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/dist/css/index.css" type="text/css" />
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <title>WINER'S AUCTIONS | Contact</title>
+    <title>AUCTIONS | Contact</title>
   </head>
   <body class="container-fluid d-flex flex-column min-vh-100">
     <!-- ========================== Header =================================== -->
-    <header class="sticky-top">
-      <a class="navbar-brand responsive" href="/index.html">NeNo_AUCTIONS</a>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid text-center">
-          <button
-            type="button"
-            class="navbar-toggler border-0 p-0"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbar-Collapse"
-          >
-            <i class="fas fa-bars" style="color: #fff; font-size: 2rem"></i>
-          </button>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3 px-4">
+        <a href="/index.html" class="navbar-brand">
+            AUCTIONS
+            </a>
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span> </span>
+                <span> </span>
+                <span> </span>
+              </button>
           <div
-            class="collapse navbar-collapse justify-content-end"
+            class="collapse navbar-collapse justify-content-end navbar-nav font-weight-semibold"
             id="navbarCollapse"
           >
-            <div class="navbar-nav font-weight-semibold">
-              <a href="/index.html" class="nav-item nav-link text-white mt-4 mt-lg-0">HOME</a>
-              <a href="profile.html" class="nav-item nav-link text-white mt-4 mt-lg-0" id="profile-link">PROFILE</a>
-              <a href="users.html" class="nav-item nav-link text-white mt-4 mt-lg-0" id="users-link">USERS</a>
-              <a href="/login/login.html" class="nav-item nav-link text-white mt-4 mt-lg-0" id="login-link">LOGIN</a>
-              <a href="/index.html" class="nav-item nav-link text-white mt-4 mt-lg-0" id="logout-link">LOG OUT</a>
-            </div>
+            <ul class="navbar-nav ml-auto text-right">
+              <li
+                class="nav-item"
+                data-toggle="collapse"
+                data-target=".navbar-collapse.show"
+              >
+                <a
+                  href="index.html"
+                  class="nav-item nav-link text-white mt-4 mt-lg-0"
+                >
+                  HOME
+                </a>
+              </li>
+              <li
+                class="nav-item"
+                data-toggle="collapse"
+                data-target=".navbar-collapse.show"
+              >
+                <a
+                  href="/pages/profile.html"
+                  class="nav-item nav-link text-white mt-4 mt-lg-0"
+                  id="profile-link"
+                >
+                  PROFILE
+                </a>
+              </li>
+              <li
+                class="nav-item"
+                data-toggle="collapse"
+                data-target=".navbar-collapse.show"
+              >
+                <a
+                  href="/pages/users.html"
+                  class="nav-item nav-link text-white mt-4 mt-lg-0"
+                  id="users-link"
+                >
+                  USERS
+                </a>
+              </li>
+              <li
+                class="nav-item"
+                data-toggle="collapse"
+                data-target=".navbar-collapse.show"
+              >
+                <a
+                  href="/login/login.html"
+                  class="nav-item nav-link text-white mt-4 mt-lg-0"
+                  id="login-link"
+                >
+                  LOGIN
+                </a>
+              </li>
+              <li
+                class="nav-item"
+                data-toggle="collapse"
+                data-target=".navbar-collapse.show"
+              >
+                <a
+                  href="index.html"
+                  class="nav-item nav-link text-white mt-4 mt-lg-0"
+                  id="logout-link"
+                >
+                  LOGOUT
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </nav>
@@ -100,7 +157,7 @@
       <div class="bg-light py-2">
         <div class="text-center">
           <p class="mb-0 py-2 primary-text">
-            &copy; 2022 WINER'S AUCTIONS | All rights reserved.
+            &copy; 2022 AUCTIONS | All rights reserved.
           </p>
           <p>Designed by: Nenorvalls</p>
         </div>

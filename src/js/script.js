@@ -60,17 +60,13 @@ function listData(list, out){
     let newDivs = "";
 
     for (let auction of list) {
-    //console.log ("Auction Media: ", auction.media[0], auction.media.length);
 
-   //Ternyary for listing media
    const productImg =
    auction.media.length === 0 || auction.media == "undefined"
    ? 
     "../placeholder.png"
     : `${auction.media[0]}`;
-   //console.log ("Fikset Action Media: ", productImg);
 
-   //Ternyary for avatar img
     const profileImg =
     auction.seller.avatar === "" || auction.seller.avatar === null
     ? [
@@ -122,8 +118,7 @@ function listData(list, out){
                  </div>
                </div>
           </div>`;
-          //console.log("Auction media:", auction.media[0]);
-          //console.log(auction.seller.avatar);
+
     }
     out.innerHTML = newDivs;
 
@@ -152,9 +147,7 @@ function listData(list, out){
           //console.log(filterAuctions);
   
           const filtered = collection.filter((auction)=> {
-              //console.log(post.author.name, filterPosts);
-              //console.log(post.author.name.toUpperCase().indexOf(filterPosts.toUpperCase()) > -1);
-              //console.log(collection.length);
+
               const author = auction.seller.name.toLowerCase();
               const title = auction.title.toLowerCase();
               const published = auction.created.toString();
@@ -168,10 +161,6 @@ function listData(list, out){
           listData(filtered, outElement);
       }
   
-
-
-
-
 //-----------------------------------------------------  
 //Hente create post verdier:
 const postTitle = document.getElementById("postTitle");
@@ -238,11 +227,6 @@ function validateFormAndProcess(event) {
     const endsAt = `${endsBid.value.trim()}:00.000Z`;
 
 
-    //var dateParts = listingDate.value.trim().split("-");
-    //var deadline = new Date(dateParts[0], dateParts[1] - 1, dateParts[2]);
-    //var endsAt = deadline.toISOString();
-    //console.log(endsAt);
-
     if (media.value === []) 
     media = 
     ["https://upload.wikimedia.org/wikipedia/commons/6/67/Learning_Curve_--_Coming_Soon_Placeholder.png"];
@@ -282,8 +266,7 @@ function validateFormAndProcess(event) {
     }
 
       if (titleMsg.innerHTML === "" && bodyMsg.innerHTML === "" && mediaMsg.innerHTML === "") {
-        //console.log("Form is submitted!");
-        //form.submit(); ///for å submitte skjema 
+
      }
      else {
         console.log("You still have validation errors");
