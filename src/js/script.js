@@ -65,7 +65,7 @@ function listData(list, out) {
 
     newHTML += `
                     <div class="col-lg-4 col-md-6 col-sm-12">
-                        <a href="/single-item.html?id="${auction.id}">
+                        <a href="/users.html?id="${auction.id}">
                             <div class="card mt-5">
                                 <img src="${auctionImg}" class="card-img-top card-img">
                                 <div class="card-body">
@@ -106,4 +106,67 @@ function listData(list, out) {
     });
     listData(filtered, outListing);
   }
+}
+
+// ============================================================================
+// Create Listing
+// Get elements
+const listingTitle = document.getElementById("listingTitle");
+const listingContent = document.getElementById("listingContent");
+const listingImg = document.getElementById("listingImg");
+const endBid = document.getElementById("endBid");
+const submitListing = document.getElementById("submitListing");
+
+// Create listing
+const createListing = `${API_URL}${listingEndpoint}`;
+
+async function createNewListing(url, data) {
+  try {
+    const accessToken = localStorage.getItem("accessToken");
+    const options = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${accessToken}`,
+      },
+      body: JSON.stringify(data),
+    };
+    console.log("URL:", url, "data:", data, "options:", options);
+
+    const response = await fetch(url, options);
+    console.log(response);
+    const answer = await response.json();
+    console.log("answer:", answer);
+    if (answer.id) {
+      window.location = "/index.html";
+    }
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+// Submit listing
+submitListing.addEventListener("click", doSubmit);
+function doSubmit(event) {
+  event.preventDefault();
+  const title = listingTitle.value.trim();
+  const description = listingContent.value.trim();
+  let media = [`${listingImg.value.trim()}`];
+
+  if (media[0] === "") {
+    media = ["/images/gallery4.jpg"];
+  }
+
+  const endsAt = `${endBid.value.trim()}:00.000Z`;
+
+  const listingData = {
+    title: title,
+    description: description,
+    media: media,
+    endsAt: endsAt,
+  };
+
+  console.log(listingData);
+
+  createNewListing(createListing, listingData);
 }

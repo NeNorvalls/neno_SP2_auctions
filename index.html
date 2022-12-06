@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/dist/css/index.css" type="text/css" />
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/src/js/script.js" defer></script>
     <title>AUCTIONS | Home</title>
   </head>
 
@@ -97,7 +96,8 @@
                 <div class="col-md-12">
                   <img
                     class="rounded-circle"
-                    style="width: 180px"
+                    width="200"
+                    height="200"
                     src="/images/gallery4.jpg"
                     alt="profile avatar"
                   />
@@ -108,14 +108,14 @@
                   <div class="container-fluid col-md-12">
                     <p class="title">Current Time</p>
                     <div class="timer">
-                      <!-- <div class="pill">
+                      <div class="pill">
                         <div id="year" class="date"></div>
                         <div class="label">yr.</div>
                       </div> 
                       <div class="pill"> 
                         <div id="month" class="date"></div>
                         <div class="label">mos</div>
-                       </div>  -->
+                       </div> 
                       <div class="pill">
                         <div id="day" class="date"></div>
                         <div class="label">day</div>
@@ -138,18 +138,8 @@
                       </div>
                     </div>
                   </div>
-
-                  <div class="alert alert-warning" role="alert">
-                    Bidding Time closes in <span id="time"></span> minutes!
-                  </div>
-
-                  <p>
-                    You can call me Neno, and I am holding the family legacy of
-                    handling winery business from centuries already. WINER's
-                    Auction house is serving globally for so long with good
-                    quality of service. Join us and be our members. Enjoy!
-                  </p>
                 </div>
+              </div>
               </div>
             </div>
           </div>
@@ -231,25 +221,24 @@
           </div>
         </div>
       </section>
-
       <!-- ==================================== CREATE LISTING ======================================= -->
       <section>
-        <div class="container-fluid bg-dark" id="createListing">
+        <div class="container-fluid bg-dark" id="listing">
           <div class="row">
             <div class="col-lg-6">
-              <h2 class="text-center mt-5 text-white">CREATE A BID</h2>
+              <h2 class="text-center mt-5 text-white">CREATE A LIST</h2>
               <div class="site-section">
-                <div class="container-fluid w-75">
+                <div class="container w-75">
                   <div class="row justify-content-center">
                     <div class="col-lg-10">
                       <div class="row">
                         <div class="col-md-12">
                           <p id="titleMsg" class="msg-element"></p>
-                          <label class="text-white" for="title">Title</label>
+                          <label for="title">Title</label>
                           <input
                             type="text"
-                            id="postTitle"
-                            placeholder="What are you selling?"
+                            id="listingTitle"
+                            placeholder="What do you want to sell?"
                             class="form-control"
                           />
                         </div>
@@ -257,12 +246,10 @@
                       <div class="row">
                         <div class="col-md-12">
                           <p id="bodyMsg" class="msg-element"></p>
-                          <label class="text-white" for="description"
-                            >Description</label
-                          >
+                          <label for="description">Description</label>
                           <textarea
                             class="form-control"
-                            id="postContent"
+                            id="listingContent"
                             placeholder="Describe your product"
                           ></textarea>
                         </div>
@@ -270,24 +257,20 @@
                       <div class="row">
                         <div class="col-md-12">
                           <p id="mediaMsg" class="msg-element"></p>
-                          <label class="text-white" for="media"
-                            >Media URL</label
-                          >
+                          <label for="media">Media URL</label>
                           <input
                             type="url"
                             class="form-control"
-                            id="registerAvatar"
+                            id="listingImg"
                             placeholder="Place a image URL"
                           />
-                          <p id="avatarError" class="error-message"></p>
                         </div>
                       </div>
+
                       <div class="row">
                         <div class="col-md-12">
                           <p id="endbidMsg" class="msg-element"></p>
-                          <label class="text-white" for="auction"
-                            >Select time and date:</label
-                          >
+                          <label for="auction">Select time and date:</label>
                           <input
                             id="dateTime"
                             type="datetime-local"
@@ -295,11 +278,12 @@
                           />
                         </div>
                       </div>
+
                       <div class="row">
                         <div class="col-12 text-center mb-5">
                           <button
                             class="btn btn-secondary px-5 mt-5"
-                            id="submitPost"
+                            id="submitListing"
                           >
                             POST
                           </button>
@@ -311,19 +295,19 @@
               </div>
             </div>
             <div class="col-lg-6">
-              <div class="logged-in">
+              <section class="logged-in">
                 <h2 class="text-center mt-5 text-white">NEW LISTING</h2>
                 <div class="container w-75">
                   <div class="row justify-content-center">
                     <div id="preview-container" class=""></div>
                   </div>
                 </div>
-              </div>
+              </section>
             </div>
           </div>
         </div>
-        <hr />
       </section>
+      <hr />
       <!-- ================================= Search ================================================== -->
       <div class="container-fluid container">
         <form class="form-inline">
@@ -331,10 +315,11 @@
             class="form-control mr-sm-2"
             id="search-auction"
             type="search"
-            placeholder="SEARCH for Wine Brand"
+            placeholder="Find your product"
           />
         </form>
       </div>
+      <hr />
 
       <!-- listing container -->
       <h2 class="text-center">Auction</h2>
@@ -343,7 +328,9 @@
         <div id="post-container" class="row"></div>
       </div>
     </main>
+
     <hr />
+
     <!---------------------------------------------- FOOTER ------------------------------------------------------------------>
     <footer class="footer-section mt-auto">
       <div class="bg-light py-2">
@@ -357,6 +344,6 @@
     </footer>
     <script src="/src/js/logout.js"></script>
     <script src="src/js/components/CurrentTimer.js"></script>
-    <script src="src/js/components/bidTimer.js"></script>
+    <script src="/src/js/script.js"></script>
   </body>
 </html>

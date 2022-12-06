@@ -1,5 +1,3 @@
-
-
 const loginLink = document.getElementById("login-link");
 const logoutLink = document.getElementById("logout-link");
 const profileLink = document.getElementById("profile-link");

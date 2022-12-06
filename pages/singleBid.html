@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/dist/css/index.css" type="text/css" />
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="/src/js/script.js" defer></script> -->
+    <title>AUCTIONS | Home</title>
+  </head>
+
+  <body>
+    <!-- ========================== Header =================================== -->
+    <header>
+      <nav class="navbar navbar-expand-lg bg-dark py-3 px-4">
+        <div class="container-fluid">
+          <a class="navbar-brand text-white" href="#">AUCTIONS</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a
+                class="nav-link active text-white"
+                aria-current="page"
+                href="/index.html"
+                >HOME</a
+              >
+              <a
+                class="nav-link text-white"
+                id="profile-link"
+                href="/pages/profile.html"
+                >PROFILE</a
+              >
+              <a
+                class="nav-link text-white"
+                id="users-link"
+                href="/pages/users.html"
+                >USERS</a
+              >
+              <a
+                class="nav-link text-white"
+                id="login-link"
+                href="/login/login.html"
+                >LOGIN</a
+              >
+              <a class="nav-link text-white" id="logout-link" href="/index.html"
+                >LOGOUT</a
+              >
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- ==================================== main ======================================= -->
+    <hr />
+    <main>
+      <section>
+        <h1 class="text-center">Single Item</h1>
+        <div class="site-section mt-5 bg-dark text-white w-75 mx-auto">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-3 order-lg-2">
+                <div class="box-side mb-4" id="bid-make-a-bid">
+                  <p id="number-of-bids"></p>
+                  <form action="#">
+                    <div class="mb-4">
+                      <input
+                        type="text"
+                        id="create-bid-input"
+                        class="form-control mb-2"
+                        placeholder="0 Credits"
+                      />
+                      <a href="register.html"
+                        ><input
+                          type="submit"
+                          id="create-bid-btn"
+                          value="SUBMIT A BID"
+                          class="btn btn-secondary mx-auto w-100"
+                      /></a>
+                      <p class="msg-element" id="create-bid-msg"></p>
+                    </div>
+                    <p class="mb-0">
+                      <a href="/login/login.html">Login</a>
+                      /
+                      <a href="//register/register.html">Register</a>
+                    </p>
+                  </form>
+                </div>
+                <div id="bid-my-own" class="text-center mb-3 box-side">
+                  <button class="btn btn-secondary btn-lg" id="sell-delete-btn">
+                    DELETE
+                  </button>
+                  <button class="btn btn-secondary btn-lg" id="sell-update-btn">
+                    UPDATE
+                  </button>
+                </div>
+                <div id="bid-not-loggedin" class="text-center mb-3 box-side">
+                  <a href="/register/register.html"
+                    ><button class="btn btn-secondary btn-lg">
+                      REGISTER
+                    </button></a
+                  >
+                </div>
+                <div id="bid-expired" class="text-center mb-3 box-side">
+                  <h3>This bid is EXPIRED</h3>
+                </div>
+                <div class="box-side text-center mb-4">
+                  <img
+                    src=""
+                    id="auction-avatar"
+                    alt="user"
+                    class="img-fluid w-50 mb-4"
+                    width="200"
+                    height="200"
+                  />
+                  <h3 id="auction-seller"></h3>
+                </div>
+              </div>
+              <div id="post-container">
+                <div class="col-12 text-center" id="post-container">
+                  <img
+                    class=""
+                    src="../Img/loader.gif"
+                    alt="Loading content"
+                    style="width: 100px"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <hr />
+
+    <!-- <main>
+      <div class="site-section mt-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 order-lg-2">
+              <div
+                class="box-side mb-4"
+                id="bid-make-a-bid"
+                style="display: none"
+              >
+                <p id="number-of-bids">Number of bids: 0</p>
+                <form action="#">
+                  <div class="mb-4">
+                    <input
+                      type="text"
+                      id="create-bid-input"
+                      class="form-control mb-2"
+                      placeholder="0 Credits"
+                    />
+                    <a href="register.html"
+                      ><input
+                        type="submit"
+                        id="create-bid-btn"
+                        value="SUBMIT A BID"
+                        class="btn btn-secondary mx-auto w-100"
+                    /></a>
+                    <p class="msg-element" id="create-bid-msg"></p>
+                  </div>
+                  <p class="mb-0">
+                    <a href="/public/login.html">Sign in</a>
+                    /
+                    <a href="/public/register.html">Register</a>
+                  </p>
+                </form>
+              </div>
+              <div
+                id="bid-my-own"
+                class="text-center mb-3 box-side"
+                style="display: none"
+              >
+                <button class="btn btn-secondary btn-lg" id="sell-delete-btn">
+                  DELETE
+                </button>
+                <button class="btn btn-secondary btn-lg" id="sell-update-btn">
+                  UPDATE
+                </button>
+              </div>
+              <div id="bid-not-loggedin" class="text-center mb-3 box-side">
+                <a href="register.html"
+                  ><button class="btn btn-secondary btn-lg">SIGN UP</button></a
+                >
+              </div>
+              <div
+                id="bid-expired"
+                class="text-center mb-3 box-side"
+                style="display: none"
+              >
+                <h3>This bid is EXPIRED</h3>
+              </div>
+              <div class="box-side text-center mb-4">
+                <img
+                  src="https://static1.personality-database.com/profile_images/8234280eab3348eea48b7daaadef65cc.png"
+                  id="auction-avatar"
+                  alt="user"
+                  class="img-fluid w-50 rounded-circle mb-4"
+                />
+                <h3 id="auction-seller">jowander</h3>
+              </div>
+            </div>
+            <div id="post-container" class="col-lg-8 pr-lg-5">
+              <div class="mb-5" id="singleMedia">
+                <img
+                  src="../placeholder.png"
+                  alt="product img"
+                  class="img-fluid"
+                />
+              </div>
+              <h2 class="my-4">Henrik Samuelsen</h2>
+              <p>null</p>
+              <div class="card-body d-flex">
+                <p>Auction ends:</p>
+                <p class="timer not-expired">1d 4h 27m</p>
+              </div>
+              <h2 class="mt-4">Bidders: (0)</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main> -->
+    <!---------------------------------------------- FOOTER ------------------------------------------------------------------>
+    <footer class="footer-section mt-auto">
+      <div class="bg-light py-2">
+        <div class="text-center">
+          <p class="mb-0 py-2 primary-text">
+            &copy; 2022 AUCTIONS | All rights reserved.
+          </p>
+          <p>Designed by: Nenorvalls</p>
+        </div>
+      </div>
+    </footer>
+    <script src="/src/js/logout.js"></script>
+    <script src="src/js/components/CurrentTimer.js"></script>
+    <script src="src/js/components/bidTimer.js"></script>
+  </body>
+</html>

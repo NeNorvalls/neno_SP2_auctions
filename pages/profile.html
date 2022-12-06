@@ -13,7 +13,7 @@
     <header>
       <nav class="navbar navbar-expand-lg bg-dark py-3 px-4">
         <div class="container-fluid">
-          <a class="navbar-brand text-white" href="#">AUCTIONS</a>
+          <a class="navbar-brand text-white text-center" href="#">AUCTIONS</a>
           <button
             class="navbar-toggler"
             type="button"
@@ -74,93 +74,136 @@
         </button> -->
       </form>
     </div>
-    <hr />
 
     <!-- ==================================== main ======================================= -->
     <main>
       <h1 class="text-center mt-3">PROFILE</h1>
-  
-  
-      <div class=""> 
-          <div class="col-md-6 mx-auto shadow"> 
-              <!-- Profile box --> 
-              <div class="bg-white rounded"> 
-                  <div class=" pt-0" width="100"> 
-                      <div class="align-items-end bg-primary d-flex flex-row p-4"> 
-                              <div class="col-md-6 profile-image">
-                                  <img src="" id="avatarImg" alt="..." width="150" class="rounded mb-2 img-thumbnail">
-                              </div>
-                              <div id="post-container" class="col-md-6 col-sm-12 form-group text-start">
-                                 
-                              </div>  
-                          </div> 
-                      </div> 
-                  </div> 
-                  <div class="bg-light px-4 py-3 d-flex text-center"> 
-                      <div class="text-center">
-                          <button type="button" class="btn btn-secondary mt-4" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                              EDIT AVATAR
-                            </button>
-                      </div>
-                      <div class="d-flex text-center p-4 justify-content-end">
-                          <ul class="list-inline mb-0 justify-content-end"> 
-                              <li class="list-inline-item"> 
-                                  <p id="list-credits" class="font-weight-bold mb-0 d-block">$000</p>
-                                  <p class="text-muted">Credits</p> 
-                              </li> 
-                          </ul> 
-                      </div>
-                  </div> 
-  
-                  <div class="px-4 py-3"> 
-                      <h3 class="mb-0">About me</h3> 
-                      <div class="p-4 rounded shadow-sm bg-light"> 
-                          <p id="list-email" class="mb-0"></p> 
-                          <p class="mb-0">Norway</p> 
-                          <p class="mb-0">+47 911 00 990</p> 
-                      </div> 
-                  </div> 
-  
-                  <div class="py-4 px-4"> 
-                      <div class="d-flex align-items-center justify-content-between mb-3">
-                           <h3 class="mb-0">My listings</h3>
 
-                      </div> 
-                      <div class="row"> 
-                          <div id="listing-container" class="row">
-                              <img src="/images/gallery4.jpg" alt="Loading content" style="width:100px;">
-                          </div>
-                      </div> 
-                  </div> 
-              </div> 
+      <div class="">
+        <div class="col-md-6 mx-auto shadow">
+          <!-- =============CONTAINER================== -->
+          <div class="bg-white rounded">
+            <div class="pt-0" width="100">
+              <div class="align-items-end bg-primary d-flex flex-row p-4">
+                <div class="col-md-6 profile-image">
+                  <img
+                    src=""
+                    id="avatarImg"
+                    alt="..."
+                    width="150"
+                    class="rounded mb-2 img-thumbnail"
+                  />
+                </div>
+                <div
+                  id="post-container"
+                  class="col-md-6 col-sm-12 form-group text-start"
+                ></div>
+              </div>
+            </div>
           </div>
-      </main>
-  
-        <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <div class="bg-light px-4 py-3 d-flex text-center">
+            <div class="text-center">
+              <button
+                type="button"
+                class="btn btn-secondary mt-4"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                EDIT AVATAR
+              </button>
+            </div>
+            <div class="d-flex text-center p-4 justify-content-end">
+              <ul class="list-inline mb-0 justify-content-end">
+                <li class="list-inline-item">
+                  <p id="list-credits" class="font-weight-bold mb-0 d-block">
+                    215
+                  </p>
+                  <p class="text-muted">Credits</p>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div class="modal-body">
-              <div class="text-center mt-5">
-                  <label for="avatar">Avatar URL</label>
-                  <textarea class="form-control form-control-lg m-auto" id="updateAvatarInput"  placeholder="Place a avatar URL"></textarea>
-                  <p class="" id="updateAvatarMsg"></p>
-                  <div class="text-center">
-                  </div>
-              </div>        </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" id="updateAvatarBtn" class="btn btn-secondary" data-bs-dismiss="modal">CHANGE AVATAR</button>
+
+          <div class="px-4 py-3">
+            <h3 class="mb-0">About me</h3>
+            <div class="p-4 rounded shadow-sm bg-light">
+              <p id="list-email" class="mb-0"></p>
+              <p class="mb-0">Lives in Bergen</p>
+              <p class="mb-0">+123 45 678</p>
+            </div>
+          </div>
+
+          <div class="py-4 px-4">
+            <div class="d-flex align-items-center justify-content-between mb-3">
+              <h3 class="mb-0">My listings</h3>
+            </div>
+            <div class="row">
+              <div id="listing-container" class="row">
+                <img
+                  src="../Img/loader.gif"
+                  alt="Loading content"
+                  style="width: 100px"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </main>
-    
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">
+                Modal title
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="text-center mt-5">
+                <label for="avatar">Avatar URL</label>
+                <textarea
+                  class="form-control form-control-lg m-auto"
+                  id="updateAvatarInput"
+                  placeholder="Place a avatar URL"
+                ></textarea>
+                <p class="" id="updateAvatarMsg"></p>
+                <div class="text-center"></div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button
+                type="button"
+                id="updateAvatarBtn"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                CHANGE AVATAR
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
     <hr />
     <!-- =================== FOOTER ================================== -->
     <footer class="footer-section mt-auto">
@@ -173,6 +216,7 @@
         </div>
       </div>
     </footer>
+    <script src="/src/js/profile/profile.js"></script>
     <script src="/src/js/logout.js"></script>
   </body>
 </html>
