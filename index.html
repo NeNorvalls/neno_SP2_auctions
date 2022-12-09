@@ -34,22 +34,19 @@
                 href="/index.html"
                 >HOME</a
               >
-              <a
-                class="nav-link text-white"
-                id="profile-link"
-                href="/pages/profile.html"
+              <a class="nav-link text-white" id="profile-link" href="/profile/"
                 >PROFILE</a
               >
               <a
                 class="nav-link text-white"
                 id="users-link"
-                href="/pages/users.html"
+                href="/pages/users/"
                 >USERS</a
               >
               <a
                 class="nav-link text-white"
                 id="login-link"
-                href="/login/login.html"
+                href="/profile/login/"
                 >LOGIN</a
               >
               <a class="nav-link text-white" id="logout-link" href="/index.html"
@@ -60,8 +57,9 @@
         </div>
       </nav>
     </header>
-    <!-- ==================================== main ======================================= -->
+
     <hr />
+    <!-- ==================================== main ======================================= -->
     <main>
       <section>
         <div class="container-fluid my-4">
@@ -90,7 +88,7 @@
           <div class="row">
             <div class="col-md-12">
               <div class="page-header">
-                <h1>PROFILE</h1>
+                <h1>Welcome guys feel free to bid, buy and sell!</h1>
               </div>
               <div class="row">
                 <div class="col-md-12">
@@ -102,101 +100,8 @@
                     alt="profile avatar"
                   />
                   <h2>Neno Aksent</h2>
-                  <p>Credit: 1500</p>
-                  <a href="pages/myProfile.html">View Details</a>
-
-                  <div class="container-fluid col-md-12">
-                    <p class="title">Current Time</p>
-                    <div class="timer">
-                      <div class="pill">
-                        <div id="year" class="date"></div>
-                        <div class="label">yr.</div>
-                      </div> 
-                      <div class="pill"> 
-                        <div id="month" class="date"></div>
-                        <div class="label">mos</div>
-                       </div> 
-                      <div class="pill">
-                        <div id="day" class="date"></div>
-                        <div class="label">day</div>
-                      </div>
-                      <div class="pill">
-                        <div id="hours" class="date"></div>
-                        <div class="label">hrs.</div>
-                      </div>
-                      <div class="pill">
-                        <div id="minutes" class="date"></div>
-                        <div class="label">min.</div>
-                      </div>
-                      <div class="pill">
-                        <div id="seconds" class="date"></div>
-                        <div class="label">sec</div>
-                      </div>
-                      <div class="pill">
-                        <div id="milliseconds" class="date"></div>
-                        <div class="label">msec.</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="listing">
-        <div class="container-fluid text-center">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="page-header">
-                <h1>MY LISTING</h1>
-              </div>
-              <hr />
-              <div class="row">
-                <div class="col-md-4">
-                  <img
-                    class="img-responsive img-fluid rounded-3 text-center"
-                    style="width: 350px"
-                    src="/images/Imperial Cream.jpg"
-                    alt="wine brands"
-                  />
-                  <h2>Auction</h2>
-                  <p>Imperial Cream</p>
-                  <p>Bottle: 3</p>
-                  <p>Vintage:</p>
-                  <p>Duty Paid</p>
-                  <p>Current Price: $90</p>
-                </div>
-
-                <div class="col-md-4">
-                  <img
-                    class="img-responsive img-fluid rounded-3 text-center"
-                    style="width: 350px"
-                    src="/images/Zonnebloem-Cabernet-Sauvignon-2-of-2.jpeg"
-                    alt="wine brand"
-                  />
-                  <h2>Auction</h2>
-                  <p>Zonnebloem-Cabernet-Sauvignon</p>
-                  <p>Bottle: 5</p>
-                  <p>Vintage:</p>
-                  <p>Duty Paid</p>
-                  <p>Current Price: $90</p>
-                </div>
-                <div class="col-md-4">
-                  <img
-                    class="img-responsive img-fluid rounded-3 text-center"
-                    style="width: 350px"
-                    src="/images/Cabernet Sauvignon-1901.jpg"
-                    alt="wine brand"
-                  />
-                  <h2>Auction</h2>
-                  <p>Cabernet Sauvignon -1901</p>
-                  <p>Bottle: 2</p>
-                  <p>Vintage:</p>
-                  <p>Duty Paid</p>
-                  <p>Current Price: $90</p>
+                  <p>aka: Cocomarcia</p>
+                  <p>Credit: 100 000</p>
                 </div>
               </div>
             </div>
@@ -221,14 +126,20 @@
           </div>
         </div>
       </section>
+      <hr />
       <!-- ==================================== CREATE LISTING ======================================= -->
       <section>
-        <div class="container-fluid bg-dark" id="listing">
+        <div class="container-fluid" id="listing">
           <div class="row">
             <div class="col-lg-6">
-              <h2 class="text-center mt-5 text-white">CREATE A LIST</h2>
               <div class="site-section">
-                <div class="container w-75">
+                <div class="container w-75 border border-4 border-dark">
+                  <div class="bg-dark">
+                    <h2 class="text-center mt-5 text-white border-dark">
+                      CREATE A LIST
+                    </h2>
+                  </div>
+                  <hr />
                   <div class="row justify-content-center">
                     <div class="col-lg-10">
                       <div class="row">
@@ -271,11 +182,13 @@
                         <div class="col-md-12">
                           <p id="endbidMsg" class="msg-element"></p>
                           <label for="auction">Select time and date:</label>
-                          <input
-                            id="dateTime"
-                            type="datetime-local"
-                            value="2014-08-19T20:00"
-                          />
+                          <form action="/action_page.php">
+                            <input
+                              id="endBid"
+                              type="datetime-local"
+                              value="2022-12-08T11:00"
+                            />
+                          </form>
                         </div>
                       </div>
 
@@ -294,10 +207,16 @@
                 </div>
               </div>
             </div>
+
             <div class="col-lg-6">
               <section class="logged-in">
-                <h2 class="text-center mt-5 text-white">NEW LISTING</h2>
-                <div class="container w-75">
+                <div class="container w-75 border border-4 border-dark">
+                  <div class="bg-dark">
+                    <h2 class="text-center mt-5 text-white border-dark">
+                      New Listing
+                    </h2>
+                  </div>
+                  <hr />
                   <div class="row justify-content-center">
                     <div id="preview-container" class=""></div>
                   </div>
@@ -310,29 +229,26 @@
       <hr />
       <!-- ================================= Search ================================================== -->
       <div class="container-fluid container">
-        <form class="form-inline">
+        <form class="form-inline border-dark">
           <input
             class="form-control mr-sm-2"
             id="search-auction"
             type="search"
-            placeholder="Find your product"
+            placeholder="Find your wine here"
           />
         </form>
       </div>
       <hr />
-
       <!-- listing container -->
       <h2 class="text-center">Auction</h2>
 
-      <div class="container">
+      <div class="container border border-dark">
         <div id="post-container" class="row"></div>
       </div>
     </main>
-
-    <hr />
-
-    <!---------------------------------------------- FOOTER ------------------------------------------------------------------>
-    <footer class="footer-section mt-auto">
+    <!-- 
+   ================== FOOTER ====================== -->
+    <footer class="footer-section mt-auto fixed-bottom">
       <div class="bg-light py-2">
         <div class="text-center">
           <p class="mb-0 py-2 primary-text">
@@ -343,7 +259,8 @@
       </div>
     </footer>
     <script src="/src/js/logout.js"></script>
-    <script src="src/js/components/CurrentTimer.js"></script>
     <script src="/src/js/script.js"></script>
   </body>
 </html>
+
+<!-- _______________________ NENORVALLS _______________________________ -->

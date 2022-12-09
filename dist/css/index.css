@@ -406,12 +406,12 @@ select:disabled {
   display: none !important;
 }
 
-/* button,
+button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
   -webkit-appearance: button;
-} */
+}
 button:not(:disabled),
 [type="button"]:not(:disabled),
 [type="reset"]:not(:disabled),
@@ -468,7 +468,7 @@ legend + * {
 
 [type="search"] {
   outline-offset: -2px;
-  /* -webkit-appearance: textfield; */
+  -webkit-appearance: textfield;
 }
 
 /* rtl:raw:
@@ -479,9 +479,9 @@ legend + * {
   direction: ltr;
 }
 */
-/* ::-webkit-search-decoration {
+::-webkit-search-decoration {
   -webkit-appearance: none;
-} */
+}
 
 ::-webkit-color-swatch-wrapper {
   padding: 0;
@@ -489,7 +489,7 @@ legend + * {
 
 ::file-selector-button {
   font: inherit;
-  /* -webkit-appearance: button; */
+  -webkit-appearance: button;
 }
 
 output {
@@ -3913,6 +3913,7 @@ fieldset:disabled .btn {
   padding: var(--bs-navbar-toggler-padding-y) var(--bs-navbar-toggler-padding-x);
   font-size: var(--bs-navbar-toggler-font-size);
   line-height: 1;
+  color: var(--bs-navbar-color);
   background-color: transparent;
   border: var(--bs-border-width) solid var(--bs-navbar-toggler-border-color);
   border-radius: var(--bs-navbar-toggler-border-radius);
@@ -3937,8 +3938,7 @@ fieldset:disabled .btn {
   width: 1.5em;
   height: 1.5em;
   vertical-align: middle;
-  /* background-image: var(--bs-navbar-toggler-icon-bg-white); */
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  background-image: var(--bs-navbar-toggler-icon-bg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
@@ -7471,12 +7471,12 @@ fieldset:disabled .btn {
 
 .border-dark {
   --bs-border-opacity: 1;
-  border-color: rgba(var(--bs-dark-rgb), var(--bs-border-opacity)) !important;
+  border-color: #000 !important;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px !important;
 }
 
 .border-white {
-  --bs-border-opacity: 1;
-  border-color: rgba(var(--bs-white-rgb), var(--bs-border-opacity)) !important;
+  border-color: #fff !important;
 }
 
 .border-1 {
@@ -7517,6 +7517,9 @@ fieldset:disabled .btn {
 
 .border-opacity-100 {
   --bs-border-opacity: 1;
+}
+
+.border-black {
 }
 
 .w-25 {
@@ -8342,8 +8345,7 @@ fieldset:disabled .btn {
 }
 
 .text-white {
-  --bs-text-opacity: 1;
-  color: rgba(var(--bs-white-rgb), var(--bs-text-opacity)) !important;
+  color: #fff !important;
 }
 
 .text-body {
@@ -11120,13 +11122,13 @@ fieldset:disabled .btn {
 }
 
 .card-body {
-  background-color: #212529;
+  background-color: #000000;
 }
 
 .card-body p,
 h4,
 .h4 {
-  color: #fff;
+  color: #ffffff;
 }
 
 h4.p-2,
@@ -11140,7 +11142,6 @@ h4.p-2,
 }
 
 .title {
-  color: #ffffff;
   font-size: 2.5em;
   text-shadow: 0px 15px 30px rgb(0, 0, 0);
   font-family: "Crimson Text";
@@ -11161,14 +11162,13 @@ h4.p-2,
 }
 
 .pill {
-  background: #000;
   color: #ffffff;
   border-top: 5px solid #ffffff;
   padding: 10px 15px;
   margin: 10px 5px;
   transition: 0.3s ease-out;
   border-radius: 5px;
-  box-shadow: 0px 35px 50px rgba(0, 0, 0, 0.5);
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
 .pill:hover {

@@ -8,8 +8,9 @@
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <title>AUCTIONS | Login</title>
   </head>
+
   <body class="container-fluid d-flex flex-column min-vh-100">
-    <!-- =============================== Header ===================================================== -->
+    <!-- ==================== Header ==================== -->
     <header>
       <nav class="navbar navbar-expand-lg bg-dark py-3 px-4">
         <div class="container-fluid">
@@ -28,16 +29,12 @@
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
               <a class="nav-link text-white" href="/index.html">HOME</a>
-              <a class="nav-link" id="profile-link" href="/pages/profile.html"
-                >PROFILE</a
-              >
-              <a class="nav-link" id="users-link" href="/pages/users.html"
-                >USERS</a
-              >
+              <a class="nav-link" id="profile-link" href="/profile/">PROFILE</a>
+              <a class="nav-link" id="users-link" href="/pages/users/">USERS</a>
               <a
                 class="nav-link active text-white"
                 aria-current="page"
-                href="/login/login.html"
+                href="/profile/login/"
                 >LOGIN</a
               >
               <a class="nav-link" id="logout-link" href="/index.html">LOGOUT</a>
@@ -46,7 +43,7 @@
         </div>
       </nav>
     </header>
-    <!-- ==================================== main ======================================= -->
+    <!-- ===================== main ====================== -->
     <main>
       <div class="container-fluid">
         <form id="loginForm">
@@ -81,9 +78,9 @@
             <p id="passwordError" class="error-message"></p>
           </div>
           <p>Don't have a user yet?</p>
-          <a href="/register/register.html"
-            ><p class="primary-text">Register here!</p></a
-          >
+          <a href="/profile/register/">
+            <p class="primary-text">Register here!</p>
+          </a>
           <button id="loginSubmit" class="text-white btn btn-success">
             Login
           </button>
@@ -91,7 +88,7 @@
       </div>
     </main>
 
-    <!-- =============================== Footer ====================================================== -->
+    <!-- ================== Footer =================== -->
     <footer class="footer-section mt-auto">
       <div class="bg-light py-2">
         <div class="text-center">
@@ -102,7 +99,8 @@
         </div>
       </div>
     </footer>
-    <!-- <script src="/src/js/api/auth/logout.js"></script> -->
     <script src="/src/js/login.js"></script>
   </body>
 </html>
+
+<!-- _____________________________ NENORVALLS _____________________________ -->

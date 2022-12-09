@@ -1,6 +1,6 @@
 const listing = document.getElementById("listing");
 
-// check if user is logged in
+// ===================== check if user is logged-in =========================
 function isUserLoggedIn() {
   const accessToken = localStorage.getItem("accessToken");
   if (!accessToken) {
@@ -10,7 +10,7 @@ function isUserLoggedIn() {
 
 isUserLoggedIn();
 
-// endpoints
+// ================= endpoints ==================
 const API_URL = "https://api.noroff.dev/api/v1";
 const listingEndpoint = "/auction/listings";
 const flag = "?_seller=true&_bids=true&sort=created&sortOrder=desc";
@@ -21,7 +21,7 @@ const username = localStorage.getItem("username");
 const deleteEndpoint = "/auction/listings/delete";
 const deleteURL = `${API_URL}${deleteEndpoint}`;
 
-// get listing
+// ================= get listing ====================
 let collection = [];
 
 async function getAllListings(url) {
@@ -30,8 +30,8 @@ async function getAllListings(url) {
     const options = {
       method: "GET",
       headers: {
-        Authorization: `Bearer ${accessToken}`,
-      },
+        Authorization: `Bearer ${accessToken}`
+      }
     };
 
     const response = await fetch(url, options);
@@ -43,12 +43,11 @@ async function getAllListings(url) {
     console.log(error);
   }
 }
-
 getAllListings(auctionURL);
 
 const outListing = document.getElementById("post-container");
 
-// Listing all auction posts on the page
+// ================= LISTS OF ALL AUCTION POSTS ========================
 function listData(list, out) {
   out.innerHTML = "";
   let newHTML = "";
@@ -65,7 +64,7 @@ function listData(list, out) {
 
     newHTML += `
                     <div class="col-lg-4 col-md-6 col-sm-12">
-                        <a href="/users.html?id="${auction.id}">
+                        <a href="/single-item.html?id="${auction.id}">
                             <div class="card mt-5">
                                 <img src="${auctionImg}" class="card-img-top card-img">
                                 <div class="card-body">
@@ -87,7 +86,7 @@ function listData(list, out) {
   }
   out.innerHTML = newHTML;
 
-  // Search functionality
+  //  ============================= SEARCH FUNCTIONALITY ======================
   const searchInput = document.getElementById("search-auction");
   searchInput.addEventListener("keyup", filterAuctions);
 
@@ -127,9 +126,9 @@ async function createNewListing(url, data) {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${accessToken}`,
+        Authorization: `Bearer ${accessToken}`
       },
-      body: JSON.stringify(data),
+      body: JSON.stringify(data)
     };
     console.log("URL:", url, "data:", data, "options:", options);
 
@@ -145,7 +144,7 @@ async function createNewListing(url, data) {
   }
 }
 
-// Submit listing
+// =================== Submit listing ======================
 submitListing.addEventListener("click", doSubmit);
 function doSubmit(event) {
   event.preventDefault();
@@ -163,10 +162,51 @@ function doSubmit(event) {
     title: title,
     description: description,
     media: media,
-    endsAt: endsAt,
+    endsAt: endsAt
   };
 
   console.log(listingData);
 
   createNewListing(createListing, listingData);
 }
+
+// ================ Preview elements ====================
+let previewContainer = document.getElementById("preview-container");
+const previewTitle = document.getElementById("preview-title");
+const previewImg = document.getElementById("preview-img");
+const previewDescription = document.getElementById("preview-description");
+
+// =================== Preview of creating auction ===================
+listingTitle.addEventListener("keyup", preview);
+listingImg.addEventListener("keyup", preview);
+listingContent.addEventListener("keyup", preview);
+
+async function preview() {
+  previewContainer.innerHTML = "";
+  previewContainer.innerHTML = `
+                <div class="col-sm-12">
+                  <div class="card mt-5 border border-dark">
+                    <img src="${
+                      listingImg.value !== ""
+                        ? listingImg.value
+                        : "/images/—Pngtree—vector gallery icon_3989549.png"
+                    }" class="card-img-top card-img" alt="..">
+
+                      <div class="card-body">
+                          <h4 class="card-title">${listingTitle.value}</h4>
+                          <p id="preview-description">${
+                            listingContent.value
+                          }</p>
+                      </div>
+                      <div class="d-flex">
+                          <img src="/images/—Pngtree—elephant avatar_3194470.png" width="40"
+                          height="40" alt="Avatar" loading="lazy" />
+                          <h4 class="p-2"> Seller</h4>
+                      </div>
+                    </div>
+                  </div>
+             </div>
+  `;
+}
+
+// _____________________________ NENORVALLS _______________________________

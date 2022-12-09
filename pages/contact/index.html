@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="/dist/css/index.css" type="text/css" />
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
-    <title>AUCTIONS | Register</title>
+    <title>AUCTIONS | Contact</title>
   </head>
   <body class="container-fluid d-flex flex-column min-vh-100">
-    <!-- =============================== Header ===================================================== -->
+    <!-- ========================== Header =================================== -->
     <header>
       <nav class="navbar navbar-expand-lg bg-dark py-3 px-4">
         <div class="container-fluid">
@@ -43,86 +43,85 @@
               <a
                 class="nav-link text-white"
                 id="users-link"
-                href="/pages/users.html"
+                href="/pages/users/"
                 >USERS</a
               >
               <a
                 class="nav-link text-white"
                 id="login-link"
-                href="/login/login.html"
+                href="/profile/login/"
                 >LOGIN</a
               >
               <a class="nav-link text-white" id="logout-link" href="/index.html"
                 >LOGOUT</a
               >
+              <p class="px-1 mt-2 text-success text-center" id="credits"></p>
+              <p class="mt-2 text-success text-center" id="p-credits">
+                CREDITS
+              </p>
             </div>
           </div>
         </div>
       </nav>
     </header>
+    <hr />
     <!-- ==================================== main ======================================= -->
     <main>
       <div class="container-fluid">
-        <form id="registerForm">
-          <h2 class="fw-normal mb-3 pb-3 secondary-text text-center">
-            Register
-          </h2>
-          <h5 class="fw-normal mb-3 pb-3 primary-text">Sign up here:</h5>
-
-          <div class="form-group form-outline mb-3">
+        <h2 class="fw-normal mb-3 pb-3 primary-text text-center">Contact Us</h2>
+        <form id="contactForm">
+          <!-- Name Input -->
+          <div class="form-group form-floating mb-3">
             <label for="">Name</label>
             <input
               type="text"
               class="form-control"
-              id="registerUsername"
               name="name"
               required
               pattern="^[\w]+$"
               title="User name must only contain lower case and upper case letters, numbers and underscore (_). Example: My_user123"
             />
-            <p id="usernameError" class="error-message"></p>
           </div>
-
-          <div class="form-group form-outline mb-3">
-            <label for="registerEmail">Email</label>
+          <!-- Email Input -->
+          <div class="form-group form-floating mb-3">
+            <label for="">Email</label>
             <input
               type=" email"
               class="form-control"
-              id="registerEmail"
               name="email"
               required
               pattern="^[\w\-.]+@(stud.)?noroff.no$"
               title="Only (stud.)noroff.no domains are not allowed to register"
             />
-            <p id="emailError" class="error-message"></p>
           </div>
 
-          <div class="form-group form-outline mb-3">
-            <label for="">Password</label>
-            <input
-              type="password"
+          <!-- Message Input -->
+          <div class="form-floating mb-3">
+            <label for="">Message</label>
+            <textarea
               class="form-control"
-              id="registerPassword"
-              name="password"
-              autocomplete="username email"
-              required
-              minlength="8"
-            />
-            <p id="passwordError" class="error-message"></p>
+              id="message"
+              type="text"
+              placeholder="Message"
+              style="height: 10rem"
+              data-sb-validations="required"
+            ></textarea>
           </div>
-
+          <!-- Submit button -->
           <div class="form-group">
-            <label for=""> Avatar </label>
-            <input type="url" class="form-control" id="registerAvatar" />
-            <p id="avatarError" class="error-message"></p>
+            <button
+              class="btn btn-primary btn-lg"
+              id="submitButton"
+              type="submit"
+            >
+              Submit
+            </button>
           </div>
-
-          <button type="submit" id="registerSubmit" class="btn btn-primary">
-            REGISTER
-          </button>
         </form>
       </div>
     </main>
+
+    <hr />
     <!-- =============================== Footer ====================================================== -->
     <footer class="footer-section mt-auto">
       <div class="bg-light py-2">
@@ -134,7 +133,6 @@
         </div>
       </div>
     </footer>
-    <script type="text/javascript" src="/src/js/register.js"></script>
     <script src="/src/js/logout.js"></script>
   </body>
 </html>

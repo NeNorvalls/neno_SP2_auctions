@@ -2,7 +2,7 @@ const loginLink = document.getElementById("login-link");
 const logoutLink = document.getElementById("logout-link");
 const profileLink = document.getElementById("profile-link");
 const usersLink = document.getElementById("users-link");
-// Check if user is logged in
+// ===============CHECKING IF USERS LOGGED_IN=======================
 function isLoggedIn() {
   const accessToken = localStorage.getItem("accessToken");
   if (!accessToken) {
@@ -17,16 +17,17 @@ function isLoggedIn() {
 isLoggedIn();
 
 // ========================================
+
 const username = localStorage.getItem("username");
 
 // Endpoints
-const APIurl = " https://api.noroff.dev/api/v1";
+const API_URL = " https://api.noroff.dev/api/v1";
 const profileEndpoint = `/auction/profiles/${username}?_listings=true`; // POST
 
-const profileUrl = `${APIurl}${profileEndpoint}`;
-const updateAvatarUrl = `${APIurl}/auction/profiles/${username}/media`;
+const profileURL = `${API_URL}${profileEndpoint}`;
+const updateAvatarURL = `${API_URL}/auction/profiles/${username}/media`;
 
-let collection = [];
+let profileLists = [];
 // ========
 async function getProfileInfo(url) {
   try {
@@ -41,28 +42,28 @@ async function getProfileInfo(url) {
     const response = await fetch(url, options);
 
     const profile = await response.json();
-    collection = profile;
+    profileLists = profile;
 
-    listData(collection, outElement);
+    listData(profileLists, results);
   } catch (error) {
     console.log(error);
   }
 }
 
-getProfileInfo(profileUrl);
+getProfileInfo(profileURL);
 
 // ================= CREATE LISTING - INNER HTML =================
 
-const outElement = document.getElementById("post-container");
+const results = document.getElementById("postContainer");
 
-function listData(list, out) {
-  out.innerHTML = "";
+function listData(list, results) {
+  results.innerHTML = "";
   const avatarImg = document.getElementById("avatarImg");
   avatarImg.src = `${list.avatar}`;
 
-  const listCredits = document.getElementById("list-credits");
+  const listCredits = document.getElementById("listCredits");
   listCredits.innerHTML = `${list.credits}`;
-  const listEmail = document.getElementById("list-email");
+  const listEmail = document.getElementById("listEmail");
   listEmail.innerHTML = `Email: ${list.email}`;
 
   let profileDivs = "";
@@ -75,7 +76,7 @@ function listData(list, out) {
 </div> 
 
     `;
-  out.innerHTML = profileDivs;
+  results.innerHTML = profileDivs;
 }
 
 // =================== GET PERSONAL LISTING ==================
@@ -93,21 +94,21 @@ async function getMyListings(url) {
 
     const listings = await response.json();
 
-    const myOwnPosts = listings.listings;
+    const myPosts = listings.listings;
 
-    listListings(myOwnPosts, secondElement);
+    listListings(myPosts, resultsLists);
   } catch (error) {
     console.warn(error);
   }
 }
 
-getMyListings(profileUrl);
+getMyListings(profileURL);
 
 // ============
-const secondElement = document.getElementById("listing-container");
+const resultsLists = document.getElementById("listingContainer");
 
-function listListings(list, second) {
-  second.innerHTML = "";
+function listListings(list, resultsLists) {
+  resultsLists.innerHTML = "";
   let newDivs = "";
 
   for (let post of list) {
@@ -121,7 +122,7 @@ function listListings(list, second) {
 
     newDivs += `
         <div class="col-lg-6 col-md-6 col-sm-12 mt-5">
-             <a href="shop-specific.html?id=${post.id}" class="text-decoration-none">
+             <a href="single-item.html?id=${post.id}" class="text-decoration-none">
                     <div class="card ">
                         <img src="${post.media}" class="card-img-top card-img" alt="...">
                         <div class="card-body">
@@ -135,7 +136,7 @@ function listListings(list, second) {
               </a>
         </div>`;
   }
-  second.innerHTML = newDivs;
+  resultsLists.innerHTML = newDivs;
 }
 
 // =====================UPDATE AVATAR=======================
@@ -149,7 +150,7 @@ console.log(
   updateAvatarBtn
 );
 
-async function updateAvatar(url, data) {
+async function updateAvatarFunc(url, data) {
   try {
     const accessToken = localStorage.getItem("accessToken");
     console.log(accessToken);
@@ -174,19 +175,19 @@ async function updateAvatar(url, data) {
       window.location.reload();
     }
   } catch (error) {
-    console.warn(error);
+    console.log(error);
   }
 }
 
 updateAvatarBtn.addEventListener("click", newAvatar);
 function newAvatar(event) {
   event.preventDefault();
-  const avatarUrl = updateAvatarInput.value.trim();
+  const avatarURL = updateAvatarInput.value.trim();
 
   let avatarData = {
-    avatar: avatarUrl,
+    avatar: avatarURL,
   };
 
-  updateAvatar(updateAvatarUrl, avatarData);
+  updateAvatarFunc(updateAvatarURL, avatarData);
 }
 // ______________________________________________________ends...
