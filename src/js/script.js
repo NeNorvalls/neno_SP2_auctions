@@ -199,7 +199,7 @@ async function preview() {
                             listingDescription.value
                           }</p>
                       </div>
-                      <div class="d-flex">
+                      <div class="thumbnail">
                           <img src="/images/—Pngtree—elephant avatar_3194470.png" width="200"
                           height="200" alt="Avatar" loading="lazy" />
                           <h4 class="p-2"> Seller</h4>

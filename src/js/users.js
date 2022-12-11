@@ -66,7 +66,7 @@ function listData(list, results) {
 
     newDivs += `
         <div class="col-lg-4 col-md-6 mb-5 mb-lg-5 border-5 border-dark">
-        <div class="feature-1 border person text-center">
+        <div class="border text-center">
             <img src="${profileAvatar}" alt="profileAvatar" class="img-fluid">
             <div class="bg-dark text-white border-dark">
                 <h2>${user.name}</h2>

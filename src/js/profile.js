@@ -122,7 +122,7 @@ function listListings(list, resultsLists) {
 
     newDivs += `
         <div class="col-lg-6 col-md-6 col-sm-12 mt-5">
-             <a href="/pages/specific-item/?id=${post.id}" >
+             <a href="/pages/specific-bid/?id=${post.id}" >
                     <div class="card ">
                         <img src="${post.media}" class="card-img-top card-img" alt="...">
                         <div class="card-body">
