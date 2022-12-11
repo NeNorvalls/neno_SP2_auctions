@@ -20,7 +20,7 @@ isLoggedIn();
 
 // ======================== Endpoints ==========================
 
-const API_baaseURL = " https://api.noroff.dev/api/v1";
+const API_baseURL = " https://api.noroff.dev/api/v1";
 const auctionEndpoint = "/auction/profiles"; // POST
 
 const usersURL = `${API_baseURL}${auctionEndpoint}`;
