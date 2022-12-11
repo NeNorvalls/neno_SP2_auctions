@@ -5,7 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/dist/css/index.css" type="text/css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+   <!-- ====================== HOTJAR ========================== -->
+    <script>
+      (function (h, o, t, j, a, r) {
+        h.hj =
+          h.hj ||
+          function () {
+            (h.hj.q = h.hj.q || []).push(arguments);
+          };
+        h._hjSettings = { hjid: 2859085, hjsv: 6 };
+        a = o.getElementsByTagName("head")[0];
+        r = o.createElement("script");
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
+    </script>
+
     <title>AUCTIONS | Profile</title>
   </head>
   <body class="min-vh-100 my-0">
@@ -58,7 +81,7 @@
     </header>
     <hr />
 
-    <!-- ================================================= MAIN ==================================================== -->
+    <!-- =============================== MAIN ============================== -->
 
     <main class="w-75 mx-auto bg-dark text-white">
       <hr />
@@ -139,17 +162,17 @@
               </div>
             </div>
           </div>
+
           <hr />
+
           <!-- ======================= MY LISTINGS ===================== -->
           <div class="row">
             <div class="py-4 px-4">
-              <div
-                class="d-flex align-items-center justify-content-between mb-3"
-              >
+              <div class="align-items-center justify-content-between mb-3">
                 <h3 class="mb-0">My listings</h3>
               </div>
               <div class="row">
-                <div id="container-for-listings" class="row">
+                <div id="container-for-listings" class="row thumbnail">
                   <img
                     src="/images/—Pngtree—vector gallery icon_3989549.png"
                     alt="Loading content"
@@ -160,7 +183,9 @@
             </div>
           </div>
         </div>
+
         <hr />
+
         <!-- ======================= MY BIDS ===================== -->
         <div class="row">
           <div class="py-4 px-4">
@@ -179,6 +204,7 @@
           </div>
         </div>
       </div>
+
       <!-- =============================== Modal ====================================== -->
       <div
         class="modal fade"
@@ -202,7 +228,7 @@
             </div>
             <div class="modal-body">
               <div class="text-center mt-5">
-                <label for="avatar">Avatar URL</label>
+                <label for="profileAvatar">Avatar URL</label>
                 <textarea
                   class="form-control form-control-lg m-auto"
                   id="input-for-updateAvatar"

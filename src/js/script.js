@@ -11,15 +11,15 @@ function isUserLoggedIn() {
 isUserLoggedIn();
 
 // ================= endpoints ==================
-const API_URL = "https://api.noroff.dev/api/v1";
+const API_baseURL = "https://api.noroff.dev/api/v1";
 const listingEndpoint = "/auction/listings";
 const flag = "?_seller=true&_bids=true&sort=created&sortOrder=desc";
 
-const auctionURL = `${API_URL}${listingEndpoint}${flag}`;
+const auctionURL = `${API_baseURL}${listingEndpoint}${flag}`;
 const username = localStorage.getItem("username");
 
 const deleteEndpoint = "/auction/listings/delete";
-const deleteURL = `${API_URL}${deleteEndpoint}`;
+const deleteURL = `${API_baseURL}${deleteEndpoint}`;
 
 // ================= get listing ====================
 let totalAuctions = [];
@@ -119,7 +119,7 @@ const endBid = document.getElementById("endBid");
 const submitListing = document.getElementById("submit-button-for-listings");
 
 // Create listing
-const createListing = `${API_URL}${listingEndpoint}`;
+const createListing = `${API_baseURL}${listingEndpoint}`;
 
 async function createNewListing(url, data) {
   try {

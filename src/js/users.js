@@ -19,12 +19,12 @@ function isLoggedIn() {
 isLoggedIn();
 
 // ======================== Endpoints ==========================
-const API_URL = " https://api.noroff.dev/api/v1";
+
+const API_baaseURL = " https://api.noroff.dev/api/v1";
 const auctionEndpoint = "/auction/profiles"; // POST
 
-const usersURL = `${API_URL}${auctionEndpoint}`;
+const usersURL = `${API_baseURL}${auctionEndpoint}`;
 
-//let AUCTION = [];
 let usersLists = [];
 
 async function getAllUsers(url) {

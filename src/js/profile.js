@@ -21,11 +21,11 @@ isLoggedIn();
 const username = localStorage.getItem("username");
 
 // Endpoints
-const API_URL = " https://api.noroff.dev/api/v1";
+const API_baseURL = " https://api.noroff.dev/api/v1";
 const profileEndpoint = `/auction/profiles/${username}?_listings=true`; // POST
 
-const profileURL = `${API_URL}${profileEndpoint}`;
-const updateAvatarURL = `${API_URL}/auction/profiles/${username}/media`;
+const profileURL = `${API_baseURL}${profileEndpoint}`;
+const updateAvatarURL = `${API_baseURL}/auction/profiles/${username}/media`;
 
 let profileLists = [];
 // ========

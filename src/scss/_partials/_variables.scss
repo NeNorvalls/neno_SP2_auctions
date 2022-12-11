@@ -1,4 +1,15 @@
-$gradient: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
-$primaryColor: #000000;
-$secondaryColor: #ffffff;
-$hoverColor: #ffdd40;
+// Main Variables
+$gray-500: #adb5bd;
+$black: #000;
+$white: #fff;
+$yellow: #e6fd14;
+$gold: #996c1d;
+
+$primaryColor: $black;
+$secondaryColor: $white;
+
+$primary-hoverColor: $gray-500;
+$secondary-hoverColor:$yellow;
+
+
+$box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
