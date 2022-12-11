@@ -2939,7 +2939,7 @@ fieldset:disabled .btn {
 
 .btn-secondary {
   --bs-btn-color: #fff;
-  --bs-btn-bg: #6c757d;
+  /* --bs-btn-bg: #6c757d; */
   --bs-btn-border-color: #6c757d;
   --bs-btn-hover-color: #fff;
   --bs-btn-hover-bg: #5c636a;
@@ -4297,6 +4297,7 @@ fieldset:disabled .btn {
   flex: 1 1 auto;
   padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
   color: var(--bs-card-color);
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px !important;
 }
 
 .card-title {
@@ -5368,8 +5369,8 @@ fieldset:disabled .btn {
   --bs-modal-width: 500px;
   --bs-modal-padding: 1rem;
   --bs-modal-margin: 0.5rem;
-  --bs-modal-color: ;
-  --bs-modal-bg: #fff;
+  --bs-modal-color: #fff !important;
+  --bs-modal-bg: #000 !important;
   --bs-modal-border-color: var(--bs-border-color-translucent);
   --bs-modal-border-width: 1px;
   --bs-modal-border-radius: 0.5rem;

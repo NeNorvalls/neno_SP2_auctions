@@ -58,92 +58,82 @@
       </nav>
     </header>
     <!-- ================================= Search ================================================== -->
-    <div class="container-fluid">
-      <form class="form-inline">
-        <input
-          class="form-control mr-sm-2"
-          id="filter-auction"
-          type="search"
-          placeholder="SEARCH for Wine Brand"
-        />
-      </form>
-    </div>
     <hr />
     <main>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6">
-            <h2 class="text-center mt-5">EDIT LISTING</h2>
-            <div class="site-section">
-              <div class="container w-75">
-                <div class="row justify-content-center" id="container">
-                  <div class="col-lg-10">
-                    <div class="row">
-                      <div class="col-md-12 form-group">
-                        <p id="titleMsg" class="msg-element"></p>
-                        <label for="title">Title</label>
-                        <textarea
-                          class="form-control text-info"
-                          id="editTitle"
-                        ></textarea>
+      <section id="editListing-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <h2 class="text-center mt-5">EDIT LISTING</h2>
+              <div class="editListing-section">
+                <div class="container w-75">
+                  <div class="row justify-content-center" id="container">
+                    <div class="col-lg-10">
+                      <div class="row">
+                        <div class="col-md-12 form-group">
+                          <label for="title">Title</label>
+                          <textarea
+                            class="form-control text-info"
+                            id="title-for-edit-listing"
+                          ></textarea>
+                        </div>
                       </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-12 form-group">
-                        <p id="bodyMsg" class="msg-element"></p>
-                        <label for="description">Description</label>
-                        <textarea
-                          class="form-control text-info"
-                          id="editContent"
-                        ></textarea>
+                      <div class="row">
+                        <div class="col-md-12 form-group">
+                          <label for="description">Description</label>
+                          <textarea
+                            class="form-control text-info"
+                            id="edit-listing-description"
+                          ></textarea>
+                        </div>
                       </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-12">
-                        <p id="mediaMsg" class="msg-element"></p>
-                        <label class="text-white" for="media">Media URL</label>
-                        <input
-                          type="url"
-                          class="form-control"
-                          id="registerAvatar"
-                          placeholder="Place a image URL"
-                        />
-                        <p id="avatarError" class="error-message"></p>
+                      <div class="row">
+                        <div class="col-md-12">
+                          <label class="text-white" for="media"
+                            >Media URL</label
+                          >
+                          <input
+                            type="url"
+                            class="form-control"
+                            id="avatar-for-editListing"
+                            placeholder="Place a image URL"
+                          />
+                          <p id="avatarError" class="error-message"></p>
+                        </div>
                       </div>
-                    </div>
-                    <div class="row mt-3">
-                      <div class="col-md-12 form-group">
-                        <p id="endBidTime" class="msg-element text-success"></p>
-                        <p>You cannot change/update the ending bid time.</p>
+                      <div class="row mt-3">
+                        <div class="col-md-12 form-group">
+                          <p>Not possible to edit/change bid schedule.</p>
+                        </div>
                       </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-12 text-center">
-                        <button
-                          class="btn btn-secondary px-5 mt-3"
-                          id="submitEdit"
-                        >
-                          EDIT
-                        </button>
+                      <div class="row">
+                        <div class="col-12 text-center">
+                          <button
+                            class="btn btn-secondary px-5 mt-3"
+                            id="submitBtn-for-edit-listing"
+                          >
+                            EDIT
+                          </button>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="col-lg-6">
-            <section class="logged-in">
-              <h2 class="text-center mt-5">PREVIEW</h2>
-              <div class="container w-75">
-                <div class="row justify-content-center">
-                  <div id="preview-container" class=""></div>
+            <div class="col-lg-6">
+              <section class="logged-in">
+                <h2 class="text-center mt-5">PREVIEW</h2>
+                <div class="container w-75">
+                  <div class="row justify-content-center">
+                    <div id="preview-container-for-edit-listing" class=""></div>
+                  </div>
                 </div>
-              </div>
-            </section>
+              </section>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
     </main>
 
     <hr />

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/dist/css/index.css" type="text/css" />
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <title>AUCTIONS | Profile</title>
@@ -33,10 +33,7 @@
                 href="/index.html"
                 >HOME</a
               >
-              <a
-                class="nav-link text-white"
-                id="profile-link"
-                href="/profile/"
+              <a class="nav-link text-white" id="profile-link" href="/profile/"
                 >PROFILE</a
               >
               <a
@@ -61,162 +58,181 @@
     </header>
     <hr />
 
-     <!-- ================================================= MAIN ==================================================== -->
-    
-  <main class="w-75 mx-auto bg-dark text-white">
-    <hr>
-    <div class="container-fluid">
-      <div class="page-header text-white text-center">
-        <h1>PROFILE</h1>
-      </div>
-      <hr>
-      <div class="row">
-        <div class="col-md-12">
-          <div class="row">
-            <div class="col-md-3">       
-                        <div class="col-md-12 profile-image text-center">
-                            <img
-                              src=""
-                              id="avatarImg"
-                              alt="..."
-                              width="150"
-                              class="rounded mb-2 img-thumbnail"
-                            />
-                            <hr>
-                            <div
-                            id="postContainer"
-                            class="col-md-6 col-sm-12 form-group d-flex text-center"
-                          ></div>
-                            </div>
+    <!-- ================================================= MAIN ==================================================== -->
 
-                            <div class="text-center">
-                              <button
-                                type="button"
-                                class="btn btn-secondary mt-4"
-                                data-bs-toggle="modal"
-                                data-bs-target="#exampleModal"
-                              >
-                                EDIT AVATAR
-                              </button>
-                            </div>
-            </div>
-            <div class="col-md-9">
-              <div class="row">
-                <div class="col-md-12 text-black">
-                                <div class="bg-light px-4 py-3 d-flex">
-                                    <div class="px-4 py-3">
-                                      <h3 class="mb-0">About me</h3>
-                                      <div class="d-flex text-center p-4">
-                                        <ul class="list-inline mb-0 justify-content-end">
-                                          <li class="list-inline-item">
-                                            <p
-                                              id="listCredits"
-                                              class="font-weight-bold mb-0 d-block"
-                                            >
-                                              Let us BID now!
-                                            </p>
-                                            <p class="text-muted text-center">Credit</p>
-                                          </li>
-                                        </ul>
-                                      </div>
-                                      <div class="p-4 rounded shadow-sm bg-light">
-                                        <p id="listEmail" class="mb-0"></p>
-                                        <p class="mb-0">Lives in Bergen</p>
-                                        <p class="mb-0">+47 010 90 000</p>
-                                        <hr />
-                                        <div class="alert alert-warning" role="alert">
-                                          Bidding Time closes in
-                                          <span id="time"></span> minutes!
-                                        </div>
-                  
-                                        <p>
-                                          Welcome to the auction house, we sell, buy, bid... name
-                                          your price and auctions start! Enjoy! Feel free to
-                                          contact us!
-                                          <a class="link-info" href="/pages/contact/"></a>
-                                        </p>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
+    <main class="w-75 mx-auto bg-dark text-white">
+      <hr />
+      <div class="container-fluid">
+        <div class="profilePage-section text-white text-center">
+          <h1>PROFILE</h1>
+        </div>
+        <hr />
+        <div class="row">
+          <div class="col-md-12">
+            <div class="row">
+              <div class="col-md-3">
+                <div class="col-md-12 profile-image text-center">
+                  <img
+                    src=""
+                    id="profile-avatar"
+                    alt="..."
+                    width="200"
+                    class="mb-2 img-thumbnail"
+                  />
+                  <hr />
+                  <div
+                    id="profile-container"
+                    class="col-md-6 col-sm-12 form-group d-flex text-center"
+                  ></div>
+                </div>
+
+                <div class="text-center">
+                  <button
+                    type="button"
+                    class="btn btn-secondary mt-4"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                  >
+                    EDIT AVATAR
+                  </button>
                 </div>
               </div>
-            </div>
-          </div>
-                <hr />
-                <!-- ======================= MY LISTINGS ===================== -->
+
+              <div class="col-md-9">
                 <div class="row">
-                  <div class="py-4 px-4">
-                    <div class="d-flex align-items-center justify-content-between mb-3">
-                      <h3 class="mb-0">My listings</h3>
-                    </div>
-                    <div class="row">
-                      <div id="listingContainer" class="row">
-                        <img
-                          src="/images/—Pngtree—elephant avatar_3194470.png"
-                          alt="Loading content"
-                          style="width: 100px"
-                        />
+                  <div class="col-md-12 text-white">
+                    <div class="bg-light px-4 py-3 w-100">
+                      <div class="px-4 py-3 bg-dark">
+                        <h3 class="mb-0">About me</h3>
+                        <div class="d-flex text-center p-4">
+                          <ul class="list-inline mb-0 justify-content-end">
+                            <li class="list-inline-item">
+                              <p
+                                id="profile-credits"
+                                class="font-weight-bold mb-0 d-block"
+                              >
+                                0
+                              </p>
+                              <p class="text-muted text-center">Credit</p>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="p-4 rounded shadow-sm bg-light text-black">
+                          <p id="email-for-profile-users" class="mb-0"></p>
+                          <p class="mb-0">General Manager</p>
+                          <p class="mb-0">Auction Company, Inc.</p>
+                          <p class="mb-0">Lives in Bergen</p>
+                          <p class="mb-0">+47 010 90 000</p>
+
+                          <hr />
+                          <p class="text-black">
+                            Welcome to the auction house, we sell, buy, bid...
+                            name your price and auctions start! Enjoy! Feel free
+                            to contact us!
+                            <a class="link-info" href="/pages/contact.html"></a>
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-          <!-- Modal -->
-          <div
-            class="modal fade"
-            id="exampleModal"
-            tabindex="-1"
-            aria-labelledby="exampleModalLabel"
-            aria-hidden="true"
-          >
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="exampleModalLabel">
-                    Modal title
-                  </h1>
-                  <button
-                    type="button"
-                    class="btn-close"
-                    data-bs-dismiss="modal"
-                    aria-label="Close"
-                  ></button>
-                </div>
-                <div class="modal-body">
-                  <div class="text-center mt-5">
-                    <label for="avatar">Avatar URL</label>
-                    <textarea
-                      class="form-control form-control-lg m-auto"
-                      id="updateAvatarInput"
-                      placeholder="Place a avatar URL"
-                    ></textarea>
-                    <p class="" id="updateAvatarMsg"></p>
-                    <div class="text-center"></div> 
-                  </div>
-                </div>
-                <div class="modal-footer">
-                  <button
-                    type="button"
-                    class="btn btn-secondary"
-                    data-bs-dismiss="modal"
-                  >
-                    Close
-                  </button>
-                  <button
-                    type="button"
-                    id="updateAvatarBtn"
-                    class="btn btn-secondary"
-                    data-bs-dismiss="modal"
-                  >
-                    CHANGE AVATAR
-                  </button>
+            </div>
+          </div>
+          <hr />
+          <!-- ======================= MY LISTINGS ===================== -->
+          <div class="row">
+            <div class="py-4 px-4">
+              <div
+                class="d-flex align-items-center justify-content-between mb-3"
+              >
+                <h3 class="mb-0">My listings</h3>
+              </div>
+              <div class="row">
+                <div id="container-for-listings" class="row">
+                  <img
+                    src="/images/—Pngtree—vector gallery icon_3989549.png"
+                    alt="Loading content"
+                    style="width: 200px"
+                  />
                 </div>
               </div>
             </div>
           </div>
-  </main>
-   
+        </div>
+        <hr />
+        <!-- ======================= MY BIDS ===================== -->
+        <div class="row">
+          <div class="py-4 px-4">
+            <div class="d-flex align-items-center justify-content-between mb-3">
+              <h3 class="mb-0">My BIDS</h3>
+            </div>
+            <div class="row">
+              <div id="container-for-bid-lists" class="row">
+                <img
+                  src="/images/—Pngtree—elephant avatar_3194470.png"
+                  alt="Loading content"
+                  style="width: 200px"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- =============================== Modal ====================================== -->
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">
+                Place URL Media here
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="text-center mt-5">
+                <label for="avatar">Avatar URL</label>
+                <textarea
+                  class="form-control form-control-lg m-auto"
+                  id="input-for-updateAvatar"
+                  placeholder="Place a avatar URL"
+                ></textarea>
+                <p class="" id="updateAvatar-message-for-profile"></p>
+                <div class="text-center"></div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button
+                type="button"
+                id="button-for-updating-avatar"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                CHANGE AVATAR
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
 
     <!-- ===================================== FOOTER ================================================ -->
     <footer class="footer-section mt-auto py-0">
@@ -229,7 +245,6 @@
         </div>
       </div>
     </footer>
-    <script src="/src/js/bidTimer.js"></script>
     <script src="/src/js/profile.js"></script>
     <script src="/src/js/logout.js"></script>
   </body>

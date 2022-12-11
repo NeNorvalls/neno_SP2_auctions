@@ -54,16 +54,16 @@ getProfileInfo(profileURL);
 
 // ================= CREATE LISTING - INNER HTML =================
 
-const results = document.getElementById("postContainer");
+const results = document.getElementById("profile-container");
 
 function listData(list, results) {
   results.innerHTML = "";
-  const avatarImg = document.getElementById("avatarImg");
+  const avatarImg = document.getElementById("profile-avatar");
   avatarImg.src = `${list.avatar}`;
 
-  const listCredits = document.getElementById("listCredits");
+  const listCredits = document.getElementById("profile-credits");
   listCredits.innerHTML = `${list.credits}`;
-  const listEmail = document.getElementById("listEmail");
+  const listEmail = document.getElementById("email-for-profile-users");
   listEmail.innerHTML = `Email: ${list.email}`;
 
   let profileDivs = "";
@@ -98,14 +98,14 @@ async function getMyListings(url) {
 
     listListings(myPosts, resultsLists);
   } catch (error) {
-    console.warn(error);
+    console.log(error);
   }
 }
 
 getMyListings(profileURL);
 
 // ============
-const resultsLists = document.getElementById("listingContainer");
+const resultsLists = document.getElementById("container-for-listings");
 
 function listListings(list, resultsLists) {
   resultsLists.innerHTML = "";
@@ -122,7 +122,7 @@ function listListings(list, resultsLists) {
 
     newDivs += `
         <div class="col-lg-6 col-md-6 col-sm-12 mt-5">
-             <a href="single-item.html?id=${post.id}" class="text-decoration-none">
+             <a href="/pages/specific-item/?id=${post.id}" >
                     <div class="card ">
                         <img src="${post.media}" class="card-img-top card-img" alt="...">
                         <div class="card-body">
@@ -140,9 +140,11 @@ function listListings(list, resultsLists) {
 }
 
 // =====================UPDATE AVATAR=======================
-const updateAvatarMsg = document.getElementById("updateAvatarMsg");
-const updateAvatarInput = document.getElementById("updateAvatarInput");
-const updateAvatarBtn = document.getElementById("updateAvatarBtn");
+const updateAvatarMsg = document.getElementById(
+  "updateAvatar-message-for-profile"
+);
+const updateAvatarInput = document.getElementById("input-for-updateAvatar");
+const updateAvatarBtn = document.getElementById("button-for-updating-avatar");
 console.log(
   "Update avatar elements:",
   updateAvatarMsg,

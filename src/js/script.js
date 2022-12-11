@@ -22,7 +22,7 @@ const deleteEndpoint = "/auction/listings/delete";
 const deleteURL = `${API_URL}${deleteEndpoint}`;
 
 // ================= get listing ====================
-let postsLists = [];
+let totalAuctions = [];
 
 async function getAllListings(url) {
   try {
@@ -37,40 +37,40 @@ async function getAllListings(url) {
     const response = await fetch(url, options);
     console.log(response);
     const auction = await response.json();
-    postsLists = auction;
-    listData(auction, resultsListing);
+    totalAuctions = auction;
+    listData(auction, outListing);
   } catch (error) {
     console.log(error);
   }
 }
 getAllListings(auctionURL);
 
-const resultsListing = document.getElementById("listingContainer");
+const outListing = document.getElementById("post-listing-container");
 
 // ================= LISTS OF ALL AUCTION POSTS ========================
-function listData(list, resultsListing) {
-  resultsListing.innerHTML = "";
+function listData(list, out) {
+  out.innerHTML = "";
   let newHTML = "";
 
   for (let auction of Object.values(list)) {
     const auctionImg =
       auction.media.length === 0 || auction.media == "undefined"
-        ? "/images/—Pngtree—elephant avatar_3194470.png"
+        ? "/images/—Pngtree—vector gallery icon_3989549.png"
         : `${auction.media[0]}`;
-    const profileImg =
+    const profileAvatar =
       auction.seller.avatar === "" || auction.seller.avatar === null
         ? ["/images/—Pngtree—elephant avatar_3194470.png"]
         : auction.seller.avatar;
 
     newHTML += `
                     <div class="col-lg-4 col-md-6 col-sm-12">
-                        <a href="/pages/specific-item/?id="${auction.id}">
+                        <a href="/pages/specific-bid/?id="${auction.id}">
                             <div class="card mt-5">
                                 <img src="${auctionImg}" class="card-img-top card-img">
                                 <div class="card-body">
                                     <h4 class="card-title">${auction.title}</h4>
                                     <div class="d-flex">
-                                        <img src="${profileImg}" class="" height="140" width="140" alt="Avatar" loading="lazy" />
+                                        <img src="${profileAvatar}" class="rounded-circle p-2" height="40" alt="Avatar" loading="lazy" />
                                         <h4 class="p-2"> ${auction.seller.name}</h4>
                                     </div>
                                     <div class="d-flex mt-1 pt-2 justify-content-between">
@@ -84,16 +84,16 @@ function listData(list, resultsListing) {
                         </a>
                     </div>`;
   }
-  resultsListing.innerHTML = newHTML;
+  out.innerHTML = newHTML;
 
   //  ============================= SEARCH FUNCTIONALITY ======================
-  const searchInput = document.getElementById("listing-search");
+  const searchInput = document.getElementById("search-for-auctions-lists");
   searchInput.addEventListener("keyup", filterAuctions);
 
   function filterAuctions() {
     const filterAuctions = searchInput.value.toLowerCase();
 
-    const filtered = postsLists.filter((auction) => {
+    const filtered = totalAuctions.filter((auction) => {
       const author = auction.seller.name.toLowerCase();
       const title = auction.title.toLowerCase();
       const published = auction.created.toString();
@@ -103,18 +103,20 @@ function listData(list, resultsListing) {
       if (published.indexOf(filterAuctions) > -1) return true;
       return false;
     });
-    listData(filtered, resultsListing);
+    listData(filtered, outListing);
   }
 }
 
 // ============================================================================
 // Create Listing
 // Get elements
-const listingTitle = document.getElementById("listingPost-title");
-const listingCoverage = document.getElementById("listingCoverage");
-const listingImg = document.getElementById("listingImg");
-const endBid = document.getElementById("bidding-endTime");
-const submitListing = document.getElementById("submitListing");
+const listingTitle = document.getElementById("title-for-listings-post");
+const listingDescription = document.getElementById(
+  "description-text-for-listing"
+);
+const listingImg = document.getElementById("img-for-listing");
+const endBid = document.getElementById("endBid");
+const submitListing = document.getElementById("submit-button-for-listings");
 
 // Create listing
 const createListing = `${API_URL}${listingEndpoint}`;
@@ -148,8 +150,8 @@ async function createNewListing(url, data) {
 submitListing.addEventListener("click", doSubmit);
 function doSubmit(event) {
   event.preventDefault();
-  const title = listingPost - title.value.trim();
-  const description = listingCoverage.value.trim();
+  const title = listingTitle.value.trim();
+  const description = listingDescription.value.trim();
   let media = [`${listingImg.value.trim()}`];
 
   if (media[0] === "") {
@@ -171,17 +173,15 @@ function doSubmit(event) {
 }
 
 // ================ Preview elements ====================
-let previewContainer = document.getElementById("listing-preview-container");
-const previewTitle = document.getElementById("listing-preview-title");
-const previewImg = document.getElementById("listing-preview-img");
-const previewDescription = document.getElementById(
-  "listing-preview-description"
-);
+let previewContainer = document.getElementById("preview-container-listings");
+const previewTitle = document.getElementById("preview-title");
+const previewImg = document.getElementById("preview-img");
+const previewDescription = document.getElementById("preview-description");
 
 // =================== Preview of creating auction ===================
 listingTitle.addEventListener("keyup", preview);
 listingImg.addEventListener("keyup", preview);
-listingCoverage.addEventListener("keyup", preview);
+listingDescription.addEventListener("keyup", preview);
 
 async function preview() {
   previewContainer.innerHTML = "";
@@ -193,16 +193,15 @@ async function preview() {
                         ? listingImg.value
                         : "/images/—Pngtree—vector gallery icon_3989549.png"
                     }" class="card-img-top card-img" alt="..">
-
                       <div class="card-body">
                           <h4 class="card-title">${listingTitle.value}</h4>
-                          <p id="listing-preview-description">${
-                            listingContent.value
+                          <p id="preview-description">${
+                            listingDescription.value
                           }</p>
                       </div>
                       <div class="d-flex">
-                          <img src="/images/—Pngtree—elephant avatar_3194470.png" width="160"
-                          alt="Avatar" loading="lazy" />
+                          <img src="/images/—Pngtree—elephant avatar_3194470.png" width="200"
+                          height="200" alt="Avatar" loading="lazy" />
                           <h4 class="p-2"> Seller</h4>
                       </div>
                     </div>
