@@ -4,6 +4,7 @@ const profileLink = document.getElementById("profile-link");
 const usersLink = document.getElementById("users-link");
 
 // ===============CHECKING IF USERS LOGGED_IN=======================
+
 function isLoggedIn() {
   const accessToken = localStorage.getItem("accessToken");
 
@@ -54,6 +55,7 @@ getAllUsers(usersURL);
 const results = document.getElementById("container-for-usersList");
 
 // ================== USERLISTS =================
+
 function listData(list, results) {
   results.innerHTML = "";
   let newDivs = "";
@@ -65,7 +67,7 @@ function listData(list, results) {
         : user.avatar;
 
     newDivs += `
-        <div class="col-lg-4 col-md-6 mb-5 mb-lg-5 border-5 border-dark">
+        <div class="col-lg-4 col-md-6 mb-5 mb-lg-5 border">
         <div class="border text-center">
             <img src="${profileAvatar}" alt="profileAvatar" class="img-fluid">
             <div class="bg-dark text-white border-dark">
@@ -75,6 +77,7 @@ function listData(list, results) {
         </div>
     </div>`;
   }
+
   results.innerHTML = newDivs;
 
   //   ================ SEARCH FILTER =======================
@@ -94,5 +97,3 @@ function listData(list, results) {
     listData(filtered, results);
   }
 }
-
-// ________________ NENORVALLS _____________________

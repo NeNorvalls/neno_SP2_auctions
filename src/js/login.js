@@ -110,7 +110,7 @@ async function loginUser(url, data) {
       errorMessage.innerHTML = answer.message;
     }
   } catch (error) {
-    console.warn(error);
+    console.log(error);
   }
 }
 

@@ -4,29 +4,29 @@ semester_project
 
 <!-- ============================== Task to do: ============================ -->
 
-[] register
-[] login
-[] logout
+[✓] register
+[✓] login
+[✓] logout
 [] update avatar page
 [] view total credit
-[] creating listing
+[✓] creating listing
 [] add a Bid
 [] view a Bid to from users
-[] can able to use use credit to Bid
-[] unregister user can search listings
+[✓] can able to use use credit to Bid
+[✓] unregister user can search listings
 
 <!-- ===================== Functionality ====================== -->
 
-[] register
-[] login
-[] logout
+[✓] register
+[✓] login
+[✓] logout
 [] update avatar page
 [] view total credit
-[] creating listing
+[✓] creating listing
 [] add a Bid
 [] view a Bid to from users
 [] can able to use use credit to Bid
-[] unregister user can search listings
+[✓] unregister user can search listings
 
 ================== Design ========================
 
@@ -38,6 +38,8 @@ semester_project
 [] fonts
 [] color (WCAG pass)
 [] font-size
+[] buttons
+[] icons
 
 <!-- ================ Hosting ===================== -->
 
@@ -57,5 +59,11 @@ semester_project
 [] kanban project board
 [] repository link
 [] netlify
+
+<!-- =============== OTHER STUFF NEEDED =================== -->
+
+[] meta names
+[] meta descriptions
+[] fixing designs
 
 <!-- ________________________________ the-End ________________________________ -->

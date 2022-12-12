@@ -38,18 +38,18 @@ async function getAllListings(url) {
     console.log(response);
     const auction = await response.json();
     totalAuctions = auction;
-    listData(auction, outListing);
+    listData(auction, resultsListing);
   } catch (error) {
     console.log(error);
   }
 }
 getAllListings(auctionURL);
 
-const outListing = document.getElementById("post-listing-container");
+const resultsListing = document.getElementById("post-listing-container");
 
 // ================= LISTS OF ALL AUCTION POSTS ========================
-function listData(list, out) {
-  out.innerHTML = "";
+function listData(list, results) {
+  results.innerHTML = "";
   let newHTML = "";
 
   for (let auction of Object.values(list)) {
@@ -84,7 +84,7 @@ function listData(list, out) {
                         </a>
                     </div>`;
   }
-  out.innerHTML = newHTML;
+  results.innerHTML = newHTML;
 
   //  ============================= SEARCH FUNCTIONALITY ======================
   const searchInput = document.getElementById("search-for-auctions-lists");
@@ -103,7 +103,7 @@ function listData(list, out) {
       if (published.indexOf(filterAuctions) > -1) return true;
       return false;
     });
-    listData(filtered, outListing);
+    listData(filtered, resultsListing);
   }
 }
 
@@ -193,7 +193,7 @@ async function preview() {
                         ? listingImg.value
                         : "/images/—Pngtree—vector gallery icon_3989549.png"
                     }" class="card-img-top card-img" alt="..">
-                      <div class="card-body">
+                      <div class="card-body border border-dark">
                           <h4 class="card-title">${listingTitle.value}</h4>
                           <p id="preview-description">${
                             listingDescription.value

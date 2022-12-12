@@ -25,6 +25,7 @@ const API_baseURL = " https://api.noroff.dev/api/v1";
 const profileEndpoint = `/auction/profiles/${username}?_listings=true`; // POST
 
 const profileURL = `${API_baseURL}${profileEndpoint}`;
+const bidsURL = `${API_baseURL}/auction/profiles/${username}?_listings&_bids=true`;
 const updateAvatarURL = `${API_baseURL}/auction/profiles/${username}/media`;
 
 let profileLists = [];
@@ -104,6 +105,65 @@ async function getMyListings(url) {
 
 getMyListings(profileURL);
 
+async function getMyBids(url) {
+  try {
+    const accessToken = localStorage.getItem("accessToken");
+    const options = {
+      method: "GET",
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+      },
+    };
+
+    const response = await fetch(url, options);
+
+    const bids = await response.json();
+
+    const myBids = bids.bids;
+
+    listMyBids(myBids, bidListingResults);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+getMyBids(profileURL);
+
+const bidListingResults = document.getElementById("container-for-bid-lists");
+
+function listMyBids(list, bidListingResults) {
+  bidListingResults.innerHTML = "";
+  let newBidDivs = "";
+
+  for (let post of list) {
+    let date = new Date(post.endsAt);
+    let ourDate = date.toLocaleString("default", {
+      day: "numeric",
+      month: "long",
+      hour: "2-digit",
+      minute: "2-digit",
+    });
+
+    newBidDivs += `
+  <div class="col-lg-6 col-md-6 col-sm-12 mt-5">
+  <a href="/pages/specific-bid/?id=${post.id}" >
+         <div class="card ">
+             <img src="${post.media}" class="card-img-top card-img" alt="...">
+             <div class="card-body">
+                 <h4 class="card-title">${post.title}</h4>
+                 <p class="card-text">${post.description}</p>
+             </div>
+             <div class="card-body">
+                 <p >${ourDate}</p>
+                 <p ">${post.amount}</p>
+             </div>
+         </div>
+   </a>
+</div>
+  `;
+  }
+}
+
 // ============
 const resultsLists = document.getElementById("container-for-listings");
 
@@ -130,7 +190,7 @@ function listListings(list, resultsLists) {
                             <p class="card-text">${post.description}</p>
                         </div>
                         <div class="card-body">
-                            <p class="text-success">${ourDate}</p>
+                            <p ">${ourDate}</p>
                         </div>
                     </div>
               </a>
@@ -192,4 +252,3 @@ function newAvatar(event) {
 
   updateAvatarFunc(updateAvatarURL, avatarData);
 }
-// ______________________________________________________ends...
