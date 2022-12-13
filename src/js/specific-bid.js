@@ -66,10 +66,12 @@ async function getSingleAuction(url) {
 
 getSingleAuction(getSingleAuctionURL);
 
-const auctionsListResults = document.getElementById("specificBid-container");
+const auctionsListResults = document.getElementById(
+  "container-for-specificBid"
+);
 
 // ====================================================== Listing Auction Results =============
-function listData(auctions, results) {
+function listData(auctions, out) {
   let date = new Date(auctions.endsAt);
 
   let now = new Date().getTime();
@@ -127,7 +129,7 @@ function listData(auctions, results) {
 
   sendBidBtn.addEventListener("click", validateAndProcess);
 
-  results.innerHTML = newDivs;
+  out.innerHTML = newDivs;
 
   //   ===================================== BID TIMER =============
   const timer = document.querySelector(".timer");
@@ -234,7 +236,7 @@ async function getSingleBids(url) {
 
     const answer = bids.bids;
 
-    listBids(answer, listBidsResults);
+    listBids(answer, secondElement);
   } catch (error) {
     console.warn(error);
   }
@@ -242,10 +244,10 @@ async function getSingleBids(url) {
 
 getSingleBids(getSingleAuctionURL);
 
-const listBidsResults = document.getElementById("bidContainer");
+const secondElement = document.getElementById("bidContainer");
 
-function listBids(list, listBidsResults) {
-  listBidsResults.innerHTML = "";
+function listBids(list, second) {
+  second.innerHTML = "";
 
   let newDivs = "";
 
@@ -269,7 +271,7 @@ function listBids(list, listBidsResults) {
                           </li>
                       </ul>`;
   }
-  listBidsResults.innerHTML = newDivs;
+  second.innerHTML = newDivs;
 }
 
 //MAKE A BID
@@ -296,7 +298,7 @@ async function createBid(url, data) {
     }
     console.log(answer);
   } catch (error) {
-    console.log(error);
+    console.warn(error);
   }
 }
 

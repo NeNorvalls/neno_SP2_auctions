@@ -36,8 +36,8 @@ async function getAllUsers(url) {
     const options = {
       method: "GET",
       headers: {
-        Authorization: `Bearer ${accessToken}`
-      }
+        Authorization: `Bearer ${accessToken}`,
+      },
     };
 
     const response = await fetch(url, options);
@@ -69,9 +69,9 @@ function listData(list, results) {
 
     newDivs += `
         <div class="col-lg-4 col-md-6 mb-5 mb-lg-5 border">
-        <div class="border text-center">
+        <div class="border text-center box-shadow bg-dark border-dark">
             <img src="${profileAvatar}" alt="profileAvatar" class="img-fluid">
-            <div class="bg-dark text-white border-dark">
+            <div class="bg-white text-black">
                 <h2>${user.name}</h2>
                 <span class="position mb-3 d-block">Credits: ${user.credits}</span>
             </div>

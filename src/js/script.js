@@ -68,7 +68,7 @@ function listData(list, results) {
 
     newHTML += `
                     <div class="col-lg-4 col-md-6 col-sm-12">
-                        <a href="/pages/specific-bid/?id=${auction.id}">
+                        <a href="/pages/specific-bid/index.html?id=${auction.id}">
                             <div class="card mt-5 box-shadow">
                                 <img src="${auctionImg}" class="card-img-top card-img">
                                 <div class="card-body">
@@ -96,11 +96,9 @@ function listData(list, results) {
   searchInput.addEventListener("keyup", filterAuctions);
 
   function filterAuctions() {
-
     const filterAuctions = searchInput.value.toLowerCase();
 
     const filtered = totalAuctions.filter((auction) => {
-
       const author = auction.seller.name.toLowerCase();
       const title = auction.title.toLowerCase();
       const published = auction.created.toString();
@@ -117,7 +115,9 @@ function listData(list, results) {
 // =========================================== CREATE LISTINGS =================================
 const listingTitle = document.getElementById("title-for-listings-post");
 
-const listingDescription = document.getElementById("description-text-for-listing");
+const listingDescription = document.getElementById(
+  "description-text-for-listing"
+);
 
 const listingImg = document.getElementById("img-for-listing");
 
@@ -157,7 +157,6 @@ async function createNewListing(url, data) {
 submitListing.addEventListener("click", doSubmit);
 
 function doSubmit(event) {
-
   event.preventDefault();
 
   const title = listingTitle.value.trim();
