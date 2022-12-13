@@ -34,13 +34,14 @@
 // ======== LOGIN ==========
 
 #loginSubmit,
-#registerSubmit {
+#registerSubmit,
+#submit-button-for-listings {
   color: $secondaryColor !important;
   background-color: #212529 !important;
 
   &:hover {
     color: $black;
-    background-color: $secondaryColor;
-    border: 2px solid $secondaryColor;
+    background-color: $gray !important;
+    border: 2px solid $secondaryColor !important;
   }
 }
