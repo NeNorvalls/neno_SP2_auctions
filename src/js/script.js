@@ -68,7 +68,7 @@ function listData(list, results) {
                             <div class="card mt-5">
                                 <img src="${auctionImg}" class="card-img-top card-img">
                                 <div class="card-body">
-                                    <h4 class="card-title">${auction.title}</h4>
+                                    <h4 class="card-title text-center">${auction.title}</h4>
                                     <div class="d-flex">
                                         <img src="${profileAvatar}" class="rounded-circle p-2" height="40" alt="Avatar" loading="lazy" />
                                         <h4 class="p-2"> ${auction.seller.name}</h4>
@@ -194,7 +194,9 @@ async function preview() {
                         : "/images/—Pngtree—vector gallery icon_3989549.png"
                     }" class="card-img-top card-img" alt="..">
                       <div class="card-body border border-dark">
-                          <h4 class="card-title">${listingTitle.value}</h4>
+                          <h4 class="card-title text-center">${
+                            listingTitle.value
+                          }</h4>
                           <p id="preview-description">${
                             listingDescription.value
                           }</p>
