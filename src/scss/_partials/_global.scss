@@ -14,3 +14,21 @@
 .navbar-toggler {
   color: $secondaryColor;
 }
+
+
+// ============ card =============
+.card-body {
+  background-color: $primaryColor;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+
+// ========== FOOTER ==========
+
+.footer-section {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: auto;
+  width: 100%;
+}

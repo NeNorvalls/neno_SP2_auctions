@@ -1,6 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap");
-/*!
+@import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap"); /*!
  * Bootstrap  v5.2.3 (https://getbootstrap.com/)
  * Copyright 2011-2022 The Bootstrap Authors
  * Copyright 2011-2022 Twitter, Inc.
@@ -410,6 +409,7 @@ button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
+  -webkit-appearance: button;
 }
 button:not(:disabled),
 [type="button"]:not(:disabled),
@@ -467,6 +467,7 @@ legend + * {
 
 [type="search"] {
   outline-offset: -2px;
+  -webkit-appearance: textfield;
 }
 
 /* rtl:raw:
@@ -487,6 +488,7 @@ legend + * {
 
 ::file-selector-button {
   font: inherit;
+  -webkit-appearance: button;
 }
 
 output {
@@ -3831,7 +3833,7 @@ fieldset:disabled .btn {
   --bs-navbar-toggler-padding-x: 0.75rem;
   --bs-navbar-toggler-font-size: 1.25rem;
   --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-  /* --bs-navbar-toggler-border-color: rgba(0, 0, 0, 0.1); */
+  --bs-navbar-toggler-border-color: rgba(0, 0, 0, 0.1);
   --bs-navbar-toggler-border-radius: 0.375rem;
   --bs-navbar-toggler-focus-width: 0.25rem;
   --bs-navbar-toggler-transition: box-shadow 0.15s ease-in-out;
@@ -5366,6 +5368,7 @@ fieldset:disabled .btn {
   --bs-modal-padding: 1rem;
   --bs-modal-margin: 0.5rem;
   --bs-modal-color: ;
+  --bs-modal-bg: #fff;
   --bs-modal-border-color: var(--bs-border-color-translucent);
   --bs-modal-border-width: 1px;
   --bs-modal-border-radius: 0.5rem;
@@ -5433,13 +5436,8 @@ fieldset:disabled .btn {
 }
 
 .modal-content {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
   color: var(--bs-modal-color);
   pointer-events: auto;
-  background-color: var(--bs-modal-bg);
   background-clip: padding-box;
   border: var(--bs-modal-border-width) solid var(--bs-modal-border-color);
   border-radius: var(--bs-modal-border-radius);
@@ -11109,6 +11107,14 @@ fieldset:disabled .btn {
   color: #fff;
 }
 
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: auto;
+  width: 100%;
+}
+
 .card-img {
   width: 100%;
   height: 250px;
@@ -11117,7 +11123,6 @@ fieldset:disabled .btn {
 
 .card-body {
   background-color: #212529;
-  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px !important;
 }
 
 .card-body p,
