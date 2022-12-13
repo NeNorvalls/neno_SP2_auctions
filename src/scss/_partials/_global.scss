@@ -41,7 +41,7 @@
 
   &:hover {
     color: $black;
-    background-color: !important;
+    background-color: $hoverColor !important;
     border: 2px solid $secondaryColor !important;
   }
 }
