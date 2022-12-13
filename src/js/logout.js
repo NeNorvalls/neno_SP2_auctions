@@ -1,10 +1,15 @@
 const loginLink = document.getElementById("login-link");
+
 const logoutLink = document.getElementById("logout-link");
+
 const profileLink = document.getElementById("profile-link");
+
 const usersLink = document.getElementById("users-link");
+
 // =================  Check if user is logged in =================
 function isLoggedIn() {
   const accessToken = localStorage.getItem("accessToken");
+
   if (!accessToken) {
     logoutLink.style.display = "none";
     profileLink.style.display = "none";
@@ -24,5 +29,3 @@ logOut.addEventListener("click", () => {
   localStorage.removeItem("username");
   window.location = "/index.html";
 });
-
-// _________________ NENORVALLS ___________________

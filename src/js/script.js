@@ -1,6 +1,6 @@
 const listing = document.getElementById("listing");
 
-// ===================== check if user is logged-in =========================
+// ======================================= check if user is logged-in ==============
 function isUserLoggedIn() {
   const accessToken = localStorage.getItem("accessToken");
   if (!accessToken) {
@@ -10,18 +10,22 @@ function isUserLoggedIn() {
 
 isUserLoggedIn();
 
-// ================= endpoints ==================
+// ================================================ endpoints ==================
 const API_baseURL = "https://api.noroff.dev/api/v1";
+
 const listingEndpoint = "/auction/listings";
+
 const flag = "?_seller=true&_bids=true&sort=created&sortOrder=desc";
 
 const auctionURL = `${API_baseURL}${listingEndpoint}${flag}`;
+
 const username = localStorage.getItem("username");
 
 const deleteEndpoint = "/auction/listings/delete";
+
 const deleteURL = `${API_baseURL}${deleteEndpoint}`;
 
-// ================= get listing ====================
+// =================================================== get listing ====================
 let totalAuctions = [];
 
 async function getAllListings(url) {
@@ -47,7 +51,7 @@ getAllListings(auctionURL);
 
 const resultsListing = document.getElementById("post-listing-container");
 
-// ================= LISTS OF ALL AUCTION POSTS ========================
+// ============================================= LISTS OF ALL AUCTION POSTS ========================
 function listData(list, results) {
   results.innerHTML = "";
   let newHTML = "";
@@ -64,7 +68,7 @@ function listData(list, results) {
 
     newHTML += `
                     <div class="col-lg-4 col-md-6 col-sm-12">
-                        <a href="/pages/specific-bid/?id="${auction.id}">
+                        <a href="/pages/specific-bid/?id=${auction.id}">
                             <div class="card mt-5 box-shadow">
                                 <img src="${auctionImg}" class="card-img-top card-img">
                                 <div class="card-body">
@@ -86,14 +90,17 @@ function listData(list, results) {
   }
   results.innerHTML = newHTML;
 
-  //  ============================= SEARCH FUNCTIONALITY ======================
+  //  ===================================================== SEARCH FUNCTIONALITY ======================
   const searchInput = document.getElementById("search-for-auctions-lists");
+
   searchInput.addEventListener("keyup", filterAuctions);
 
   function filterAuctions() {
+
     const filterAuctions = searchInput.value.toLowerCase();
 
     const filtered = totalAuctions.filter((auction) => {
+
       const author = auction.seller.name.toLowerCase();
       const title = auction.title.toLowerCase();
       const published = auction.created.toString();
@@ -107,15 +114,15 @@ function listData(list, results) {
   }
 }
 
-// ============================================================================
-// Create Listing
-// Get elements
+// =========================================== CREATE LISTINGS =================================
 const listingTitle = document.getElementById("title-for-listings-post");
-const listingDescription = document.getElementById(
-  "description-text-for-listing"
-);
+
+const listingDescription = document.getElementById("description-text-for-listing");
+
 const listingImg = document.getElementById("img-for-listing");
+
 const endBid = document.getElementById("endBid");
+
 const submitListing = document.getElementById("submit-button-for-listings");
 
 // Create listing
@@ -146,16 +153,21 @@ async function createNewListing(url, data) {
   }
 }
 
-// =================== Submit listing ======================
+// ================================================== Submit listing ======================
 submitListing.addEventListener("click", doSubmit);
+
 function doSubmit(event) {
+
   event.preventDefault();
+
   const title = listingTitle.value.trim();
+
   const description = listingDescription.value.trim();
+
   let media = [`${listingImg.value.trim()}`];
 
   if (media[0] === "") {
-    media = ["/images/gallery4.jpg"];
+    media = ["/images/—Pngtree—vector gallery icon_3989549.png"];
   }
 
   const endsAt = `${endBid.value.trim()}:00.000Z`;
@@ -172,19 +184,25 @@ function doSubmit(event) {
   createNewListing(createListing, listingData);
 }
 
-// ================ Preview elements ====================
+// ================================================ Preview elements ====================
 let previewContainer = document.getElementById("preview-container-listings");
+
 const previewTitle = document.getElementById("preview-title");
+
 const previewImg = document.getElementById("preview-img");
+
 const previewDescription = document.getElementById("preview-description");
 
 // =================== Preview of creating auction ===================
 listingTitle.addEventListener("keyup", preview);
+
 listingImg.addEventListener("keyup", preview);
+
 listingDescription.addEventListener("keyup", preview);
 
 async function preview() {
   previewContainer.innerHTML = "";
+
   previewContainer.innerHTML = `
                 <div class="col-sm-12">
                   <div class="card mt-5 border border-dark">

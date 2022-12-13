@@ -1,11 +1,16 @@
 const loginLink = document.getElementById("login-link");
+
 const logoutLink = document.getElementById("logout-link");
+
 const profileLink = document.getElementById("profile-link");
+
 const usersLink = document.getElementById("users-link");
+
 const loginForm = document.getElementById("loginForm");
+
 const errorMessage = document.querySelector("#errorMessage");
 
-// ================= check if user is logged in =======================
+// =================================== check if user is logged in =======================
 function isUserLoggedIn() {
   const accessToken = localStorage.getItem("accessToken");
 
@@ -20,16 +25,20 @@ function isUserLoggedIn() {
 
 isUserLoggedIn();
 
-// =========== Get elements ==============
+// =================================================== Get elements ==============
 const emailInput = document.getElementById("loginEmail");
+
 const passwordInput = document.getElementById("loginPassword");
+
 const submitButton = document.getElementById("loginSubmit");
 
-// =========== Validate form ==================
+// ================================================= Validate form ==================
 const emailError = document.querySelector("#emailError");
+
 const passwordError = document.querySelector("#passwordError");
 
 submitButton.addEventListener("click", validateForm);
+
 function validateForm() {
   const email = emailInput.value.trim();
   const password = passwordInput.value.trim();
@@ -44,6 +53,7 @@ function validateForm() {
 
   passwordError.innerHTML = "";
   const submittedPassword = password;
+
   if (submittedPassword.length < 8) {
     passwordError.innerHTML +=
       "The password must be at least 8 characters long";
@@ -56,10 +66,11 @@ function validateForm() {
   }
 }
 
-// ================ Login user functionality ====================
+// ================================================== USER LOGIN FUNCTIONALITY ====================
 
 // Endpoints
 const API = "https://api.noroff.dev/api/v1";
+
 const loginEndpoint = "/auction/auth/login";
 
 const loginUrl = `${API}${loginEndpoint}`;
@@ -69,11 +80,8 @@ submitButton.addEventListener("click", loginSubmitFunction);
 function loginSubmitFunction(event) {
   event.preventDefault();
 
-  /**
-   *  @param {string} url URL to API endpoint
-   *  @param {object} data Object with the data for new user */
-
   const email = emailInput.value.trim();
+
   const password = passwordInput.value.trim();
 
   const loginData = {
@@ -97,6 +105,7 @@ async function loginUser(url, data) {
 
     const response = await fetch(url, options);
     console.log(response);
+
     const reply = await response.json();
     console.log(reply);
 
@@ -113,5 +122,3 @@ async function loginUser(url, data) {
     console.log(error);
   }
 }
-
-// _______________________________ NENORVALLS ____________________________

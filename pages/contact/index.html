@@ -8,14 +8,14 @@
     <title>AUCTIONS | Contact</title>
   </head>
 
-  <body class="container-fluid d-flex flex-column min-vh-100">
+  <body class="min-vh-100">
     <!-- ======================= Header ======================== -->
     <header>
       <nav class="navbar navbar-expand-lg bg-dark py-3 px-4">
         <div class="container-fluid">
           <a class="navbar-brand text-white" href="/index.html">AUCTIONS</a>
           <button
-            class="navbar-toggler navbar-light"
+            class="navbar-toggler bg-light"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarNavAltMarkup"
@@ -54,10 +54,6 @@
               <a class="nav-link text-white" id="logout-link" href="/index.html"
                 >LOGOUT</a
               >
-              <p class="px-1 mt-2 text-success text-center" id="credits"></p>
-              <p class="mt-2 text-success text-center" id="p-credits">
-                CREDITS
-              </p>
             </div>
           </div>
         </div>
@@ -150,7 +146,10 @@
           function () {
             (h.hj.q = h.hj.q || []).push(arguments);
           };
-        h._hjSettings = { hjid: 2859085, hjsv: 6 };
+        h._hjSettings = {
+          hjid: 2859085,
+          hjsv: 6,
+        };
         a = o.getElementsByTagName("head")[0];
         r = o.createElement("script");
         r.async = 1;

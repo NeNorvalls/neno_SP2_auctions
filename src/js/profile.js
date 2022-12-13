@@ -1,10 +1,15 @@
 const loginLink = document.getElementById("login-link");
+
 const logoutLink = document.getElementById("logout-link");
+
 const profileLink = document.getElementById("profile-link");
+
 const usersLink = document.getElementById("users-link");
-// ===============CHECKING IF USERS LOGGED_IN=======================
+
+// ====================================== CHECKING IF USERS LOGGED_IN=======================
 function isLoggedIn() {
   const accessToken = localStorage.getItem("accessToken");
+
   if (!accessToken) {
     logoutLink.style.display = "none";
     profileLink.style.display = "none";
@@ -16,20 +21,21 @@ function isLoggedIn() {
 
 isLoggedIn();
 
-// ========================================
-
 const username = localStorage.getItem("username");
 
-// Endpoints
+// ========================================== Endpoints ======================
 const API_baseURL = " https://api.noroff.dev/api/v1";
+
 const profileEndpoint = `/auction/profiles/${username}?_listings=true`; // POST
 
 const profileURL = `${API_baseURL}${profileEndpoint}`;
+
 const bidsURL = `${API_baseURL}/auction/profiles/${username}?_listings&_bids=true`;
+
 const updateAvatarURL = `${API_baseURL}/auction/profiles/${username}/media`;
 
 let profileLists = [];
-// ========
+
 async function getProfileInfo(url) {
   try {
     const accessToken = localStorage.getItem("accessToken");
@@ -43,6 +49,7 @@ async function getProfileInfo(url) {
     const response = await fetch(url, options);
 
     const profile = await response.json();
+
     profileLists = profile;
 
     listData(profileLists, results);
@@ -53,17 +60,19 @@ async function getProfileInfo(url) {
 
 getProfileInfo(profileURL);
 
-// ================= CREATE LISTING - INNER HTML =================
+// ================================================= CREATE LISTING - INNER HTML =================
 
 const results = document.getElementById("profile-container");
 
 function listData(list, results) {
   results.innerHTML = "";
+
   const avatarImg = document.getElementById("profile-avatar");
   avatarImg.src = `${list.avatar}`;
 
   const listCredits = document.getElementById("profile-credits");
   listCredits.innerHTML = `${list.credits}`;
+
   const listEmail = document.getElementById("email-for-profile-users");
   listEmail.innerHTML = `Email: ${list.email}`;
 
@@ -80,7 +89,7 @@ function listData(list, results) {
   results.innerHTML = profileDivs;
 }
 
-// =================== GET PERSONAL LISTING ==================
+// ========================================================== GET PERSONAL LISTING ==================
 async function getMyListings(url) {
   try {
     const accessToken = localStorage.getItem("accessToken");
@@ -108,6 +117,7 @@ getMyListings(profileURL);
 async function getMyBids(url) {
   try {
     const accessToken = localStorage.getItem("accessToken");
+
     const options = {
       method: "GET",
       headers: {
@@ -129,10 +139,13 @@ async function getMyBids(url) {
 
 getMyBids(profileURL);
 
+// ============================= FOR PERSONAL BIDS CONTAINER ===================
+
 const bidListingResults = document.getElementById("container-for-bid-lists");
 
 function listMyBids(list, bidListingResults) {
   bidListingResults.innerHTML = "";
+
   let newBidDivs = "";
 
   for (let post of list) {
@@ -164,7 +177,7 @@ function listMyBids(list, bidListingResults) {
   }
 }
 
-// ============
+// ========================================= CONTAINER FOR LISTINGS RESULTS =====================
 const resultsLists = document.getElementById("container-for-listings");
 
 function listListings(list, resultsLists) {
@@ -199,12 +212,15 @@ function listListings(list, resultsLists) {
   resultsLists.innerHTML = newDivs;
 }
 
-// =====================UPDATE AVATAR=======================
+// =============================================== FOR UPDATE AVATAR =======================
 const updateAvatarMsg = document.getElementById(
   "updateAvatar-message-for-profile"
 );
+
 const updateAvatarInput = document.getElementById("input-for-updateAvatar");
+
 const updateAvatarBtn = document.getElementById("button-for-updating-avatar");
+
 console.log(
   "Update avatar elements:",
   updateAvatarMsg,
@@ -242,6 +258,7 @@ async function updateAvatarFunc(url, data) {
 }
 
 updateAvatarBtn.addEventListener("click", newAvatar);
+
 function newAvatar(event) {
   event.preventDefault();
   const avatarURL = updateAvatarInput.value.trim();

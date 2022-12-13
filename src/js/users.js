@@ -1,10 +1,12 @@
 const loginLink = document.getElementById("login-link");
+
 const logoutLink = document.getElementById("logout-link");
+
 const profileLink = document.getElementById("profile-link");
+
 const usersLink = document.getElementById("users-link");
 
-// ===============CHECKING IF USERS LOGGED_IN=======================
-
+// =========================================CHECKING IF USERS LOGGED_IN=============
 function isLoggedIn() {
   const accessToken = localStorage.getItem("accessToken");
 
@@ -19,9 +21,9 @@ function isLoggedIn() {
 
 isLoggedIn();
 
-// ======================== Endpoints ==========================
-
+// ============================================ Endpoints =============
 const API_baseURL = " https://api.noroff.dev/api/v1";
+
 const auctionEndpoint = "/auction/profiles"; // POST
 
 const usersURL = `${API_baseURL}${auctionEndpoint}`;
@@ -34,8 +36,8 @@ async function getAllUsers(url) {
     const options = {
       method: "GET",
       headers: {
-        Authorization: `Bearer ${accessToken}`,
-      },
+        Authorization: `Bearer ${accessToken}`
+      }
     };
 
     const response = await fetch(url, options);
@@ -54,8 +56,7 @@ getAllUsers(usersURL);
 
 const results = document.getElementById("container-for-usersList");
 
-// ================== USERLISTS =================
-
+// ========================================== USERLISTS ====================
 function listData(list, results) {
   results.innerHTML = "";
   let newDivs = "";
@@ -80,7 +81,7 @@ function listData(list, results) {
 
   results.innerHTML = newDivs;
 
-  //   ================ SEARCH FILTER =======================
+  //   =================================================== SEARCH FILTER =======================
   const inputField = document.getElementById("search-to-filter-users");
 
   inputField.addEventListener("keyup", filterUsers);

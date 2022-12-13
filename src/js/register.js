@@ -1,10 +1,14 @@
 const loginLink = document.getElementById("login-link");
+
 const logoutLink = document.getElementById("logout-link");
+
 const profileLink = document.getElementById("profile-link");
+
 const usersLink = document.getElementById("users-link");
+
 const registerForm = document.getElementById("registerForm");
 
-// ================ Checking if user is logged in ===============
+// =========================================== Checking if user is logged in ===============
 function isUserLoggedIn() {
   const accessToken = localStorage.getItem("accessToken");
   if (!accessToken) {
@@ -20,31 +24,36 @@ isUserLoggedIn();
 
 // =============== Get elements ================
 const usernameInput = document.querySelector("input#registerUsername");
+
 const emailInput = document.querySelector("input#registerEmail");
+
 const passwordInput = document.querySelector("input#registerPassword");
+
 const avatarInput = document.querySelector("input#registerAvatar");
+
 const submitButton = document.querySelector("button#registerSubmit");
 
 // Register user
 
-// ================ API endpoints ====================
+// ================================================= API endpoints ====================
 const API = "https://api.noroff.dev/api/v1";
+
 const registerEndpoint = "/auction/auth/register";
 
 const registerUrl = `${API}${registerEndpoint}`;
 
-// ============ Validate and functionality of register submit button ==============
+// ====================================== functionality of register submit button ==============
 submitButton.addEventListener("click", registerSubmitFunction);
 
 function registerSubmitFunction(event) {
   event.preventDefault();
 
-  /** @param {string} url URL to API endpoint */
-  /** @param {object} data Object with the data for new user */
-
   const username = usernameInput.value.trim();
+
   const email = emailInput.value.trim();
+
   const password = passwordInput.value.trim();
+
   const avatar = avatarInput.value.trim();
 
   const newUserData = {
@@ -65,10 +74,15 @@ async function registerNewUser(url, data) {
       },
       body: JSON.stringify(data),
     };
+
     console.log(url, data, options);
+
     const response = await fetch(url, options);
+
     console.log(response);
+
     const reply = await response.json();
+
     console.log(reply);
 
     if (response.status === 201) {
@@ -81,14 +95,18 @@ async function registerNewUser(url, data) {
   }
 }
 
-// =============== Get error message containers =================
+// ==================================================== Get error message containers =================
 const usernameError = document.querySelector("#usernameError");
+
 const emailError = document.querySelector("#emailError");
+
 const passwordError = document.querySelector("#passwordError");
+
 const avatarError = document.querySelector("#avatarError");
 
-// ======== Validate form ==========
+// ================================================================ Validate form ==========
 submitButton.addEventListener("click", validateForm);
+
 function validateForm() {
   const username = usernameInput.value.trim();
   const email = emailInput.value.trim();
@@ -111,7 +129,7 @@ function validateForm() {
       "Please enter a valid email with only characters, number, dot and underscore";
   }
 
-  // ==============  Validate @noroff.no / @stud.noroff.no =============
+  // ======================================================  Validate @noroff.no / @stud.noroff.no =============
   if (
     !(
       submittedEmail.includes("@stud.noroff.no") ||
@@ -122,13 +140,16 @@ function validateForm() {
   }
 
   passwordError.innerHTML = "";
+
   const submittedPassword = password;
+
   if (submittedPassword.length < 8) {
     passwordError.innerHTML +=
       "The password must be at least 8 characters long";
   }
 
   const submittedAvatar = avatar;
+
   avatarError.innerHTML = "";
   let avatarRegEx = /\.(jpeg|jpg|gif|png|svg)$/;
   if (!avatarRegEx.test(submittedAvatar)) {
@@ -149,5 +170,3 @@ function validateForm() {
     console.log("You have one or more errors!");
   }
 }
-
-// ___________________________________ NENORVALLS ___________________________________

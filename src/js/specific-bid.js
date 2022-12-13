@@ -1,10 +1,15 @@
 const loginLink = document.getElementById("login-link");
+
 const logoutLink = document.getElementById("logout-link");
+
 const profileLink = document.getElementById("profile-link");
+
 const usersLink = document.getElementById("users-link");
-// Checking if user is logged in
+
+// ====================================== Checking if user is logged in====================
 function isUserLoggedIn() {
   const accessToken = localStorage.getItem("accessToken");
+
   if (!accessToken) {
     logoutLink.style.display = "none";
     profileLink.style.display = "none";
@@ -16,8 +21,9 @@ function isUserLoggedIn() {
 
 isUserLoggedIn();
 
-// Endpoints
+// ========================================= ENDPOINTS =====================
 const API_URL = " https://api.noroff.dev/api/v1";
+
 const auctionEndpoint = "/auction/listings/"; // POST
 
 const AUCTION_URL = `${API_URL}${auctionEndpoint}`;
@@ -32,10 +38,8 @@ let id = params.get("id");
 
 const getSingleAuctionURL = `${AUCTION_URL}${id}${extraFlag}`;
 const makeBidUrl = `${AUCTION_URL}${id}/bids`;
-//let posts = [];
-//console.log(id);
 
-//let AUCTION = [];
+// ========================
 let auctionsResults = [];
 
 async function getSingleAuction(url) {
@@ -47,14 +51,13 @@ async function getSingleAuction(url) {
         Authorization: `Bearer ${accessToken}`,
       },
     };
-    //console.log(url, options);
 
     const response = await fetch(url, options);
-    //console.log(response);
+
     const auctions = await response.json();
-    //console.log("Auctions:", auctions);
+
     auctionsResults = auctions;
-    //console.log("auctionsResults:", auctionsResults);
+
     listData(auctions, auctionsListResults);
   } catch (error) {
     console.log(error);
@@ -63,10 +66,10 @@ async function getSingleAuction(url) {
 
 getSingleAuction(getSingleAuctionURL);
 
-const auctionsListResults = document.getElementById("container-for-specificBid");
+const auctionsListResults = document.getElementById("specificBid-container");
 
-// ============== Listing Auction Results =============
-function listData(auctions, out) {
+// ====================================================== Listing Auction Results =============
+function listData(auctions, results) {
   let date = new Date(auctions.endsAt);
 
   let now = new Date().getTime();
@@ -84,23 +87,25 @@ function listData(auctions, out) {
     bidTime = "EXPIRED";
   }
 
-  //placeholder for listing media
+  //  ================================= PLACEHOLDER FOR LISTINGS MEDIA ===============
   const productImg =
     auctions.media.length === 0 || auctions.media == "undefined"
       ? "/images/—Pngtree—vector gallery icon_3989549.png"
       : `${auctions.media[0]}`;
 
-  //placeholder for avatar
+  //  =============================================== PLACEHOLDER FOR AVATAR ============
   const profileImg =
     auctions.seller.avatar === "" || auctions.seller.avatar === null
       ? ["/images/—Pngtree—elephant avatar_3194470.png"]
       : auctions.seller.avatar;
 
-  //Putting some stuff in elements
+  // ======================================================= ELEMENTS =====================
   const numberOfBids = document.getElementById("number-of-bids");
   numberOfBids.innerHTML = `Number of bids: ${auctions._count.bids}`;
+
   const auctionAvatar = document.getElementById("auction-avatar");
   auctionAvatar.src = `${profileImg}`;
+
   const auctionSeller = document.getElementById("auction-seller");
   auctionSeller.innerHTML = `${auctions.seller.name}`;
 
@@ -117,12 +122,14 @@ function listData(auctions, out) {
                    </div>
                    <h2 class="mt-4">Bidders: (${auctions._count.bids})</h2>
             `;
+
   const sendBidBtn = document.getElementById("create-bid-btn");
+
   sendBidBtn.addEventListener("click", validateAndProcess);
 
-  out.innerHTML = newDivs;
+  results.innerHTML = newDivs;
 
-  //TIMER
+  //   ===================================== BID TIMER =============
   const timer = document.querySelector(".timer");
 
   let bidEnding = timer.innerHTML;
@@ -133,18 +140,21 @@ function listData(auctions, out) {
     timer.classList.add("expired");
   }
 
-  // DISPLAY ELEMENTS BASED ON LOGGED IN OR NOT
-  //YOUR OWN BID OR NOT
-  //EXPIRED OR NOT
+  //   ===================================== ELEMENTS FOR LOGIN/LOGOUT, BID/NOT BID, EXPIRED OR NOT ==================
   const makeBid = document.getElementById("to-do-bid");
+
   const myOwnBid = document.getElementById("bid-my-own");
+
   const bidNotLoggedIn = document.getElementById("bid-not-loggedin");
+
   const bidExpired = document.getElementById("bid-expired");
+
   console.log(makeBid, myOwnBid, bidNotLoggedIn, bidExpired);
 
   function displayBid() {
     const accessToken = localStorage.getItem("accessToken");
     const userName = localStorage.getItem("username");
+
     if (accessToken && userName !== auctions.seller.name) {
       myOwnBid.style.display = "none";
       bidNotLoggedIn.style.display = "none";
@@ -157,7 +167,7 @@ function listData(auctions, out) {
       makeBid.style.display = "none";
       myOwnBid.style.display = "none";
       bidExpired.style.display = "none";
-    } else if ((timer.innerHTML = "EXPIRED")) {
+    } else if ((timer.innerHTML = "Auction is expired")) {
       makeBid.style.display = "none";
       myOwnBid.style.display = "none";
       bidNotLoggedIn.style.display = "none";
@@ -166,25 +176,27 @@ function listData(auctions, out) {
 
   displayBid();
 
-  //Delete listing
-  const sellDelete = document.getElementById("btn-to-sell");
+  //   ================================ DELETE LISTING =================
+  const sellDelete = document.getElementById("deleteListingBtn");
+
   sellDelete.addEventListener("click", () => {
     if (confirm("Are you totally sure?")) {
       deletePost(auctions.id);
     }
   });
-  //Update listing
-  const sellUpdate = document.getElementById("updateBtn-to sell");
+
+  //   ========================================== UPDATE LISTING =================
+  const sellUpdate = document.getElementById("updateListingBtn");
+
   sellUpdate.addEventListener("click", () => {
-    //console.log(btnUpdate.getAttribute('data-update'));
-    window.location = `./listing-edit.html?id=${auctions.id}`;
+    window.location = `/pages/editListing/?id=${auctions.id}`;
   });
 }
 
-// DELETE POST
+// ==================================================== DELETING POST ===============
 async function deletePost(id) {
-  //console.log(id);
   const url = `${DELETE_URL}${id}`;
+
   try {
     const accessToken = localStorage.getItem("accessToken");
     const options = {
@@ -194,7 +206,6 @@ async function deletePost(id) {
         Authorization: `Bearer ${accessToken}`,
       },
     };
-    //console.log("Delete url options:", url, options);
 
     const response = await fetch(url, options);
 
@@ -206,7 +217,7 @@ async function deletePost(id) {
   }
 }
 
-//GET BIDS AND LIST OUT
+// ===================================== FOR GETTING SINGLE BID ====================
 async function getSingleBids(url) {
   try {
     const accessToken = localStorage.getItem("accessToken");
@@ -216,15 +227,14 @@ async function getSingleBids(url) {
         Authorization: `Bearer ${accessToken}`,
       },
     };
-    //console.log(url, options);
 
     const response = await fetch(url, options);
-    //console.log(response);
+
     const bids = await response.json();
-    // console.log("Auctions:", auctions);
+
     const answer = bids.bids;
-    //console.log("listBids:", answer);
-    listBids(answer, secondElement);
+
+    listBids(answer, listBidsResults);
   } catch (error) {
     console.warn(error);
   }
@@ -232,20 +242,21 @@ async function getSingleBids(url) {
 
 getSingleBids(getSingleAuctionURL);
 
-const secondElement = document.getElementById("bidContainer");
+const listBidsResults = document.getElementById("bidContainer");
 
-function listBids(list, second) {
-  second.innerHTML = "";
+function listBids(list, listBidsResults) {
+  listBidsResults.innerHTML = "";
+
   let newDivs = "";
-  //Sort the list highest to lowest bids
+
+  //   ============================================= SORTING HIGHEST OR LOW BIDS =============
   list.sort(function (a, b) {
     return b.amount - a.amount;
   });
-  //console.log("Sortert:", list);
 
   for (let bid of list) {
     newDivs += `
-        <ul class="list-unstyled bidder mt-3">
+        <ul class="bidder mt-3">
                           <li class="d-flex justify-content-between align-items-center">
                               <div class="d-flex align-items-center">
                                   <span>-</span>
@@ -258,14 +269,14 @@ function listBids(list, second) {
                           </li>
                       </ul>`;
   }
-  second.innerHTML = newDivs;
+  listBidsResults.innerHTML = newDivs;
 }
 
 //MAKE A BID
 async function createBid(url, data) {
   try {
     const accessToken = localStorage.getItem("accessToken");
-    //console.log(accessToken);
+
     const options = {
       method: "POST",
       headers: {
@@ -274,26 +285,33 @@ async function createBid(url, data) {
       },
       body: JSON.stringify(data),
     };
-    //console.log(url, data, options);
+
     const response = await fetch(url, options);
     console.log(response);
+
     const answer = await response.json();
+
     if (response.status === 200) {
       window.location.reload();
     }
     console.log(answer);
   } catch (error) {
-    console.warn(error);
+    console.log(error);
   }
 }
 
-// Prosesses and validates bid input
+// ============================================= PROCESSING BID INPUTS ===============
 function validateAndProcess(event) {
   event.preventDefault();
-  const bidInput = document.getElementById("create-bid-input").value.trim();
-  const bidInputMsg = document.getElementById("create-bid-msg");
+
+  const bidInput = document.getElementById("bidInput").value.trim();
+
+  const bidInputMsg = document.getElementById("bidText");
+
   console.log("Bid elements:", bidInput, bidInputMsg);
+
   const bidToSend = parseInt(bidInput);
+
   console.log("bidToSend:", bidToSend);
 
   let bidData = {
@@ -306,11 +324,12 @@ function validateAndProcess(event) {
     bidInputMsg.innerHTML = "Bid has to be a number.";
   }
 
-  // Checking if user is logged in
+  // ======================================= SECURING THAT USERS ARE isLoggedIn-IN =================
   function isUserLoggedIn() {
     const accessToken = localStorage.getItem("accessToken");
+
     if (!accessToken) {
-      alert("You have to sign in to place a bid!");
+      alert("Login in order to bid!");
       window.location.href = "/profile/login/";
     }
   }
