@@ -63,7 +63,7 @@ async function getSingleAuction(url) {
 
 getSingleAuction(getSingleAuctionURL);
 
-const auctionsListResults = document.getElementById("post-container");
+const auctionsListResults = document.getElementById("container-for-specificBid");
 
 // ============== Listing Auction Results =============
 function listData(auctions, out) {
@@ -232,7 +232,7 @@ async function getSingleBids(url) {
 
 getSingleBids(getSingleAuctionURL);
 
-const secondElement = document.getElementById("bid-container");
+const secondElement = document.getElementById("bidContainer");
 
 function listBids(list, second) {
   second.innerHTML = "";

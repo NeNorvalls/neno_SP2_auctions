@@ -65,7 +65,7 @@ function listData(list, results) {
     newHTML += `
                     <div class="col-lg-4 col-md-6 col-sm-12">
                         <a href="/pages/specific-bid/?id="${auction.id}">
-                            <div class="card mt-5">
+                            <div class="card mt-5 box-shadow">
                                 <img src="${auctionImg}" class="card-img-top card-img">
                                 <div class="card-body">
                                     <h4 class="card-title text-center">${auction.title}</h4>
