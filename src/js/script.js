@@ -70,7 +70,7 @@ function listData(list, results) {
                                 <div class="card-body">
                                     <h4 class="card-title text-center">${auction.title}</h4>
                                     <div class="d-flex">
-                                        <img src="${profileAvatar}" class="rounded-circle p-2" height="40" alt="Avatar" loading="lazy" />
+                                        <img src="${profileAvatar}" class="img-thumbnail p-2" height="120" width="120" alt="Avatar" loading="lazy" />
                                         <h4 class="p-2"> ${auction.seller.name}</h4>
                                     </div>
                                     <div class="d-flex mt-1 pt-2 justify-content-between">
