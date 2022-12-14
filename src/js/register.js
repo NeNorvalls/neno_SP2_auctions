@@ -86,7 +86,7 @@ async function registerNewUser(url, data) {
     console.log(reply);
 
     if (response.status === 201) {
-      window.location = "/index.html";
+      window.location = "/profile/login";
     } else if (reply.message === "Profile already exists, try to login!") {
       errorMessage.innerHTML = reply.message;
     }

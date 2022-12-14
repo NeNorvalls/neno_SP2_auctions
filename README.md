@@ -4,14 +4,15 @@ semester_project
 
 <!-- ============================== Task to do: ============================ -->
 
+Pages
 [✓] register
 [✓] login
 [✓] logout
-[] update avatar page
+[✔] update avatar page
 [] view total credit
 [✓] creating listing
-[] add a Bid
-[] view a Bid to from users
+[✔] add a Bid
+[✔] view a Bid to from users
 [✓] can able to use use credit to Bid
 [✓] unregister user can search listings
 
@@ -20,12 +21,12 @@ semester_project
 [✓] register
 [✓] login
 [✓] logout
-[] update avatar page
+[✔] update avatar page
 [] view total credit
 [✓] creating listing
-[] add a Bid
-[] view a Bid to from users
-[] can able to use use credit to Bid
+[✔] add a Bid
+[✔] view a Bid to from users
+[✔] can able to use use credit to Bid
 [✓] unregister user can search listings
 
 ================== Design ========================
@@ -43,7 +44,7 @@ semester_project
 
 <!-- ================ Hosting ===================== -->
 
-[] netlify
+[✔] netlify
 
 <!-- ================== Others ================ -->
 
@@ -67,3 +68,16 @@ semester_project
 [] fixing designs
 
 <!-- ________________________________ the-End ________________________________ -->
+
+<!-- ============================ FOR DELIVERY ========================= -->
+
+Full: [text][label]
+Collapsed: [label][]
+Shortcut: [label]
+
+Full: ![text][image]
+Collapsed: ![image][]
+Shortcut: ![image]
+
+[label]: https://example.com/label
+[image]: https://example.com/image
