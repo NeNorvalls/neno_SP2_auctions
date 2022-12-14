@@ -15,7 +15,7 @@ const API_baseURL = "https://api.noroff.dev/api/v1";
 
 const listingEndpoint = "/auction/listings";
 
-const flag = "?_seller=true&_bids=true&sort=created&sortOrder=desc";
+const flag = "?limit=100&_seller=true&_bids=true&sort=created&sortOrder=desc";
 
 const auctionURL = `${API_baseURL}${listingEndpoint}${flag}`;
 
@@ -92,8 +92,14 @@ function listData(list, results) {
 
   //  ===================================================== SEARCH FUNCTIONALITY ======================
   const searchInput = document.getElementById("search-for-auctions-lists");
+  let timeout = null;
 
-  searchInput.addEventListener("keyup", filterAuctions);
+  searchInput.addEventListener("keyup", function (event) {
+    clearTimeout(timeout);
+    timeout = setTimeout(function () {
+      filterAuctions();
+    }, 1000);
+  });
 
   function filterAuctions() {
     const filterAuctions = searchInput.value.toLowerCase();
