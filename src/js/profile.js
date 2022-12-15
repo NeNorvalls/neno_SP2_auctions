@@ -7,7 +7,7 @@ const profileLink = document.getElementById("profile-link");
 const usersLink = document.getElementById("users-link");
 
 // ====================================== CHECKING IF USERS LOGGED_IN=======================
-function isLoggedIn() {
+function isUserLoggedIn() {
   const accessToken = localStorage.getItem("accessToken");
 
   if (!accessToken) {
@@ -19,7 +19,7 @@ function isLoggedIn() {
   }
 }
 
-isLoggedIn();
+isUserLoggedIn();
 
 const username = localStorage.getItem("username");
 
@@ -36,6 +36,7 @@ const updateAvatarURL = `${API_baseURL}/auction/profiles/${username}/media`;
 
 let profileLists = [];
 
+// GET my profile info
 async function getProfileInfo(url) {
   try {
     const accessToken = localStorage.getItem("accessToken");
@@ -62,7 +63,7 @@ getProfileInfo(profileURL);
 
 // ================================================= CREATE LISTING - INNER HTML =================
 
-const results = document.getElementById("profile-container");
+const results = document.getElementById("profile-listing-container");
 
 function listData(list, results) {
   results.innerHTML = "";
@@ -138,44 +139,6 @@ async function getMyBids(url) {
 }
 
 getMyBids(profileURL);
-
-// ============================= FOR PERSONAL BIDS CONTAINER ===================
-
-const bidListingResults = document.getElementById("container-for-bid-lists");
-
-function listMyBids(list, bidListingResults) {
-  bidListingResults.innerHTML = "";
-
-  let newBidDivs = "";
-
-  for (let post of list) {
-    let date = new Date(post.endsAt);
-    let ourDate = date.toLocaleString("default", {
-      day: "numeric",
-      month: "long",
-      hour: "2-digit",
-      minute: "2-digit",
-    });
-
-    newBidDivs += `
-  <div class="col-lg-6 col-md-6 col-sm-12 mt-5">
-  <a href="/pages/specific-bid/?id=${post.id}" >
-         <div class="card ">
-             <img src="${post.media}" class="card-img-top card-img" alt="...">
-             <div class="card-body">
-                 <h4 class="card-title">${post.title}</h4>
-                 <p class="card-text">${post.description}</p>
-             </div>
-             <div class="card-body">
-                 <p >${ourDate}</p>
-                 <p ">${post.amount}</p>
-             </div>
-         </div>
-   </a>
-</div>
-  `;
-  }
-}
 
 // ========================================= CONTAINER FOR LISTINGS RESULTS =====================
 const resultsLists = document.getElementById("container-for-listings");

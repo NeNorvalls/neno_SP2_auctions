@@ -60,9 +60,9 @@
 
     <!-- =============================== MAIN ============================== -->
 
-    <main class="w-90 mx-auto bg-dark text-white">
+    <main class="w-100 mx-auto bg-dark text-white">
       <hr />
-      <div class="container-fluid">
+      <div class="container-lg">
         <div class="profilePage-section text-white text-center">
           <h1>PROFILE</h1>
         </div>
@@ -81,15 +81,15 @@
                   />
                   <hr />
                   <div
-                    id="profile-container"
-                    class="col-md-6 col-sm-12 form-group d-flex text-center"
+                    id="profile-listing-container"
+                    class="text-center"
                   ></div>
                 </div>
 
                 <div class="text-center">
                   <button
                     type="button"
-                    class="btn btn-secondary mt-4"
+                    class="btn btn-secondary mt-2 mb-4"
                     data-bs-toggle="modal"
                     data-bs-target="#exampleModal"
                   >
@@ -101,19 +101,19 @@
               <div class="col-md-9">
                 <div class="row">
                   <div class="col-md-12 text-white">
-                    <div class="bg-light px-4 py-3 w-100">
-                      <div class="px-4 py-3 bg-dark">
+                    <div class="bg-light px-2 py-2 w-100">
+                      <div class="px-2 py-2 bg-dark">
                         <h3 class="mb-0 text-center">About me</h3>
                         <div class="d-flex text-center p-4">
                           <ul class="list-inline mb-0 justify-content-end">
-                            <li class="list-inline-item">
-                              <p
+                            <li class="list-inline-item bg-light rounded">
+                              <h5
                                 id="profile-credits"
-                                class="font-weight-bold mb-0 d-block"
+                                class="font-weight-bold mb-0 d-block text-black"
                               >
                                 0
-                              </p>
-                              <p class="text-muted text-center">Credit</p>
+                            </h5>
+                              <h5 class="text-muted text-center">Credits</h5>
                             </li>
                           </ul>
                         </div>
@@ -144,12 +144,12 @@
 
           <!-- ======================= MY LISTINGS ===================== -->
           <div class="row">
-            <div class="py-4 px-4">
+            <div class="py-2 px-2">
               <div class="align-items-center justify-content-between mb-3">
-                <h3 class="mb-0 text-center">My listings</h3>
+                <h3 class="mb-0 text-center">My Listings</h3>
               </div>
-              <div class="row">
-                <div id="container-for-listings" class="row thumbnail">
+              <div>
+                <div id="container-for-listings" class="row thumbnail ">
                   <img
                     src="/images/—Pngtree—vector gallery icon_3989549.png"
                     alt="Loading content"
@@ -162,26 +162,6 @@
         </div>
 
         <hr />
-
-        <!-- ======================= MY BIDS ===================== -->
-        <div class="row">
-          <div class="py-4 px-4">
-            <div class="d-flex align-items-center justify-content-between mb-3">
-              <h3 class="mb-0 text-center">My BIDS</h3>
-            </div>
-            <div class="row">
-              <div id="container-for-bid-lists" class="row">
-                <img
-                  src="/images/—Pngtree—elephant avatar_3194470.png"
-                  alt="Loading content"
-                  style="width: 200px"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
       <!-- =============================== Modal ====================================== -->
       <div
         class="modal fade"
@@ -209,7 +189,7 @@
                 <textarea
                   class="form-control form-control-lg m-auto"
                   id="input-for-updateAvatar"
-                  placeholder="Place a avatar URL"
+                  placeholder="Place an avatar URL"
                 ></textarea>
                 <p class="" id="updateAvatar-message-for-profile"></p>
                 <div class="text-center"></div>

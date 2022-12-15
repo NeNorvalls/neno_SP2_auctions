@@ -2,14 +2,15 @@
 
 semester_project
 
-<!-- ============================== Task to do: ============================ -->
+# USERS STORIES
 
-Pages
+ <!-- ================= PAGES =============== -->
+
 [✓] register
 [✓] login
 [✓] logout
 [✔] update avatar page
-[] view total credit
+[✔] view total credit
 [✓] creating listing
 [✔] add a Bid
 [✔] view a Bid to from users
@@ -22,62 +23,63 @@ Pages
 [✓] login
 [✓] logout
 [✔] update avatar page
-[] view total credit
+[✔] view total credit
 [✓] creating listing
 [✔] add a Bid
 [✔] view a Bid to from users
 [✔] can able to use use credit to Bid
 [✓] unregister user can search listings
 
-================== Design ========================
+<!-- ================== Design ======================== -->
 
-[] mobile version layout links
-[] desktop version layout
+[✔] mobile version layout links
+[✔] desktop version layout
 
-===================== Style Tile =======================
+<!-- ===================== Style Tile ======================= -->
 
-[] fonts
-[] color (WCAG pass)
-[] font-size
-[] buttons
-[] icons
+[✔] fonts family
+[✔] color (WCAG pass)
+[✔] font-size
+[✔] buttons
 
 <!-- ================ Hosting ===================== -->
 
 [✔] netlify
 
-<!-- ================== Others ================ -->
-
-[] code w/ jsDocs
-[] responsiveness
-[] all validation
-
 <!-- ================ Required links ================== -->
 
-[] gant chart for project timing
-[] xd design
-[] style guide
-[] kanban project board
-[] repository link
-[] netlify
-
-<!-- =============== OTHER STUFF NEEDED =================== -->
-
-[] meta names
-[] meta descriptions
-[] fixing designs
-
-<!-- ________________________________ the-End ________________________________ -->
-
-<!-- ============================ FOR DELIVERY ========================= -->
-
-Full: [text][label]
-Collapsed: [label][]
-Shortcut: [label]
-
-Full: ![text][image]
-Collapsed: ![image][]
-Shortcut: ![image]
-
-[label]: https://example.com/label
-[image]: https://example.com/image
+<table>
+  <thead>
+    <tr>
+      <th>Resource</th>
+      <td>URL</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Gantt Chart</th>
+      <td><a href="">Gantt Chart Images</a></td>
+    </tr>
+    <tr>
+      <th>Design Prototype</th>
+      <td><a href="https://xd.adobe.com/view/43db553a-b81a-4fb4-89df-20c7b3b66308-1688/">Desktop Prototype</a> </br>
+      <a href="https://xd.adobe.com/view/f56a4dc1-00de-4ac4-bee6-61a767b8c610-a039/">Mobile Prototype</a></td>
+    </tr>
+    <tr>
+      <th>Style Guide</th>
+      <td><a href="https://xd.adobe.com/view/ef30e48a-9743-4796-bc98-408e3e37ba2f-ba63/">Style Guide</a></td>
+    </tr>
+    <tr>
+      <th>Kanban Board</th>
+      <td><a href="">Project Board Link</a></td>
+    </tr>
+    <tr>
+      <th>Repository</th>
+      <td><a href="https://github.com/NeNorvalls/neno_SP2_auctions.git">Project Repository</a></td>
+    </tr>
+    <tr>
+      <th>Hosted Demo</th>
+      <td><a href="https://neno-sp2auctions.netlify.app/">Netlify Link</a></td>
+    </tr>
+  </tbody>
+</table>
