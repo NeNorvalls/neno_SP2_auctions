@@ -1,5 +1,7 @@
 # neno_SP2_auctions
 
+This project is design with the knowledge and mastery in HTML, Bootstrap, Sass & Javascript. Workflow testing part will just be done after this project will be graded as it was just an optional.
+
 semester_project
 
 # USERS STORY
