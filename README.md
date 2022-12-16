@@ -99,7 +99,7 @@ Step by step:
   <tbody>
     <tr>
       <th>Gantt Chart</th>
-      <td><a href="https://i.ibb.co/37SXLbn/neno-SP2-auctions.png" ></a>Gantt Chart Images</a></td>
+         <td><a href="https://app.ganttpro.com/#/project/1671188223358/export">Gantt Chart URL</a></td>
     </tr>
     <tr>
       <th>Design Prototype</th>
