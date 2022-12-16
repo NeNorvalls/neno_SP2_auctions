@@ -4,7 +4,8 @@ semester_project
 
 # USERS STORY
 
-PAGES 
+PAGES
+
 - [✓] register
 - [✓] login
 - [✓] logout
@@ -17,6 +18,7 @@ PAGES
 - [✓] unregister user can search listings
 
 Functionality
+
 - [✓] register
 - [✓] login
 - [✓] logout
@@ -29,23 +31,25 @@ Functionality
 - [✓] unregister user can search listings
 
 Design
+
 - [✓] mobile version layout links
 - [✓] desktop version layout
 - [✓] style guide
 
 Style Tile
+
 - [✓] fonts family
 - [✓] color (WCAG pass)
 - [✓] font-size
 - [✓] buttons
 
 Hosting
+
 - [✓] netlify
 
+### THOROUGH EXPLANATIONS FOR THE WHOLE COVERAGE OF THIS PROJECT
 
- ### THOROUGH EXPLANATIONS FOR THE WHOLE COVERAGE OF THIS PROJECT
-
-Step by step: 
+Step by step:
 
 - created a repo for the project in GitHub.com added with README.md file.
 
@@ -83,7 +87,6 @@ Step by step:
 
 - All in all will be found i the requirements format listed below:
 
-
 ## REQUIRED FORMAT LINKS
 
 <table>
@@ -96,7 +99,7 @@ Step by step:
   <tbody>
     <tr>
       <th>Gantt Chart</th>
-      <td><a href="https://i.ibb.co/37SXLbn/neno-SP2-auctions.png" ></a>">Gantt Chart Images</a></td>
+      <td><a href="https://i.ibb.co/37SXLbn/neno-SP2-auctions.png" ></a>Gantt Chart Images</a></td>
     </tr>
     <tr>
       <th>Design Prototype</th>
