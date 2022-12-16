@@ -4,8 +4,7 @@ semester_project
 
 # USERS STORY
 
- <!-- ================= PAGES =============== -->
-
+## PAGES 
 - [✓] register
 - [✓] login
 - [✓] logout
@@ -17,8 +16,7 @@ semester_project
 - [✓] can able to use use credit to Bid
 - [✓] unregister user can search listings
 
-<!-- ===================== Functionality ====================== -->
-
+## Functionality
 - [✓] register
 - [✓] login
 - [✓] logout
@@ -30,26 +28,25 @@ semester_project
 - [✔] can able to use use credit to Bid
 - [✓] unregister user can search listings
 
-<!-- ================== Design ======================== -->
-
+## Design
 - [✔] mobile version layout links
 - [✔] desktop version layout
+- [✔] style guide
 
-<!-- ===================== Style Tile ======================= -->
-
+## Style Tile
 - [✔] fonts family
 - [✔] color (WCAG pass)
 - [✔] font-size
 - [✔] buttons
 
-<!-- ================ Hosting ===================== -->
-
+## Hosting
 - [✔] netlify
 
-<!-- ================= #THOROUGH EXPLANATIONS FOR THE WHOLE COVERAGE OF THIS PROJECT# ===============-->
 
-<!-- # Step by step: -->
 
+ ### THOROUGH EXPLANATIONS FOR THE WHOLE COVERAGE OF THIS PROJECT
+
+# Step by step: 
 - created a repo for the project in GitHub.com added with README.md file.
 
 - Start with an index.html page, create a src folder and inside it add scss(sass-for the designs and add all scss files inside it), and js folder(for all js files & functionality).
@@ -86,9 +83,8 @@ semester_project
 
 - All in all will be found i the requirements format listed below:
 
-<!-- ================ Required Format links ================== -->
 
-## REQUIRED LINKS
+## REQUIRED FORMAT LINKS
 
 <table>
   <thead>
