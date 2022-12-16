@@ -101,7 +101,7 @@ Step by step:
   <tbody>
     <tr>
       <th>Gantt Chart</th>
-         <td><a href="https://app.ganttpro.com/#/project/1671188223358/export">Gantt Chart URL</a></td>
+         <td><a href="https://app.ganttpro.com/#/project/1671188223358/gantt">Gantt Chart URL</a></td>
     </tr>
     <tr>
       <th>Design Prototype</th>
