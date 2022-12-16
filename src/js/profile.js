@@ -149,7 +149,7 @@ function listListings(list, resultsLists) {
 
   for (let post of list) {
     let date = new Date(post.endsAt);
-    let ourDate = date.toLocaleString("default", {
+    let bidDate = date.toLocaleString("default", {
       day: "numeric",
       month: "long",
       hour: "2-digit",
@@ -166,7 +166,7 @@ function listListings(list, resultsLists) {
                             <p class="card-text">${post.description}</p>
                         </div>
                         <div class="card-body">
-                            <p ">${ourDate}</p>
+                            <p ">${bidDate}</p>
                         </div>
                     </div>
               </a>
