@@ -4,49 +4,49 @@ semester_project
 
 # USERS STORY
 
-## PAGES 
+PAGES 
 - [✓] register
 - [✓] login
 - [✓] logout
-- [✔] update avatar page
-- [✔] view total credit
+- [✓] update avatar page
+- [✓] view total credit
 - [✓] creating listing
-- [✔] add a Bid
-- [✔] view a Bid to from users
+- [✓] add a Bid
+- [✓] view a Bid to from users
 - [✓] can able to use use credit to Bid
 - [✓] unregister user can search listings
 
-## Functionality
+Functionality
 - [✓] register
 - [✓] login
 - [✓] logout
-- [✔] update avatar page
-- [✔] view total credit
+- [✓] update avatar page
+- [✓] view total credit
 - [✓] creating listing
-- [✔] add a Bid
-- [✔] view a Bid to from users
-- [✔] can able to use use credit to Bid
+- [✓] add a Bid
+- [✓] view a Bid to from users
+- [✓] can able to use use credit to Bid
 - [✓] unregister user can search listings
 
-## Design
-- [✔] mobile version layout links
-- [✔] desktop version layout
-- [✔] style guide
+Design
+- [✓] mobile version layout links
+- [✓] desktop version layout
+- [✓] style guide
 
-## Style Tile
-- [✔] fonts family
-- [✔] color (WCAG pass)
-- [✔] font-size
-- [✔] buttons
+Style Tile
+- [✓] fonts family
+- [✓] color (WCAG pass)
+- [✓] font-size
+- [✓] buttons
 
-## Hosting
-- [✔] netlify
-
+Hosting
+- [✓] netlify
 
 
  ### THOROUGH EXPLANATIONS FOR THE WHOLE COVERAGE OF THIS PROJECT
 
-# Step by step: 
+Step by step: 
+
 - created a repo for the project in GitHub.com added with README.md file.
 
 - Start with an index.html page, create a src folder and inside it add scss(sass-for the designs and add all scss files inside it), and js folder(for all js files & functionality).
