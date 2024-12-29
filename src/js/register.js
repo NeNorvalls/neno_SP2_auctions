@@ -60,7 +60,7 @@ function registerSubmitFunction(event) {
     name: username,
     email: email,
     password: password,
-    avatar: avatar,
+    avatar: avatar
   };
   registerNewUser(registerUrl, newUserData);
 }
@@ -70,9 +70,9 @@ async function registerNewUser(url, data) {
     const options = {
       method: "POST",
       headers: {
-        "Content-Type": "application/json",
+        "Content-Type": "application/json"
       },
-      body: JSON.stringify(data),
+      body: JSON.stringify(data)
     };
 
     console.log(url, data, options);
@@ -132,7 +132,7 @@ function validateForm() {
   // ======================================================  Validate @noroff.no / @stud.noroff.no =============
   if (
     !(
-      submittedEmail.includes("@stud.noroff.no") ||
+      submittedEmail.includes("@gmail.com") ||
       submittedEmail.includes("@noroff.no")
     )
   ) {
