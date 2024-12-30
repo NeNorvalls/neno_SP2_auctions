@@ -127,3 +127,21 @@ Step by step:
     </tr>
   </tbody>
 </table>
+
+## Technologies Used
+
+The following tools, libraries, and languages were used in the development of this project:
+
+### Front-End Technologies
+- **HTML**: Used for structuring the content and layout of the web pages.
+- **CSS**: Used for styling and layout control.
+- **Sass**: A CSS preprocessor that extends CSS with features like variables, nested rules, and mixins. (Version: `^1.56.1`).
+- **JavaScript**: The primary language for the interactive functionality of the platform.
+
+### Frameworks and Libraries
+- **Bootstrap**: (Version: `^5.2.3`), a front-end framework that provides responsive design components and utility classes.
+- **Live Server**: (Version: `^1.1.0`), a tool that automatically reloads the browser when changes are made to the project files.
+- **jQuery** (if used in your code, though not mentioned in your JSON): A JavaScript library that simplifies DOM manipulation and AJAX requests.
+
+### Package Manager
+- **npm**: Used for managing project dependencies and running scripts.
